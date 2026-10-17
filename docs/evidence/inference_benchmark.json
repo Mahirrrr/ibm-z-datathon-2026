@@ -1,0 +1,22 @@
+{
+  "machine": "s390x",
+  "rows": 8938750,
+  "engines": {
+    "cpu_default": {
+      "seconds": 21.32,
+      "records_per_second": 419197
+    },
+    "compress_trees": {
+      "engine": "compress_trees",
+      "seconds": 3.88,
+      "records_per_second": 2306666,
+      "max_abs_diff_vs_cpu": 1.1102230246251565e-16
+    },
+    "zdnn_tensors": {
+      "engine": "zdnn_tensors",
+      "seconds": 37.26,
+      "records_per_second": 239909,
+      "max_abs_diff_vs_cpu": 1.1102230246251565e-16
+    }
+  }
+}

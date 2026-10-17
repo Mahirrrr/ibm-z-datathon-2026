@@ -113,5 +113,11 @@ def test_model_metrics_decoded(client):
     assert body["policy"]["habitability_bonus"] > 0
 
 
+def test_model_reports_container_runtime(client, monkeypatch):
+    assert client.get("/api/model").json()["runtime"]["container"] is None
+    monkeypatch.setenv("SECOND_LOOK_CONTAINER", "podman")
+    assert client.get("/api/model").json()["runtime"]["container"] == "podman"
+
+
 def test_bad_limit_rejected(client):
     assert client.get("/api/disasters?limit=0").status_code == 422

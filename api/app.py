@@ -6,6 +6,7 @@ Run: .venv/bin/uvicorn api.app:app --port 8000
 import csv
 import io
 import json
+import os
 import sqlite3
 from collections import Counter
 from pathlib import Path
@@ -152,7 +153,8 @@ def create_app(db_path=DB_PATH):
         importance = query("SELECT * FROM feature_importance ORDER BY importance DESC")
         policy = {"tier_weights": TIER_WEIGHTS, "tier_labels": TIER_LABELS,
                   "habitability_bonus": HABITABILITY_BONUS, "vulnerability_bonus": VULNERABILITY_BONUS}
-        return {"metrics": metrics, "feature_importance": importance, "policy": policy}
+        runtime = {"container": os.environ.get("SECOND_LOOK_CONTAINER")}
+        return {"metrics": metrics, "feature_importance": importance, "policy": policy, "runtime": runtime}
 
     if DASHBOARD_DIR.exists():
         app.mount("/", StaticFiles(directory=DASHBOARD_DIR, html=True), name="dashboard")

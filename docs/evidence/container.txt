@@ -1,0 +1,30 @@
+$ podman version
+Client:       Podman Engine
+Version:      4.9.3
+API Version:  4.9.3
+Go Version:   go1.22.2
+Built:        Thu Jan  1 00:00:00 1970
+OS/Arch:      linux/s390x
+
+$ podman images second-look
+REPOSITORY             TAG         IMAGE ID      CREATED         SIZE
+localhost/second-look  latest      fc2062126a53  37 seconds ago  148 MB
+
+$ podman ps
+CONTAINER ID  IMAGE                         COMMAND               CREATED         STATUS         PORTS                     NAMES
+fc2a7f4ed17c  localhost/second-look:latest  uvicorn api.app:a...  23 seconds ago  Up 24 seconds  127.0.0.1:8000->8000/tcp  second-look
+
+$ podman inspect (security settings)
+ReadonlyRootfs=true CapDrop=[CAP_CHOWN CAP_DAC_OVERRIDE CAP_FOWNER CAP_FSETID CAP_KILL CAP_NET_BIND_SERVICE CAP_SETFCAP CAP_SETGID CAP_SETPCAP CAP_SETUID CAP_SYS_CHROOT] CapAdd=[] SecurityOpt=[no-new-privileges] User=1000:1000 Ports=map[8000/tcp:[{127.0.0.1 8000}]]
+Mount /home/linux1/ibm-z-datathon-2026/secondlook.db -> /app/secondlook.db rw=false
+
+$ podman info (rootless, arch)
+arch=s390x os=linux rootless=true cgroups=v2 seccomp=true apparmor=false
+
+$ ss -ltn (listeners)
+State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess
+LISTEN 0      4096   127.0.0.53%lo:53        0.0.0.0:*          
+LISTEN 0      4096         0.0.0.0:22        0.0.0.0:*          
+LISTEN 0      4096      127.0.0.54:53        0.0.0.0:*          
+LISTEN 0      4096       127.0.0.1:8000      0.0.0.0:*          
+LISTEN 0      4096            [::]:22           [::]:*          

@@ -1,0 +1,79 @@
+/home/linux1/miniconda3/envs/secondlook/bin/python -m pipeline.cohort
+rows: 26,242,788
+verified damage: 8,938,750
+verified damage + denied: 2,033,722
+second look cohort: 94,395
+  missing_documents: 70,072
+  lost_contact: 14,624
+  unverified_ownership_or_occupancy: 9,699
+/home/linux1/miniconda3/envs/secondlook/bin/python -m pipeline.train
+backend=snapml train=6,976,996 test=1,961,754 pos_rate=0.0106
+{
+  "backend": "snapml",
+  "machine": "s390x",
+  "population": "households with inspector-verified damage",
+  "rows_train": 6976996,
+  "rows_test": 1961754,
+  "disasters_test": 114,
+  "positive_rate": 0.010560201370437701,
+  "roc_auc": 0.7853928901473181,
+  "average_precision": 0.07799360869233718,
+  "precision_at_1000": 0.419,
+  "precision_at_10000": 0.1842,
+  "fit_seconds": 87.6,
+  "score_rows": 8938750,
+  "score_seconds": 21.18,
+  "records_per_second": 422098
+}
+top features: ['habitabilityRepairsRequired', 'declarationYear', 'ownRent', 'ppfvl', 'residenceType', 'homeOwnersInsurance', 'registrationMethod', 'rpfvl']
+/home/linux1/miniconda3/envs/secondlook/bin/python -m pipeline.fairness
+                group          category  households   rate  ci_low  ci_high  ratio_vs_reference
+              ownRent                 O     6297800 0.0073  0.0072   0.0074              1.0000
+              ownRent                 R     2638726 0.0180  0.0179   0.0182              2.4692
+              ownRent           Unknown        2224 0.3408  0.3214   0.3608             46.6389
+          grossIncome $120,001-$175,000      192101 0.0048  0.0045   0.0051              0.8258
+          grossIncome   $15,000-$30,000     2265465 0.0105  0.0104   0.0106              1.8236
+          grossIncome   $30,001-$60,000     1954722 0.0078  0.0077   0.0079              1.3513
+          grossIncome  $60,001-$120,000     1036627 0.0058  0.0056   0.0059              1.0000
+          grossIncome                 0      779274 0.0212  0.0209   0.0215              3.6833
+          grossIncome          <$15,000     2555780 0.0122  0.0121   0.0123              2.1207
+          grossIncome         >$175,000      154778 0.0053  0.0050   0.0057              0.9262
+          grossIncome           Unknown           3 0.0000  0.0000   0.5615              0.0000
+         applicantAge             19-34     1731396 0.0160  0.0158   0.0162              1.7897
+         applicantAge             35-49     2879427 0.0098  0.0097   0.0099              1.0948
+         applicantAge             50-64     2534531 0.0089  0.0088   0.0091              1.0000
+         applicantAge               65+     1569259 0.0076  0.0074   0.0077              0.8469
+         applicantAge               <19       55945 0.0547  0.0529   0.0566              6.1212
+         applicantAge           Unknown      168192 0.0055  0.0051   0.0058              0.6133
+accessFunctionalNeeds             False     8197646 0.0107  0.0106   0.0107              1.0000
+accessFunctionalNeeds              True      741104 0.0094  0.0092   0.0096              0.8815
+                group          category        reference  adjusted_odds_ratio
+              ownRent                 R                O                 1.88
+              ownRent           Unknown                O                18.34
+          grossIncome $120,001-$175,000 $60,001-$120,000                 0.77
+          grossIncome   $15,000-$30,000 $60,001-$120,000                 1.88
+          grossIncome   $30,001-$60,000 $60,001-$120,000                 1.46
+          grossIncome                 0 $60,001-$120,000                 3.02
+          grossIncome          <$15,000 $60,001-$120,000                 2.08
+          grossIncome         >$175,000 $60,001-$120,000                 0.78
+          grossIncome           Unknown $60,001-$120,000                 1.00
+         applicantAge             19-34            50-64                 1.27
+         applicantAge             35-49            50-64                 1.02
+         applicantAge               65+            50-64                 0.78
+         applicantAge               <19            50-64                 3.82
+         applicantAge           Unknown            50-64                 0.92
+accessFunctionalNeeds              True            False                 0.70
+/home/linux1/miniconda3/envs/secondlook/bin/python -m pipeline.rank
+ranked 94,395 households across 548 disasters
+#1 (2.21) FEMA verified $21,244 in damage; denied for missing documents; home needs repairs to be livable; lowest income band, age 65+, needs accessibility support.
+#2 (2.21) FEMA verified $20,329 in damage; denied for missing documents; home needs repairs to be livable; lowest income band, age 65+, needs accessibility support.
+#3 (2.17) FEMA verified $17,478 in damage; denied for missing documents; home needs repairs to be livable; lowest income band, age 65+, needs accessibility support.
+#4 (2.17) FEMA verified $17,253 in damage; denied for missing documents; home needs repairs to be livable; lowest income band, age 65+, needs accessibility support.
+#5 (2.12) FEMA verified $14,828 in damage; denied for missing documents; home needs repairs to be livable; lowest income band, age 65+, needs accessibility support.
+/home/linux1/miniconda3/envs/secondlook/bin/python -m pipeline.benchmark
+python: /home2/tpa/workspace/snapml_v1.17.2/snapml/src/include/BoosterModelInt.hpp:172: void tree::BoosterModel::convert_mbit(std::shared_ptr<glm::DenseDataset>): Assertion `tree_ensemble_models.size() > 0' failed.
+make: *** [Makefile:20: pipeline] Aborted (core dumped)
+
+real	4m28.941s
+user	7m16.268s
+sys	0m35.651s

@@ -175,7 +175,10 @@ Done so far: cohort, model, fairness, ranking and SQLite store, all on the Mac (
   - age 19–34 1.27
   - 65+ 0.78
   - access/functional needs 0.70
-- **Dashboard served from the VM:** uvicorn listens on 127.0.0.1:8000 on the VM. On the Mac, open a tunnel with `ssh -f -N -i ~/.ssh/linuxdatathon.pem -L 8100:127.0.0.1:8000 linux1@<vm-ip>`, then browse http://localhost:8100. The Method page shows machine s390x, the Snap ML backend, NNPA running, and the engine chart.
+- **Podman container (Oct 17, ~5:40 AM CDT):** the `Containerfile` image (`localhost/second-look`) is built natively on the VM.
+  - It runs rootless and hardened: read-only rootfs, all capabilities dropped, no-new-privileges, UID 1000, DB mounted `:ro`, bound to 127.0.0.1:8000. The run command is in the Containerfile header.
+  - Evidence (system, software, container, benchmark, log, 3 dashboard screenshots) is indexed in `docs/evidence/README.md`. The portal details-panel screenshot is still needed from Mahir.
+- **Dashboard served from the VM:** the container listens on 127.0.0.1:8000 on the VM (it replaced the bare uvicorn). On the Mac, open a tunnel with `ssh -f -N -i ~/.ssh/linuxdatathon.pem -L 8100:127.0.0.1:8000 linux1@<vm-ip>`, then browse http://localhost:8100. The Method page shows machine s390x, the Snap ML backend, NNPA running, and the engine chart.
 
 ## s390x environment facts (verified Oct 17 2026)
 

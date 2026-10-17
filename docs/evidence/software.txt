@@ -1,0 +1,12 @@
+$ conda list -n secondlook (key packages)
+fastapi                   0.143.3                  pypi_0    pypi
+numpy                     2.2.4           py312h0675b18_0  
+pandas                    2.2.3           py312hb314cc7_0  
+pyarrow                   19.0.0          py312hb314cc7_1  
+python                    3.12.9               hf88e1f6_0  
+scikit-learn              1.6.1           py312hb314cc7_0  
+snapml                    1.17.2                   pypi_0    pypi
+uvicorn                   0.54.0                   pypi_0    pypi
+
+$ Snap ML NNPA check (LD_PRELOAD system libstdc++)
+snapml imported with zDNN (NNPA) support on s390x

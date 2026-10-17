@@ -29,7 +29,7 @@ const STACK = [
   ["IBM Snap ML", "Gradient-boosted model training and batch scoring", "backend"],
   ["Telum on-chip AI accelerator (NNPA)", "Snap ML zdnn_tensors engine scores every household on the AI accelerator", "nnpa"],
   ["llama.cpp local LLM", "Writes callback scripts without data leaving the machine", null],
-  ["Podman container", "Packages the API and dashboard", null],
+  ["Podman container", "Rootless, read-only image serving the API and dashboard", "container"],
 ];
 
 function tile(label, value, accent) {
@@ -40,7 +40,7 @@ function stat(label, value, sub = "") {
   return el("div", { class: "stat" }, el("div", { class: "label" }, label), el("div", { class: "value" }, value), el("div", { class: "sub" }, sub));
 }
 
-function render({ metrics: m, feature_importance: fi, policy }) {
+function render({ metrics: m, feature_importance: fi, policy, runtime }) {
   const lift = (p) => `${Math.round(p / m.positive_rate)}x base rate`;
   document.getElementById("metrics").replaceChildren(
     stat("ROC AUC, unseen disasters", m.roc_auc.toFixed(3)),
@@ -86,7 +86,7 @@ function render({ metrics: m, feature_importance: fi, policy }) {
 
   const bench = m.inference_benchmark;
   const nnpa = bench && bench.engines.zdnn_tensors && bench.engines.zdnn_tensors.engine === "zdnn_tensors";
-  const done = { machine: onZ, backend: m.backend === "snapml", nnpa };
+  const done = { machine: onZ, backend: m.backend === "snapml", nnpa, container: Boolean(runtime && runtime.container) };
   document.getElementById("stack").replaceChildren(
     ...STACK.map(([name, what, key]) => {
       const ok = key ? done[key] : false;

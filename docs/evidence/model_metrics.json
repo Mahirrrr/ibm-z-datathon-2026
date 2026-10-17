@@ -1,0 +1,103 @@
+{
+  "backend": "snapml",
+  "machine": "s390x",
+  "population": "households with inspector-verified damage",
+  "rows_train": 6976996,
+  "rows_test": 1961754,
+  "disasters_test": 114,
+  "positive_rate": 0.010560201370437701,
+  "roc_auc": 0.7853928901473181,
+  "average_precision": 0.07799360869233718,
+  "precision_at_1000": 0.419,
+  "precision_at_10000": 0.1842,
+  "fit_seconds": 87.6,
+  "feature_importance": [
+    {
+      "feature": "habitabilityRepairsRequired",
+      "importance": 0.03373888878155929
+    },
+    {
+      "feature": "declarationYear",
+      "importance": 0.02618173704996569
+    },
+    {
+      "feature": "ownRent",
+      "importance": 0.013707090942634143
+    },
+    {
+      "feature": "ppfvl",
+      "importance": 0.010342839934361433
+    },
+    {
+      "feature": "residenceType",
+      "importance": 0.008958529031300733
+    },
+    {
+      "feature": "homeOwnersInsurance",
+      "importance": 0.007570019513668272
+    },
+    {
+      "feature": "registrationMethod",
+      "importance": 0.007119846143648893
+    },
+    {
+      "feature": "rpfvl",
+      "importance": 0.0070480415589091
+    },
+    {
+      "feature": "applicantAge",
+      "importance": 0.007046717499523371
+    },
+    {
+      "feature": "householdComposition",
+      "importance": 0.006507204266327865
+    },
+    {
+      "feature": "primaryResidence",
+      "importance": 0.006243380392503582
+    },
+    {
+      "feature": "roofDamage",
+      "importance": 0.0025446282232519705
+    },
+    {
+      "feature": "destroyed",
+      "importance": 0.0024590246661613338
+    },
+    {
+      "feature": "grossIncome",
+      "importance": 0.0022136272245470204
+    },
+    {
+      "feature": "floodDamage",
+      "importance": 0.0012313428103360492
+    },
+    {
+      "feature": "accessFunctionalNeeds",
+      "importance": 0.0012101421533717803
+    },
+    {
+      "feature": "occupants65andOver",
+      "importance": 0.00031649787120842376
+    },
+    {
+      "feature": "selfAssessmentInformation",
+      "importance": 0.00013753618549273058
+    },
+    {
+      "feature": "floodInsurance",
+      "importance": 5.7061012849741556e-05
+    },
+    {
+      "feature": "incidentTypeCode",
+      "importance": -4.343333074026864e-05
+    },
+    {
+      "feature": "damagedStateAbbreviation",
+      "importance": -0.0005073015904532574
+    }
+  ],
+  "score_rows": 8938750,
+  "score_seconds": 21.18,
+  "records_per_second": 422098
+}
