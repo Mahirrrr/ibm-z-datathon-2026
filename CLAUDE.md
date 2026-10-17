@@ -76,6 +76,25 @@ Mahir's entry for the IBM Z Datathon 2026 (Shooting Stars Foundation × IBM). Re
   - Top disasters by cohort size: 4559 LA hurricane (6,039), 1603 LA hurricane (5,493), 4339 PR hurricane (4,963), 4586 TX severe ice storm (3,739).
   - Local env: `uv venv --python 3.12 .venv`; 11 cohort tests pass (`.venv/bin/python -m pytest tests`). Ingest takes 15s and the cohort step 26s on the Mac.
 
+- **Oct 17, ~03:30 CDT: model, fairness and ranking built** (Mac, sklearn backend). Run everything with `make pipeline`.
+  - **Model** (`pipeline/train.py`):
+    - Population: 8.94M verified-damage households. Features: only what FEMA knows after inspection, before the decision.
+    - Test set: 1.96M rows from 114 disasters the model never saw.
+    - Results: ROC AUC 0.778; average precision 0.082 vs a 0.0106 base rate (7.8x lift); precision@1000 = 43.4% (41x the base rate); precision@10k = 19.0%.
+    - Top features: habitability, declaration year, own/rent, ppfvl, rpfvl, age, state, residence type.
+    - Fit takes 60s. Scoring all 8.94M rows takes 18.5s (484k records/sec on arm64).
+  - **Fairness** (`pipeline/fairness.py`). Adjusted odds ratios control for loss, habitability, destroyed, incident type and year:
+    - renters vs owners: OR 2.00 (raw 2.47x)
+    - $0 income vs $60–120k: 2.70 (raw 3.68x)
+    - <$15k: 1.86
+    - 19–34 vs 50–64: 1.32
+    - 65+: 0.85
+    - access/functional needs: 0.70. Disabled applicants are *less* likely, so say so honestly.
+  - **Ranking** (`pipeline/rank.py`): 94,395 households across 548 disasters, each with a priority and a "why flagged" sentence.
+  - **Store** (`pipeline/store.py`): `secondlook.db` (26 MB) with tables disasters, callbacks (joined with risk_score), fairness, adjusted_odds, feature_importance, model_metrics, reason_codes.
+  - Top disasters (numbers only; names still need the Disaster Declarations join): 4559 LA 2020 hurricane, 1603 2005 hurricane, 4339 PR 2017 hurricane, 4586 TX Feb 2021 ice storm.
+  - 21 tests pass.
+
 ## s390x environment facts (verified Oct 17 2026)
 
 - PyPI has **no s390x wheels** for pandas, pyarrow, scikit-learn, xgboost, torch or onnxruntime. Install them from **conda `defaults`**; conda-forge doesn't have them either.
