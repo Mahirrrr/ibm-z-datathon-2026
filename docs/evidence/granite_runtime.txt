@@ -1,0 +1,7 @@
+| granite 2B Q4_0                |   1.35 GiB |     2.53 B | CPU        |       3 |           pp256 |         33.17 ± 0.94 |
+| granite 2B Q4_0                |   1.35 GiB |     2.53 B | CPU        |       3 |            tg64 |          4.53 ± 0.01 |
+| granite 2B Q4_K - Medium       |   1.44 GiB |     2.53 B | CPU        |       3 |           pp256 |         12.25 ± 0.16 |
+| granite 2B Q4_K - Medium       |   1.44 GiB |     2.53 B | CPU        |       3 |            tg64 |          6.67 ± 0.01 |
+| granite 2B Q8_0                |   2.51 GiB |     2.53 B | CPU        |       3 |           pp256 |         15.79 ± 0.03 |
+| granite 2B Q8_0                |   2.51 GiB |     2.53 B | CPU        |       3 |            tg64 |          5.79 ± 0.03 |
+second-look Up 19 seconds 127.0.0.1:8000->8000/tcp

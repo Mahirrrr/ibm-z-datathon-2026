@@ -16,22 +16,10 @@ from fastapi import FastAPI, HTTPException, Query
 from fastapi.responses import Response
 from fastapi.staticfiles import StaticFiles
 
-from pipeline.codebook import TIER_LABELS
+from pipeline.codebook import INCIDENT_NAMES, TIER_LABELS
 from pipeline.config import DB_PATH, HABITABILITY_BONUS, TIER_WEIGHTS, VULNERABILITY_BONUS
 
 DASHBOARD_DIR = Path(__file__).resolve().parent.parent / "dashboard"
-
-# OpenFEMA incidentTypeCode, from docs/data/ihp_fields.json
-INCIDENT_NAMES = {
-    "0": "Not applicable", "1": "Explosion", "2": "Straight-line winds", "3": "Tidal wave",
-    "4": "Tropical storm", "5": "Winter storm", "8": "Tropical depression", "A": "Tsunami",
-    "B": "Biological", "C": "Coastal storm", "D": "Drought", "E": "Earthquake", "F": "Flood",
-    "G": "Freezing", "H": "Hurricane", "I": "Terrorist", "J": "Typhoon", "K": "Dam/levee break",
-    "L": "Chemical", "M": "Mud/landslide", "N": "Nuclear", "O": "Severe ice storm",
-    "P": "Fishing losses", "Q": "Crop losses", "R": "Fire", "S": "Snowstorm", "T": "Tornado",
-    "U": "Civil unrest", "V": "Volcanic eruption", "W": "Severe storm", "X": "Toxic substances",
-    "Y": "Human cause", "Z": "Other",
-}
 
 GROUP_NAMES = {
     "ownRent": "Housing",
@@ -126,6 +114,9 @@ def create_app(db_path=DB_PATH):
         d["factor_counts"] = dict(Counter(f for r in cb for f in (r["factors"] or "").split(", ") if f))
         return d
 
+    def has_notes():
+        return bool(query("SELECT 1 FROM sqlite_master WHERE type = 'table' AND name = 'callback_notes'"))
+
     def callback_rows(number, limit=None, offset=0):
         sql = "SELECT * FROM callbacks WHERE disasterNumber = ? ORDER BY rank_in_disaster"
         params = (number,)
@@ -134,9 +125,21 @@ def create_app(db_path=DB_PATH):
             params += (limit, offset)
         return query(sql, params)
 
+    def attach_notes(rows):
+        notes = {}
+        if rows and has_notes():
+            ids = [r["id"] for r in rows]
+            notes = {n["id"]: n for n in query(
+                f"SELECT * FROM callback_notes WHERE status = 'ok' AND id IN ({','.join('?' * len(ids))})", ids)}
+        for r in rows:
+            n = notes.get(r["id"])
+            r["note"] = n and {"why_flagged": n["why_flagged"], "callback_script": n["callback_script"],
+                               "citations": json.loads(n["citations"]), "model": n["model"]}
+        return rows
+
     @app.get("/api/disasters/{number}/callbacks")
     def callbacks(number: int, limit: int = Query(50, ge=1, le=500), offset: int = Query(0, ge=0)):
-        return callback_rows(number, limit, offset)
+        return attach_notes(callback_rows(number, limit, offset))
 
     @app.get("/api/disasters/{number}/callbacks.csv")
     def callbacks_csv(number: int):
@@ -154,7 +157,22 @@ def create_app(db_path=DB_PATH):
         policy = {"tier_weights": TIER_WEIGHTS, "tier_labels": TIER_LABELS,
                   "habitability_bonus": HABITABILITY_BONUS, "vulnerability_bonus": VULNERABILITY_BONUS}
         runtime = {"container": os.environ.get("SECOND_LOOK_CONTAINER")}
-        return {"metrics": metrics, "feature_importance": importance, "policy": policy, "runtime": runtime}
+        return {"metrics": metrics, "feature_importance": importance, "policy": policy, "runtime": runtime,
+                "genai": genai_stats()}
+
+    def genai_stats():
+        if not has_notes():
+            return None
+        rows = query("SELECT status, model, seconds, completion_tokens FROM callback_notes")
+        if not rows:
+            return None
+        return {
+            "model": rows[0]["model"],
+            "notes": sum(r["status"] == "ok" for r in rows),
+            "rejected": sum(r["status"] != "ok" for r in rows),
+            "median_seconds": median(r["seconds"] for r in rows),
+            "median_completion_tokens": median(r["completion_tokens"] for r in rows if r["completion_tokens"] is not None),
+        }
 
     if DASHBOARD_DIR.exists():
         app.mount("/", StaticFiles(directory=DASHBOARD_DIR, html=True), name="dashboard")

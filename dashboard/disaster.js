@@ -49,6 +49,33 @@ function draftScript(r) {
   return `Hello, this is a caseworker following up on your FEMA disaster aid application.\n\nAn inspector confirmed ${fmt.money(r.verified_loss)} in damage to your home. ${fix}\n\nCan we go through what's needed together now?`;
 }
 
+// Granite cites passages as [P1]; show the FEMA policy section instead.
+function withSections(text, citations) {
+  const bySection = Object.fromEntries(citations.map((c) => [c.ref, c.section]));
+  return text.replace(/\[(P\d+)\]/g, (m, ref) => (bySection[ref] ? `[§${bySection[ref]}]` : m));
+}
+
+function scriptBlock(r) {
+  const n = r.note;
+  if (!n) {
+    return [
+      el("p", { class: "panel-title" }, "Draft callback script"),
+      el("div", { class: "script" }, draftScript(r)),
+      el("p", { class: "note" }, "Template draft. Granite-written notes cover the top callbacks in the largest disasters."),
+    ];
+  }
+  return [
+    el("p", { class: "panel-title" }, "Why this denial looks fixable ", el("span", { class: "tag granite" }, "Granite · cited")),
+    el("p", { class: "llm" }, withSections(n.why_flagged, n.citations)),
+    el("p", { class: "panel-title" }, "Callback script"),
+    el("div", { class: "script" }, withSections(n.callback_script, n.citations)),
+    el("p", { class: "panel-title" }, "FEMA policy cited"),
+    el("ol", { class: "cites" },
+      ...n.citations.map((c) => el("li", {}, el("details", {}, el("summary", {}, c.label), el("blockquote", {}, `${c.quote}…`))))),
+    el("p", { class: "note" }, `Written by ${n.model} on IBM LinuxONE. Every citation was checked against the retrieved FEMA passages; dollar amounts were checked against the verified loss.`),
+  ];
+}
+
 function renderDrawer(r) {
   if (!r) {
     $("drawer").replaceChildren(el("h3", {}, "Select a household"), el("p", { class: "note" }, "Pick a row to see why it was flagged and a draft callback script."));
@@ -63,9 +90,7 @@ function renderDrawer(r) {
       el("dt", {}, "Model score"), el("dd", {}, r.risk_score == null ? "n/a" : r.risk_score.toFixed(2)),
       el("dt", {}, "Loss percentile"), el("dd", {}, `${Math.round(r.loss_pct * 100)}th in this disaster`),
       el("dt", {}, "County"), el("dd", {}, `${r.county || "Unknown"}, ${r.damagedStateAbbreviation}`)),
-    el("p", { class: "panel-title" }, "Draft callback script"),
-    el("div", { class: "script" }, draftScript(r)),
-    el("p", { class: "note" }, "Template draft. The local-LLM version will be generated on LinuxONE.")
+    ...scriptBlock(r)
   );
 }
 

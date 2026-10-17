@@ -38,9 +38,13 @@ FEMA publishes every application for Individuals and Households Program aid: 26.
 2. **Predictive model** (`pipeline/train.py`). An IBM Snap ML gradient-boosted model learns who ends up in the cohort, using only what FEMA knew after inspection and before deciding. It trains only on verified-damage households, and the test set is whole disasters the model never saw. That avoids the leakage trap where a naive model reaches 0.99 AUC by memorizing FEMA's eligibility rule.
 3. **Fairness audit** (`pipeline/fairness.py`). Rates by renter status, income, age, and access needs come with 95% Wilson intervals, plus adjusted odds ratios from a logistic regression with controls.
 4. **Ranked callback list** (`pipeline/rank.py`). Each disaster gets its own list. Households are ordered by verified loss, denial reason, whether the home is livable, and vulnerability. Each row comes with a sentence a caseworker can read aloud, such as *"FEMA verified $21,244 in damage; denied for missing documents; home needs repairs to be livable; lowest income band, age 65+, needs accessibility support."* The weights are a visible policy choice, not a learned one.
-5. **Dashboard** (`api/`, `dashboard/`). FastAPI serves three pages built with IBM Plex type and Carbon colors:
+5. **Generative layer: IBM Granite with RAG over FEMA policy** (`pipeline/policy.py`, `pipeline/genai.py`). This is IBM's Predictive + Generative loan-approval lab run in reverse. The lab explains why a bank approved or denied a loan; we explain why a household FEMA denied deserves a second look.
+   - **Retrieve.** FEMA's Individual Assistance Program and Policy Guide (IAPPG 1.1, chapter 3) is split into 89 passages, each labelled with its section and page, and indexed as TF-IDF vectors. Each denial reason may only cite its own sections: Identity, Insurance, Occupancy and Ownership for missing documents; Occupancy (renters) or Occupancy and Ownership (owners) for unverified homes; Applicant Communication for lost contact. The appeal timeline is always included.
+   - **Generate.** IBM Granite 3.3 2B Instruct runs locally in llama.cpp on LinuxONE, from a big-endian GGUF build. It returns JSON: a "why flagged" note, a phone script, and the passages it used.
+   - **Check.** Code rejects a note if it cites anything outside the retrieved passages, quotes a dollar amount that doesn't match the inspector's verified loss, or promises approval. Rejected notes fall back to the template script, and the Method page reports how many were rejected.
+6. **Dashboard** (`api/`, `dashboard/`). FastAPI serves three pages built with IBM Plex type and Carbon colors:
    - Story: the finding
-   - Disasters: caseworker console with CSV export
+   - Disasters: caseworker console with CSV export and a side panel for Granite's cited note and script
    - Method: how it works, plus live LinuxONE runtime evidence
 
 ## Architecture
@@ -54,7 +58,8 @@ flowchart LR
         T --> B[engine benchmark<br/>CPU · compressed · NNPA]
         C --> FA[fairness audit]
         C --> R[ranked callbacks]
-        T & FA & R & B --> DB[(secondlook.db)]
+        R --> G[Granite 3.3 on llama.cpp<br/>RAG over FEMA IAPPG<br/>cited notes, checked]
+        T & FA & R & B & G --> DB[(secondlook.db)]
         DB -->|read-only mount| P[Podman container<br/>FastAPI + dashboard<br/>127.0.0.1:8000]
     end
     P -->|SSH tunnel| U[Browser]
@@ -84,9 +89,18 @@ FEMA's raw file is Parquet. The only pyarrow build available for s390x (conda `d
 |---|---|---|
 | CPU, standard trees | 21.3 | 419,197 |
 | **CPU, Snap ML compressed trees** | **3.9** | **2,306,666** |
-| Telum on-chip AI accelerator (NNPA, `zdnn_tensors`) | 37.3 | 239,909 |
+| Snap ML `zdnn_tensors` engine (built for the NNPA) | 37.3 | 239,909 |
 
-All three engines return the same scores (max difference 1e-16). The NNPA path works end to end. On this shared 3-vCPU VM, compressed trees were fastest for this model, and we report the measurement rather than a claim.
+All three engines return the same scores (max difference 1e-16). Because the Telum accelerator computes in reduced precision, identical scores mean we can't confirm that Snap ML's `zdnn_tensors` engine actually ran on the NNPA, so we don't count it as accelerator evidence. On this shared 3-vCPU VM, compressed trees were fastest for this model.
+
+**Telum NNPA, measured with TensorFlow** (`pipeline/twin.py`, IBM's jupyter-lab-ml image, TensorFlow 2.18.1 + `ibm-zdnn-plugin` 2.3.0). A Keras twin of the model (133 inputs; Dense 64 → 32 → 1) trained on 1M households with the same disaster split. It scores the 1,961,754 held-out households:
+
+| Device | Seconds | Records/sec |
+|---|---|---|
+| CPU (`NNPA_DEVICES=0`) | 1.38 | 1,424,337 |
+| **Telum AI accelerator (NNPA, zDNN plugin)** | **1.12** | **1,745,681** |
+
+The NNPA is **1.23x** faster at batch 8,192, best of 3 runs (1.34x at batch 65,536, though both devices are slower there). Scores differ by up to 0.0033 from the accelerator's reduced-precision math, which shows the NNPA path really ran. Twin ROC AUC is 0.716; the Snap ML model (0.785) is still the one that ranks callbacks.
 
 Raw captures, screenshots, and the full run log are in [docs/evidence](docs/evidence/README.md).
 
@@ -100,6 +114,9 @@ Each of these cost real time, and each one is now handled in code:
 4. **Snap ML on s390x crashes on NaN features** (`malloc(): invalid size`). Missing values become `-1`, which never occurs in codes or dollar amounts.
 5. **A Snap ML model can only be optimized once.** The benchmark loads a fresh copy for each engine.
 6. **FEMA's CDN blocks the VM's IP address**, so the raw file is uploaded from the ingest machine instead.
+7. **GGUF models are little-endian.** We run a big-endian Granite build ([taronaeo/Granite-3.3-2B-Instruct-BE-GGUF](https://huggingface.co/taronaeo/Granite-3.3-2B-Instruct-BE-GGUF), from the llama.cpp s390x verified-models list).
+8. **llama.cpp on z17 with GCC 13.** Native builds ask for `-march=arch15`, which needs GCC 15, so we build for z16. Without `-mzvector`, ggml quietly falls back to scalar code: Granite generated 1.2 tokens/s that way, against 4.5 tokens/s with vector extensions (llama-bench, Q4_0).
+9. **llama-server's prompt cache (8 GB by default) squeezed the model out of RAM** on an 8 GB VM, and generation slowed down. The fix is `--cache-ram 0 -np 1 --load-mode none`.
 
 ## Security
 
@@ -144,6 +161,23 @@ make test PY=~/miniconda3/envs/secondlook/bin/python
 make pipeline PY=~/miniconda3/envs/secondlook/bin/python
 ```
 
+### 4b. Granite notes on LinuxONE (optional; the dashboard falls back to a template)
+
+```bash
+sudo apt-get install -y build-essential cmake
+git clone --depth 1 https://github.com/ggml-org/llama.cpp && cd llama.cpp
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DGGML_NATIVE=OFF -DLLAMA_CURL=OFF \
+  "-DCMAKE_C_FLAGS=-march=z16 -mvx -mzvector" "-DCMAKE_CXX_FLAGS=-march=z16 -mvx -mzvector"
+cmake --build build -j3 --target llama-server
+curl -L -o ~/models/granite-3.3-2b-instruct-be.Q4_0.gguf \
+  https://huggingface.co/taronaeo/Granite-3.3-2B-Instruct-BE-GGUF/resolve/main/granite-3.3-2b-instruct-be.Q4_0.gguf
+build/bin/llama-server -m ~/models/granite-3.3-2b-instruct-be.Q4_0.gguf -c 4096 -np 1 --cache-ram 0 \
+  --load-mode none -t 3 --jinja --host 127.0.0.1 --port 8081 --no-webui &
+cd ~/ibm-z-datathon-2026 && make notes PY=~/miniconda3/envs/secondlook/bin/python
+```
+
+The policy passages (`docs/data/iappg_chunks.json`) are committed. `make policy` rebuilds them from FEMA's PDF on a machine with `pdftotext`.
+
 ### 5. Serve the dashboard from a container
 
 ```bash
@@ -173,10 +207,13 @@ pipeline/
   benchmark.py   Snap ML inference engines: CPU, compressed trees, NNPA
   fairness.py    rates with Wilson intervals, adjusted odds ratios
   rank.py        ranked callback list with "why flagged" sentences
+  policy.py      FEMA IAPPG passages + TF-IDF retriever pinned per denial reason
+  genai.py       Granite (llama.cpp) notes and scripts, citation/amount/promise checks
+  twin.py        Keras twin of the model, CPU vs Telum NNPA via IBM's zDNN plugin
   store.py       everything into secondlook.db
 api/app.py       read-only FastAPI over secondlook.db + static dashboard
 dashboard/       Story, Disasters, Method pages (IBM Plex, Carbon colors)
-tests/           37 tests: cohort rules, fairness math, ranking, Arrow I/O, API
+tests/           73 tests: cohort rules, fairness math, ranking, Arrow I/O, API, policy retrieval, Granite checks, twin encoding
 Containerfile    rootless Podman image for the API and dashboard
 docs/evidence/   LinuxONE captures and screenshots
 ```
@@ -185,6 +222,9 @@ docs/evidence/   LinuxONE captures and screenshots
 
 - Data: [OpenFEMA Individuals and Households Program Valid Registrations V2](https://www.fema.gov/openfema-data-page/individuals-and-households-program-valid-registrations-v2)
 - [IBM Snap ML](https://www.zurich.ibm.com/snapml/), [zDNN](https://github.com/IBM/zDNN)
+- [IBM Granite 3.3 2B Instruct](https://huggingface.co/ibm-granite/granite-3.3-2b-instruct), as a [big-endian GGUF](https://huggingface.co/taronaeo/Granite-3.3-2B-Instruct-BE-GGUF), served by [llama.cpp](https://github.com/ggml-org/llama.cpp)
+- [TensorFlow / Keras](https://www.tensorflow.org/) with [IBM Z Accelerated for TensorFlow (zDNN plugin)](https://github.com/IBM/ibmz-accelerated-for-tensorflow), run in the [LinuxONE jupyter-lab-ml image](https://github.com/linuxone-community-cloud/jupyter-lab-ml)
+- RAG corpus: [FEMA Individual Assistance Program and Policy Guide v1.1](https://www.fema.gov/sites/default/files/documents/fema_iappg-1.1.pdf)
 - [pandas](https://pandas.pydata.org/), [Apache Arrow / pyarrow](https://arrow.apache.org/), [scikit-learn](https://scikit-learn.org/), [NumPy](https://numpy.org/)
 - [FastAPI](https://fastapi.tiangolo.com/), [Uvicorn](https://www.uvicorn.org/), [SQLite](https://sqlite.org/)
 - [Podman](https://podman.io/), [Miniconda](https://docs.anaconda.com/miniconda/)

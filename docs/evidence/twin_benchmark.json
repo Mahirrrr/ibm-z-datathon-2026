@@ -1,0 +1,41 @@
+{
+  "framework": "TensorFlow 2.18.1 / Keras",
+  "layers": "Dense 64 ReLU, Dense 32 ReLU, Dense 1 sigmoid",
+  "inputs": 133,
+  "rows_train": 1000000,
+  "fit_seconds": 4.9,
+  "runs": {
+    "cpu": {
+      "device": "cpu",
+      "machine": "s390x",
+      "rows_scored": 1961754,
+      "roc_auc": 0.716279546554112,
+      "precision_at_1000": 0.20600000023841858,
+      "batch_size": 8192,
+      "inference_seconds": 1.38,
+      "inference_seconds_all": [
+        1.41,
+        1.94,
+        1.38
+      ],
+      "records_per_second": 1424337
+    },
+    "nnpa": {
+      "device": "nnpa",
+      "machine": "s390x",
+      "rows_scored": 1961754,
+      "roc_auc": 0.7163094353932542,
+      "precision_at_1000": 0.20999999344348907,
+      "batch_size": 8192,
+      "inference_seconds": 1.12,
+      "inference_seconds_all": [
+        1.13,
+        1.25,
+        1.12
+      ],
+      "records_per_second": 1745681
+    }
+  },
+  "max_abs_diff_nnpa_vs_cpu": 0.003332376480102539,
+  "speedup_nnpa_vs_cpu": 1.23
+}

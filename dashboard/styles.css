@@ -128,6 +128,13 @@ select:focus, .btn:focus-visible, tr:focus-visible { outline: 2px solid var(--in
 .drawer h3 { font-size: 16px; font-weight: 500; margin: 0 0 4px; }
 .drawer .why { font: 16px/1.5 var(--serif); margin: 16px 0; }
 .drawer .script { font: 13px/1.6 var(--mono); white-space: pre-wrap; background: var(--gray-100); padding: 12px; color: var(--gray-20); }
+.drawer .llm { font-size: 14px; line-height: 1.5; margin: 0 0 16px; }
+.drawer .script + .panel-title { margin-top: 16px; }
+.tag.granite { background: var(--blue-60); color: #fff; font-weight: 400; margin-left: 6px; vertical-align: 1px; }
+.drawer .cites { margin: 0 0 12px; padding-left: 20px; font-size: 13px; }
+.drawer .cites li { margin-bottom: 6px; }
+.drawer .cites summary { cursor: pointer; color: var(--interactive); }
+.drawer .cites blockquote { margin: 6px 0 0; padding-left: 10px; border-left: 2px solid var(--gray-70); color: var(--text-2); font-size: 12px; }
 .drawer dl { display: grid; grid-template-columns: auto 1fr; gap: 6px 12px; font-size: 13px; margin: 0 0 16px; }
 .drawer dt { color: var(--text-2); }
 .drawer dd { margin: 0; font-family: var(--mono); }

@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Second Look_IBM Z Datathon 2026 Project</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  /* Same Carbon tokens and Plex type as the dashboard. Render: Chrome --headless=new --no-pdf-header-footer --print-to-pdf */
+  :root {
+    --gray-100:#161616; --gray-90:#262626; --gray-80:#393939; --gray-70:#525252; --gray-50:#8d8d8d;
+    --gray-30:#c6c6c6; --gray-20:#e0e0e0; --gray-10:#f4f4f4; --blue-60:#0f62fe; --blue-40:#78a9ff;
+    --red-60:#da1e28; --red-10:#fff1f1; --green-40:#42be65;
+    --serif:"IBM Plex Serif",Georgia,serif; --sans:"IBM Plex Sans",system-ui,sans-serif; --mono:"IBM Plex Mono",monospace;
+  }
+  @page { size: 1280px 720px; margin: 0; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #888; font: 20px/1.45 var(--sans); color: var(--gray-100); }
+  .slide { width: 1280px; height: 720px; padding: 56px 72px; background: #fff; position: relative; overflow: hidden;
+           page-break-after: always; break-after: page; margin: 0 auto 24px; }
+  @media print { body { background: #fff; } .slide { margin: 0; } }
+  .dark { background: var(--gray-100); color: var(--gray-10); }
+  .kicker { display:flex; justify-content:space-between; border-top: 4px solid currentColor; padding-top: 10px;
+            font-size: 15px; font-weight: 500; letter-spacing: .01em; }
+  .dark .kicker { color: var(--gray-30); }
+  h1 { font: 500 76px/1.05 var(--serif); margin: 40px 0 20px; letter-spacing: -0.01em; }
+  h2 { font: 500 42px/1.15 var(--serif); margin: 28px 0 18px; max-width: 1050px; }
+  p { margin: 0 0 14px; max-width: 980px; }
+  .lede { font: 400 26px/1.4 var(--serif); }
+  .muted { color: var(--gray-70); } .dark .muted { color: var(--gray-30); }
+  .big { font: 500 150px/1 var(--serif); letter-spacing: -0.02em; margin: 24px 0 8px; }
+  .blue { color: var(--blue-60); } .dark .blue { color: var(--blue-40); } .red { color: var(--red-60); }
+  .grid { display:grid; gap: 1px; background: var(--gray-20); border: 1px solid var(--gray-20); }
+  .grid > div { background: #fff; padding: 18px 20px; }
+  .dark .grid { background: var(--gray-80); border-color: var(--gray-80); } .dark .grid > div { background: var(--gray-90); }
+  .stat .v { font: 400 40px/1.2 var(--mono); } .stat .l { font-size: 15px; color: var(--gray-70); }
+  .dark .stat .l { color: var(--gray-30); }
+  .cols { display:grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+  .shot { width: 100%; border: 1px solid var(--gray-20); display:block; }
+  .foot { position:absolute; left:72px; right:72px; bottom: 28px; display:flex; justify-content:space-between;
+          font: 13px var(--mono); color: var(--gray-50); }
+  .bar { display:grid; grid-template-columns: 280px 1fr 70px; align-items:center; gap: 14px; height: 46px; font-size: 19px; }
+  .bar .t { height: 14px; background: var(--gray-20); position: relative; }
+  .bar .f { position:absolute; left:0; top:0; bottom:0; }
+  .bar .n { font: 500 20px var(--mono); text-align:right; }
+  ol.steps { margin: 0; padding: 0; list-style: none; counter-reset: s; }
+  ol.steps li { counter-increment: s; display:grid; grid-template-columns: 44px 1fr; gap: 8px; margin-bottom: 16px; }
+  ol.steps li::before { content: counter(s); font: 500 22px var(--mono); color: var(--blue-60); }
+  .dark ol.steps li::before { color: var(--blue-40); }
+  table { border-collapse: collapse; width: 100%; font-size: 18px; }
+  td, th { text-align:left; padding: 10px 14px; border-bottom: 1px solid var(--gray-80); }
+  th { color: var(--gray-30); font-weight: 600; font-size: 15px; }
+  td.n { font-family: var(--mono); text-align: right; }
+  .tag { display:inline-block; padding: 2px 10px; border-radius: 12px; font-size: 14px; background: var(--blue-60); color:#fff; }
+  .flow { display:flex; gap: 10px; align-items: stretch; margin-top: 18px; }
+  .flow div { flex:1; background: var(--gray-10); padding: 16px; font-size: 16px; border-top: 3px solid var(--blue-60); }
+  .flow b { display:block; font-size: 18px; margin-bottom: 6px; }
+  .flow .gen { border-top-color: var(--green-40); }
+</style>
+</head>
+<body>
+
+<!-- 1. Title -->
+<section class="slide dark">
+  <div class="kicker"><span>Team Second Look · IBM Z Datathon 2026 · Theme 3: Wildcard</span><span>SSF2026</span></div>
+  <h1>Second Look</h1>
+  <p class="lede" style="max-width:900px">Finding the disaster survivors FEMA turned away even though an inspector verified their damage, and getting them a callback.</p>
+  <p class="muted" style="margin-top:60px">Built and run on IBM LinuxONE (IBM z17, s390x) · IBM Snap ML · Telum AI accelerator · IBM Granite · Podman</p>
+  <div class="foot"><span>Second Look_IBM Z Datathon 2026 Project</span><span>1</span></div>
+</section>
+
+<!-- 2. Why this matters to me -->
+<section class="slide">
+  <div class="kicker"><span>Why this project</span><span>Bangladesh → the United States</span></div>
+  <h2>I grew up in Bangladesh watching floods take homes. The second loss came later, on paper.</h2>
+  <p class="lede muted">Families without a deed, a lease or a utility bill in their own name get turned away from aid. It happens everywhere. The difference in the US is that FEMA publishes every application, so the gap can be measured.</p>
+  <p class="lede">So we measured it, and built a way to close it.</p>
+  <div class="foot"><span>Second Look</span><span>2</span></div>
+</section>
+
+<!-- 3. Problem -->
+<section class="slide">
+  <div class="kicker"><span>The problem</span><span>OpenFEMA IHP Valid Registrations V2 · 26,242,788 applications</span></div>
+  <div class="big blue">94,395</div>
+  <p class="lede">households had damage that an inspector verified and were still denied, for a reason a phone call could fix.</p>
+  <div class="grid" style="grid-template-columns:repeat(4,1fr);margin-top:28px">
+    <div class="stat"><div class="v">$612M</div><div class="l">verified loss in the group</div></div>
+    <div class="stat"><div class="v">71,674</div><div class="l">homes not livable without repairs</div></div>
+    <div class="stat"><div class="v">70,072</div><div class="l">denied for missing documents</div></div>
+    <div class="stat"><div class="v">24,323</div><div class="l">lost contact (14,624) or never verified (9,699)</div></div>
+  </div>
+  <div class="foot"><span>Rule: verified damage AND denied AND fixable reason code (3, 4, or 7/9 with ownership/occupancy unverified)</span><span>3</span></div>
+</section>
+
+<!-- 4. Fairness -->
+<section class="slide">
+  <div class="kicker"><span>Who gets left behind</span><span>Adjusted odds ratios, z17 run</span></div>
+  <h2>The paperwork gap falls hardest on renters and the poorest households.</h2>
+  <div style="margin-top:20px">
+    <div class="bar"><span>$0 reported income</span><div class="t"><div class="f" style="width:79%;background:var(--red-60)"></div></div><span class="n red">3.02x</span></div>
+    <div class="bar"><span>Under $15k income</span><div class="t"><div class="f" style="width:54%;background:var(--red-60)"></div></div><span class="n red">2.08x</span></div>
+    <div class="bar"><span>Renters (vs owners)</span><div class="t"><div class="f" style="width:49%;background:var(--red-60)"></div></div><span class="n red">1.88x</span></div>
+    <div class="bar"><span>Age 19–34 (vs 50–64)</span><div class="t"><div class="f" style="width:33%;background:var(--red-60)"></div></div><span class="n red">1.27x</span></div>
+    <div class="bar"><span>Age 65+</span><div class="t"><div class="f" style="width:20%;background:var(--gray-50)"></div></div><span class="n">0.78x</span></div>
+    <div class="bar"><span>Access or functional needs</span><div class="t"><div class="f" style="width:18%;background:var(--gray-50)"></div></div><span class="n">0.70x</span></div>
+  </div>
+  <p class="muted" style="margin-top:16px;font-size:17px">Logistic regression on households with verified damage, controlling for loss, livability, destruction, disaster type and year. These are associations, not causes. Applicants with access or functional needs are <em>less</em> likely to land in the group, and we report that as found.</p>
+  <div class="foot"><span>Second Look</span><span>4</span></div>
+</section>
+
+<!-- 5. Solution -->
+<section class="slide">
+  <div class="kicker"><span>What we built</span><span>Predictive + generative, end to end on LinuxONE</span></div>
+  <h2>From 26 million records to a caseworker's next phone call.</h2>
+  <div class="flow">
+    <div><b>1 · Cohort rule</b>Verified damage, denied, fixable reason. Rules, so every flag fits in one sentence.</div>
+    <div><b>2 · Snap ML model</b>Who lands here, from pre-decision facts only. Tested on 114 unseen disasters.</div>
+    <div><b>3 · Fairness audit</b>Rates with 95% intervals and adjusted odds ratios.</div>
+    <div><b>4 · Ranked callbacks</b>Per disaster: loss, livability, reason, vulnerability. The weights are visible.</div>
+    <div class="gen"><b>5 · Granite + RAG</b>A cited note and script per household, grounded in FEMA's policy guide.</div>
+    <div><b>6 · Dashboard</b>Story, caseworker console, method. Served from a hardened container.</div>
+  </div>
+  <p class="lede" style="margin-top:36px">The trap we avoided: FEMA eligibility is nearly a rule, so a naive model reaches 0.99 AUC and learns nothing. We train only on verified-damage households and split by disaster.</p>
+  <div class="foot"><span>Second Look</span><span>5</span></div>
+</section>
+
+<!-- 6. Demo -->
+<section class="slide dark">
+  <div class="kicker"><span>The caseworker console</span><span>Served from Podman on the z17, via SSH tunnel</span></div>
+  <div class="cols" style="grid-template-columns: 1.45fr 1fr; margin-top: 24px">
+    <div style="height:560px;overflow:hidden;border:1px solid var(--gray-80)"><img src="../evidence/dashboard_disaster_4559_granite.png" alt="Callback list and Granite note" style="display:block;width:180%;margin-left:-82%;margin-top:-76%"></div>
+    <div>
+      <h2 style="font-size:34px;margin-top:0">Hurricane Laura, Louisiana, 2020: 6,039 households to call.</h2>
+      <p class="muted">Each row shows why it was flagged. The side panel holds IBM Granite's note and call script, with the FEMA policy sections it cites. Caseworkers can expand each citation to read the source passage.</p>
+      <p class="muted">CSV export goes straight into an outreach workflow.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Second Look</span><span>6</span></div>
+</section>
+
+<!-- 7. GenAI -->
+<section class="slide">
+  <div class="kicker"><span>Generative layer</span><span>IBM's loan-approval lab, run in reverse</span></div>
+  <h2>The lab explains why a bank said no. We find the families a system said no to, wrongly.</h2>
+  <ol class="steps" style="margin-top:20px">
+    <li><div><b>Retrieve.</b> FEMA's Individual Assistance Program and Policy Guide (IAPPG 1.1, ch. 3) is split into 89 passages and indexed as TF-IDF vectors. Each denial reason may only cite its own sections: Occupancy and Ownership, Identity, Insurance, Applicant Communication, plus the 60-day appeal rule.</div></li>
+    <li><div><b>Generate locally.</b> IBM Granite 3.3 2B Instruct runs in llama.cpp on the z17, from a big-endian GGUF. No household data leaves the machine.</div></li>
+    <li><div><b>Verify before showing.</b> Each citation must be a retrieved passage, each dollar amount must match the inspector's figure, and nothing may promise approval. Otherwise the note is rejected and the template script is shown.</div></li>
+  </ol>
+  <p class="muted" id="genai-stats" style="font-size:17px">On the z17: 50 notes covering the top 5 callbacks in each of the 10 largest disasters. All 50 passed the checks. Median 142s and 252 tokens per note on 3 shared vCPUs.</p>
+  <div class="foot"><span>Second Look</span><span>7</span></div>
+</section>
+
+<!-- 8. IBM Z -->
+<section class="slide dark">
+  <div class="kicker"><span>Technical design on IBM LinuxONE</span><span>z17 (9175) · 3 vCPU · 8 GB · Ubuntu 24.04 s390x</span></div>
+  <h2 style="margin-bottom:24px">Every step runs on the mainframe, and we report what we measured.</h2>
+  <table>
+    <tr><th>Workload</th><th>Framework</th><th>Measured on z17</th></tr>
+    <tr><td>Cohort model, 6.98M training rows</td><td>IBM Snap ML</td><td>ROC AUC <b class="blue">0.785</b> on 114 unseen disasters; precision 41.9% in the top 1,000 (40x the base rate)</td></tr>
+    <tr><td>Score all 8,938,750 households</td><td>Snap ML engines</td><td>Compressed trees <b class="blue">2.31M/s</b> (3.9s) · standard 419k/s</td></tr>
+    <tr><td>Keras twin on Telum NNPA</td><td>TensorFlow + IBM zDNN plugin</td><td id="twin-row">Telum NNPA <b class="blue">1.75M/s</b> vs CPU 1.42M/s (<b>1.23x</b>) on 1.96M held-out households; scores differ by up to 0.0033, so the NNPA really ran</td></tr>
+    <tr><td>Cited callback notes</td><td>IBM Granite 3.3 2B · llama.cpp</td><td id="granite-row">50 cited notes, 0 rejected by the checks; 4.5 tokens/s generation (llama-bench, Q4_0)</td></tr>
+    <tr><td>Dashboard and API</td><td>FastAPI · Podman</td><td>Rootless container, image built natively for s390x (148 MB)</td></tr>
+  </table>
+  <div class="foot"><span>Evidence: docs/evidence in the repository</span><span>8</span></div>
+</section>
+
+<!-- 9. Security -->
+<section class="slide">
+  <div class="kicker"><span>AI secured</span><span>Innovation without exposure</span></div>
+  <h2>Sensitive by nature, so nothing leaves the box.</h2>
+  <div class="grid" style="grid-template-columns:1fr 1fr;margin-top:20px">
+    <div><b>Local LLM.</b> Granite runs on the VM and listens only on 127.0.0.1. No third-party AI API ever sees a household.</div>
+    <div><b>Hardened container.</b> Rootless Podman with a read-only root filesystem, all capabilities dropped, no-new-privileges, and a non-root UID.</div>
+    <div><b>Read-only data.</b> The database is mounted <code>:ro</code>, and the API opens SQLite with <code>mode=ro</code>.</div>
+    <div><b>No public port.</b> The dashboard binds to localhost and is reached through an SSH tunnel with key-only auth. We replaced the public default Jupyter token.</div>
+    <div><b>No direct identifiers.</b> OpenFEMA has no names, addresses or phone numbers. Households are opaque record IDs.</div>
+    <div><b>Guarded generation.</b> Citations, dollar amounts and promises are checked in code before any note is shown.</div>
+  </div>
+  <div class="foot"><span>Second Look</span><span>9</span></div>
+</section>
+
+<!-- 10. Engineering -->
+<section class="slide">
+  <div class="kicker"><span>What porting to s390x taught us</span><span>Big-endian is real</span></div>
+  <h2>Eight things that broke, and the fix that is now in code.</h2>
+  <div class="cols" style="font-size:17px">
+    <ol class="steps">
+      <li><div>pyarrow 19 reads numeric Parquet as null on big-endian. Every intermediate file is now Arrow IPC.</div></li>
+      <li><div>26M rows × 33 columns needed more than 16 GB in pandas. Cohort labeling streams batches, with a 364 MB peak.</div></li>
+      <li><div>Snap ML's zDNN build needs the system libstdc++ (LD_PRELOAD).</div></li>
+      <li><div>Snap ML heap-crashes on NaN, so missing values become -1.</div></li>
+    </ol>
+    <ol class="steps" start="5" style="counter-reset:s 4">
+      <li><div>FEMA's CDN blocks the VM, so ingest runs on a little-endian host.</div></li>
+      <li><div>GGUF models are little-endian; we use a big-endian Granite build.</div></li>
+      <li><div>GCC 13 doesn't know z17's <code>-march=arch15</code>, so llama.cpp is built for z16.</div></li>
+      <li><div>Without <code>-mzvector</code>, llama.cpp silently drops to scalar code: 1.2 vs 4.5 tokens/s.</div></li>
+    </ol>
+  </div>
+  <div class="foot"><span>Second Look</span><span>10</span></div>
+</section>
+
+<!-- 11. Limits -->
+<section class="slide">
+  <div class="kicker"><span>Limits and ethics</span><span>Transparent decision reasoning</span></div>
+  <h2>A starting point for outreach, never a decision.</h2>
+  <ol class="steps" style="margin-top:20px">
+    <li><div>The data shows who was denied, not why each family's paperwork failed. A caseworker confirms everything on the call.</div></li>
+    <li><div>The model learns FEMA's past decisions, biases included. We use it only to decide whom to call first, never to deny anyone.</div></li>
+    <li><div>Adjusted odds ratios are associations with controls, not causal estimates.</div></li>
+    <li><div>Granite drafts; people decide. Notes that fail a check are hidden, and the rules behind the ranking are shown in the open.</div></li>
+    <li><div>Appeal windows for older disasters have closed. The value for those is measuring the gap; live use belongs in open disasters.</div></li>
+  </ol>
+  <div class="foot"><span>Second Look</span><span>11</span></div>
+</section>
+
+<!-- 12. Team and next -->
+<section class="slide dark">
+  <div class="kicker"><span>Team Second Look</span><span>What's next</span></div>
+  <div class="cols" style="margin-top:28px">
+    <div>
+      <h2 style="margin-top:0">Team</h2>
+      <p id="team">Mahir Abdullah: data pipeline, modeling and fairness audit, LinuxONE engineering, Granite RAG layer, dashboard design.</p>
+    </div>
+    <div>
+      <h2 style="margin-top:0">Next</h2>
+      <p>Run it live in open disasters, while appeal windows are still open, together with legal-aid and recovery nonprofits.</p>
+      <p>Then take it home to Bangladesh, where informal land tenure makes proof of ownership even harder to come by.</p>
+    </div>
+  </div>
+  <p class="lede" style="margin-top:40px">94,395 households. One callback each.</p>
+  <div class="foot"><span>github.com/Mahirrrr/ibm-z-datathon-2026 · SSF2026</span><span>12</span></div>
+</section>
+
+</body>
+</html>

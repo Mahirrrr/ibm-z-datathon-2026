@@ -65,6 +65,12 @@ CALLBACKS = PROCESSED_DIR / "callbacks.arrow"
 SCORES = PROCESSED_DIR / "scores.arrow"
 DB_PATH = ROOT / "secondlook.db"
 
+# Generative layer: FEMA policy corpus (IAPPG 1.1) and Granite-written notes.
+POLICY_TEXT = ROOT / "data" / "policy" / "iappg-1.1.txt"
+POLICY_CHUNKS = ROOT / "docs" / "data" / "iappg_chunks.json"
+NOTES = PROCESSED_DIR / "callback_notes.jsonl"
+LLM_URL = "http://127.0.0.1:8081/v1/chat/completions"  # llama-server on the VM, localhost only
+
 # Model features: only what FEMA knows once an inspection confirms damage, BEFORE the
 # eligibility decision. Decision fields (ihpEligible, ihpAmount, ineligibleReason,
 # unmetNeed*, verifiedOwnership/Occupancy) would leak the label and are excluded.

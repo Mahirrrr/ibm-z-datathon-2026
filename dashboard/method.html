@@ -53,6 +53,20 @@
       <p class="lede">A policy choice, shown in the open so a program manager can change it.</p>
       <pre class="formula" id="formula"></pre>
     </section>
+
+    <section>
+      <h2>How Granite writes the callback</h2>
+      <p class="lede">
+        IBM's loan-approval lab pairs a risk model with policy retrieval and Granite to explain why a bank said yes or no.
+        We run that pattern in reverse: the model finds households FEMA turned away, and Granite explains why the denial looks fixable.
+      </p>
+      <ol class="def">
+        <li><div><strong>Retrieve the rule.</strong> FEMA's Individual Assistance Program and Policy Guide (IAPPG 1.1, chapter 3) is split into 89 passages and indexed with TF-IDF vectors. Each denial reason may only draw on its own sections, such as Occupancy and Ownership for unverified homes, or Applicant Communication for lost contact, plus the appeal timeline.</div></li>
+        <li><div><strong>Write locally.</strong> IBM Granite 3.3 2B Instruct runs in llama.cpp on the LinuxONE VM, from a big-endian GGUF build. Household facts and passages never leave the machine.</div></li>
+        <li><div><strong>Check before showing.</strong> A note is shown only if every citation is a retrieved passage, every dollar amount matches the inspector's verified loss, and nothing promises approval. Anything else falls back to the template script.</div></li>
+      </ol>
+      <p class="note" id="genainote"></p>
+    </section>
   </main>
 
   <div class="console band">
@@ -61,6 +75,7 @@
       <h1>IBM LinuxONE runtime</h1>
       <div class="tiles" id="runtime"></div>
       <div id="engines" style="margin-top:24px"></div>
+      <div id="twin" style="margin-top:24px"></div>
       <table class="list" style="margin-top:24px">
         <thead><tr><th>Component</th><th>What it does</th><th>Status</th></tr></thead>
         <tbody id="stack"></tbody>

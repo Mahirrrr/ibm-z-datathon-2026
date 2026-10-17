@@ -180,6 +180,60 @@ Done so far: cohort, model, fairness, ranking and SQLite store, all on the Mac (
   - Evidence (system, software, container, benchmark, log, 3 dashboard screenshots) is indexed in `docs/evidence/README.md`. The portal details-panel screenshot is still needed from Mahir.
 - **Dashboard served from the VM:** the container listens on 127.0.0.1:8000 on the VM (it replaced the bare uvicorn). On the Mac, open a tunnel with `ssh -f -N -i ~/.ssh/linuxdatathon.pem -L 8100:127.0.0.1:8000 linux1@<vm-ip>`, then browse http://localhost:8100. The Method page shows machine s390x, the Snap ML backend, NNPA running, and the engine chart.
 
+## Progress: GenAI layer, TF/NNPA twin, deck (Oct 17, ~9 AM CDT). Not committed yet.
+
+- **Granite + RAG is done, deployed, and served from Podman on the z17.**
+  - Code: `pipeline/policy.py` (89 IAPPG 1.1 ch. 3 passages in `docs/data/iappg_chunks.json`, TF-IDF, sections pinned per tier) and `pipeline/genai.py` (llama-server JSON with citation, dollar-amount and no-promise checks).
+  - Data: the store loads `callback_notes.jsonl` into a `callback_notes` table. The API attaches `note` to callback rows, and the drawer shows it, falling back to the template.
+  - Results: 50 notes (top 5 × 10 largest disasters), all of which passed the checks. Median 142s and 252 tokens each.
+  - Server: llama.cpp is built in `~/llama.cpp`, without `-march=arch15` (GCC 13) and with `-mvx -mzvector` (without those flags it runs scalar at 1.2 tok/s). Start it with `~/granite_server.sh` (`--cache-ram 0 -np 1 --load-mode none -t 2`). It is stopped now to free RAM. Model: `~/models/granite-3.3-2b-instruct-be.Q4_0.gguf` (taronaeo BE GGUF).
+  - Generation speed on the shared host ranged 1.1–4.5 tok/s.
+- **TF twin** (`pipeline/twin.py`, `make twin`): runs in IBM's jupyter-lab-ml image (TF 2.18.1, ibm-zdnn-plugin 2.3.0). NNPA scores 1,745,681/s vs 1,424,337/s on the CPU (**1.23x**). Scores differ by up to 0.0033, which is proof the NNPA ran. Twin AUC 0.716. `NNPA_DEVICES=0` gives the CPU baseline.
+- **Honesty fix:** Snap ML `zdnn_tensors` scores were identical to CPU (1e-16), so it's no longer claimed as accelerator evidence anywhere. The TF twin is the NNPA claim.
+- **Docs:** `docs/VIDEO_PLAN.md`, `docs/SUBMISSION.md` (form text with SSF2026, links, public-repo checklist) and `docs/deck/deck.html`, rendered to `docs/deck/Second Look_IBM Z Datathon 2026 Project.pdf`.
+- Evidence added: `docs/evidence/{twin_benchmark.json, callback_notes.jsonl, granite_runtime.txt, dashboard_disaster_4559_granite.png, dashboard_method_genai.png}`. VM DB backup from before GenAI: `~/secondlook.db.pre-genai`.
+- Still open with Mahir: team names and roles (deck slide 12, video), making the repo public (the event PDFs are in history), the portal screenshot, the lab screenshots, and recording the video.
+
+## Game plan from here (written Oct 17, ~6 AM CDT; deadline Sun Oct 18 11:29 AM CDT, target 9 AM)
+
+**Done and pushed** (commits c981f0b through 8e0a66b on `main`, private repo Mahirrrr/ibm-z-datathon-2026):
+- cohort, model, fairness, ranking, store
+- 3-page dashboard
+- LinuxONE port with Snap ML and the engine benchmark
+- hardened Podman container serving the dashboard on the VM
+- docs/evidence captures
+- judge-facing README.md
+
+**Inputs from the Tech Prep session** (full notes in `docs/research/TECH_PREP_SESSION_NOTES.md`):
+- Their "Predictive + Generative" lab is a loan-approval demo: XGBoost score, then RAG over bank policy in a vector DB, then IBM **Granite** explains the decision. We mirror it in reverse: FEMA's IHP policy guide replaces the bank policy, and Granite explains why a denied household deserves a second look and drafts the callback script. Don't submit lab notebooks unchanged (novelty).
+- Technical design is weighted most heavily. Their checklist:
+  - at least 2 open-source AI frameworks
+  - a Docker/Podman container (done)
+  - video of it running live on the LinuxONE VM
+  - security and/or Telum acceleration
+- Telum acceleration, as they described it, is TensorFlow via IBM's zDNN plugin. Our Snap ML `zdnn_tensors` run matched CPU scores to 1e-16, which is suspicious for real NNPA (reduced precision). Plan: a small Keras model mirroring the cohort model, benchmarked with and without NNPA. It is also the 2nd framework. Claim only what is measured.
+- Community value needs a quantified group of beneficiaries: 94,395 households and $612M (have it).
+- Pitch should show each team member's role. Record the demo on the VM through the tunnel, not on the Mac.
+- VM rules: SSF2026 goes in the project description. Default Jupyter token `Your_Token1` was public; if jupyter-lab-ml runs, set our own token.
+
+**Remaining work, in priority order:**
+1. **GenAI layer: Granite plus RAG over FEMA IHP policy** (Predictive + Generative).
+   - On the VM, run Granite locally (llama.cpp, or whatever the jupyter-lab-ml container ships; GGUF needs care on big-endian) with a small vector store over the FEMA IHP Unified Guidance (IHPUG) sections on denial reasons and appeals.
+   - Generate a cited "why flagged" note and callback script for the top-N callbacks per disaster, and store them in secondlook.db.
+   - Show them in the Disasters drawer, replacing the template draft.
+   - Timebox this. The template script is the fallback.
+2. **Keras/TensorFlow model plus NNPA benchmark** (2nd framework, honest Telum claim). Add it to `pipeline/benchmark.py` and the Method page.
+3. Before recording, check that the dashboard copy says "Runs on IBM LinuxONE" and that every number matches the z17 run.
+4. **Pitch deck PDF** named `Second Look_IBM Z Datathon 2026 Project`: problem with the Bangladesh opener, data, solution, IBM Z usage, evidence screenshots, team roles, limits, what's next.
+5. **Demo video, 3 minutes or less**, recorded on the VM through the tunnel.
+6. Submission: Hack2Skill form with SSF2026 in the description, links to all open-source resources, the repo made **public** after removing `docs/research/*.pdf` (event PDFs), and team name "Second Look".
+
+**Open items with Mahir:**
+- He registered solo. The deck says 4–6 members; ask Discord #helpdesk (message drafted earlier) and track the answer.
+- Confirm both mandatory labs are done.
+- Screenshot the portal's expanded instance-details panel (not the ERROR status row).
+- Check-in form: team "Second Look", mode Virtual unless he attends UTD in person.
+
 ## s390x environment facts (verified Oct 17 2026)
 
 - PyPI has **no s390x wheels** for pandas, pyarrow, scikit-learn, xgboost, torch or onnxruntime. Install them from **conda `defaults`**; conda-forge doesn't have them either.

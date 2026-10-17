@@ -8,3 +8,5 @@ data/raw/
 data/processed/
 models/*.joblib
 secondlook.db
+data/policy/*.pdf
+data/policy/*.txt

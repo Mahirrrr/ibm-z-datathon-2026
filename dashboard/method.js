@@ -27,8 +27,9 @@ const FEATURE_LABELS = {
 const STACK = [
   ["IBM LinuxONE Community Cloud (s390x)", "Runs the pipeline, model, API, and dashboard", "machine"],
   ["IBM Snap ML", "Gradient-boosted model training and batch scoring", "backend"],
-  ["Telum on-chip AI accelerator (NNPA)", "Snap ML zdnn_tensors engine scores every household on the AI accelerator", "nnpa"],
-  ["llama.cpp local LLM", "Writes callback scripts without data leaving the machine", null],
+  ["Snap ML zdnn_tensors engine", "Tree ensemble compiled for the NNPA; scores identical to CPU, so not counted as accelerator proof", "nnpa"],
+  ["TensorFlow + IBM zDNN plugin", "Keras twin of the model, timed on the Telum NNPA vs plain CPU", "twin"],
+  ["IBM Granite 3.3 2B on llama.cpp", "Writes cited callback notes from FEMA policy (RAG), without data leaving the machine", "genai"],
   ["Podman container", "Rootless, read-only image serving the API and dashboard", "container"],
 ];
 
@@ -40,7 +41,11 @@ function stat(label, value, sub = "") {
   return el("div", { class: "stat" }, el("div", { class: "label" }, label), el("div", { class: "value" }, value), el("div", { class: "sub" }, sub));
 }
 
-function render({ metrics: m, feature_importance: fi, policy, runtime }) {
+function render({ metrics: m, feature_importance: fi, policy, runtime, genai }) {
+  document.getElementById("genainote").textContent = genai
+    ? `On LinuxONE: ${fmt.int(genai.notes)} notes passed the checks and ${fmt.int(genai.rejected)} were rejected. ` +
+      `Median ${Math.round(genai.median_seconds)}s and ${Math.round(genai.median_completion_tokens)} tokens per household on 3 vCPU.`
+    : "Granite notes have not been generated for this database yet.";
   const lift = (p) => `${Math.round(p / m.positive_rate)}x base rate`;
   document.getElementById("metrics").replaceChildren(
     stat("ROC AUC, unseen disasters", m.roc_auc.toFixed(3)),
@@ -86,7 +91,8 @@ function render({ metrics: m, feature_importance: fi, policy, runtime }) {
 
   const bench = m.inference_benchmark;
   const nnpa = bench && bench.engines.zdnn_tensors && bench.engines.zdnn_tensors.engine === "zdnn_tensors";
-  const done = { machine: onZ, backend: m.backend === "snapml", nnpa, container: Boolean(runtime && runtime.container) };
+  const done = { machine: onZ, backend: m.backend === "snapml", nnpa, container: Boolean(runtime && runtime.container),
+                 genai: Boolean(genai && genai.notes), twin: Boolean(m.twin_benchmark) };
   document.getElementById("stack").replaceChildren(
     ...STACK.map(([name, what, key]) => {
       const ok = key ? done[key] : false;
@@ -97,12 +103,33 @@ function render({ metrics: m, feature_importance: fi, policy, runtime }) {
     })
   );
   renderEngines(bench);
+  renderTwin(m.twin_benchmark);
+}
+
+function renderTwin(t) {
+  const target = document.getElementById("twin");
+  if (!t) {
+    target.replaceChildren();
+    return;
+  }
+  const rows = [["nnpa", "Telum AI accelerator (NNPA, zDNN plugin)", "#42be65"], ["cpu", "CPU (NNPA_DEVICES=0)", "#78a9ff"]];
+  const max = Math.max(...rows.map(([k]) => t.runs[k].records_per_second));
+  target.replaceChildren(
+    el("p", { class: "panel-title" }, `${t.framework} twin: scoring ${fmt.int(t.runs.cpu.rows_scored)} held-out households`),
+    ...rows.map(([k, label, color]) =>
+      el("div", { class: "hbar" },
+        el("span", {}, label),
+        el("div", { class: "track" }, el("div", { class: "fill", style: `width:${(t.runs[k].records_per_second / max) * 100}%;background:${color}` })),
+        el("span", { class: "n", style: "width:auto" }, `${fmt.compact(t.runs[k].records_per_second)}/s`))),
+    el("p", { class: "note" }, `NNPA vs CPU: ${t.speedup_nnpa_vs_cpu}x. ROC AUC ${t.runs.nnpa.roc_auc.toFixed(3)} (twin, NNPA). ` +
+      `Max score difference ${t.max_abs_diff_nnpa_vs_cpu.toExponential(1)}, from the accelerator's reduced-precision math.`)
+  );
 }
 
 const ENGINE_LABELS = {
   cpu_default: "CPU, standard trees",
   compress_trees: "CPU, Snap ML compressed trees",
-  zdnn_tensors: "Telum AI accelerator (NNPA)",
+  zdnn_tensors: "Snap ML zdnn_tensors engine",
 };
 
 function renderEngines(bench) {
@@ -120,7 +147,7 @@ function renderEngines(bench) {
         el("span", {}, ENGINE_LABELS[key] || key),
         el("div", { class: "track" }, el("div", { class: "fill", style: `width:${(e.records_per_second / max) * 100}%;background:${key === "zdnn_tensors" ? "#42be65" : "#78a9ff"}` })),
         el("span", { class: "n", style: "width:auto" }, `${fmt.compact(e.records_per_second)}/s`))),
-    el("p", { class: "note" }, "Every engine returns the same scores (max difference shown in the API). Measured, not claimed.")
+    el("p", { class: "note" }, "Every engine returns the same scores (max difference 1e-16). Measured, not claimed.")
   );
 }
 

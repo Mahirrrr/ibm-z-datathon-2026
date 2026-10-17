@@ -5,9 +5,10 @@ import sqlite3
 
 import pandas as pd
 
-from pipeline import frames
+from pipeline import frames, genai
 from pipeline.codebook import INELIGIBLE_REASONS, TIER_LABELS
-from pipeline.config import ADJUSTED_ODDS, BENCHMARK, CALLBACKS, COHORT, DB_PATH, FAIRNESS, METRICS, SCORES
+from pipeline.config import ADJUSTED_ODDS, BENCHMARK, CALLBACKS, COHORT, DB_PATH, FAIRNESS, METRICS, NOTES, SCORES
+from pipeline.twin import TWIN_BENCHMARK
 
 
 def disaster_summary():
@@ -41,6 +42,8 @@ def main():
     metrics = json.loads(METRICS.read_text())
     if BENCHMARK.exists():
         metrics["inference_benchmark"] = json.loads(BENCHMARK.read_text())
+    if TWIN_BENCHMARK.exists():
+        metrics["twin_benchmark"] = json.loads(TWIN_BENCHMARK.read_text())
     importance = pd.DataFrame(metrics.pop("feature_importance"))
     codes = pd.DataFrame(
         [{"code": k, "label": v} for k, v in INELIGIBLE_REASONS.items()]
@@ -57,6 +60,9 @@ def main():
             "model_metrics", con, index=False
         )
         codes.to_sql("reason_codes", con, index=False)
+        if NOTES.exists():  # optional: written by pipeline.genai on LinuxONE
+            genai.load_notes(NOTES).to_sql("callback_notes", con, index=False)
+            con.execute("CREATE INDEX idx_notes_id ON callback_notes(id)")
         con.execute("CREATE INDEX idx_callbacks_disaster ON callbacks(disasterNumber, rank_in_disaster)")
     print(f"wrote {DB_PATH} ({DB_PATH.stat().st_size / 1e6:.1f} MB)")
 

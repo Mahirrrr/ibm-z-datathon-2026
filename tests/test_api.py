@@ -1,3 +1,4 @@
+import json
 import sqlite3
 
 import pandas as pd
@@ -50,7 +51,49 @@ def client(tmp_path):
                      ).to_sql("feature_importance", con, index=False)
         pd.DataFrame([{"key": "roc_auc", "value": "0.78"}, {"key": "backend", "value": '"sklearn"'}]
                      ).to_sql("model_metrics", con, index=False)
+        pd.DataFrame([
+            {"id": 10, "status": "ok", "reason": None, "why_flagged": "Granite why", "callback_script": "Granite script",
+             "citations": json.dumps([{"ref": "P1", "label": "IAPPG 1.1, Ch. 3 §II.A.4 Occupancy, p. 51"}]),
+             "model": "granite", "seconds": 40.0, "prompt_tokens": 700, "completion_tokens": 200},
+            {"id": 11, "status": "rejected", "reason": "no citation", "why_flagged": None, "callback_script": None,
+             "citations": "[]", "model": "granite", "seconds": 30.0, "prompt_tokens": 700, "completion_tokens": 150},
+        ]).to_sql("callback_notes", con, index=False)
     return TestClient(create_app(db))
+
+
+@pytest.fixture
+def client_without_notes(client, tmp_path):
+    with sqlite3.connect(tmp_path / "test.db") as con:
+        con.execute("DROP TABLE callback_notes")
+    return client
+
+
+def test_callbacks_include_granite_note_only_when_ok(client):
+    rows = {r["id"]: r for r in client.get("/api/disasters/1/callbacks").json()}
+    assert rows[10]["note"]["why_flagged"] == "Granite why"
+    assert rows[10]["note"]["callback_script"] == "Granite script"
+    assert rows[10]["note"]["citations"][0]["label"].startswith("IAPPG 1.1")
+    assert rows[10]["note"]["model"] == "granite"
+    assert rows[11]["note"] is None
+    assert rows[12]["note"] is None
+
+
+def test_callbacks_work_without_notes_table(client_without_notes):
+    rows = client_without_notes.get("/api/disasters/1/callbacks").json()
+    assert len(rows) == 3
+    assert all(r["note"] is None for r in rows)
+    assert client_without_notes.get("/api/model").json()["genai"] is None
+
+
+def test_model_reports_genai_stats(client):
+    genai = client.get("/api/model").json()["genai"]
+    assert genai == {"model": "granite", "notes": 1, "rejected": 1, "median_seconds": 35.0,
+                     "median_completion_tokens": 175.0}
+
+
+def test_csv_has_no_note_column(client):
+    header = client.get("/api/disasters/1/callbacks.csv").text.splitlines()[0]
+    assert "note" not in header
 
 
 def test_summary_totals(client):

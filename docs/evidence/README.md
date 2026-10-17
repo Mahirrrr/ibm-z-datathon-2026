@@ -18,9 +18,27 @@ Everything here was captured from the project's IBM LinuxONE Community Cloud VM 
 |---|---|---|
 | CPU, standard trees | 21.3 | 419,197 |
 | CPU, Snap ML compressed trees | 3.9 | **2,306,666** |
-| Telum AI accelerator (NNPA, `zdnn_tensors`) | 37.3 | 239,909 |
+| Snap ML `zdnn_tensors` engine | 37.3 | 239,909 |
 
-All three return the same scores (max difference 1e-16). The NNPA path runs end to end. On this shared 3-vCPU VM, Snap ML's compressed trees were the fastest engine for this tree ensemble, so that is the one we report as fastest.
+All three return the same scores (max difference 1e-16). Because the NNPA computes in reduced precision, identical scores mean this run doesn't prove Snap ML used the accelerator. The TensorFlow twin below does. On this shared 3-vCPU VM, Snap ML's compressed trees were the fastest engine for this tree ensemble, so that is the one we report as fastest.
+
+### Telum NNPA via TensorFlow ([twin_benchmark.json](twin_benchmark.json))
+
+A Keras twin of the model scores 1,961,754 held-out households inside IBM's jupyter-lab-ml image (TensorFlow 2.18.1, ibm-zdnn-plugin 2.3.0):
+
+| Device | Records/sec |
+|---|---|
+| CPU (`NNPA_DEVICES=0`) | 1,424,337 |
+| Telum NNPA (zDNN plugin) | 1,745,681 (**1.23x**) |
+
+The maximum score difference is 0.0033, from reduced-precision NNPA math, so the accelerator really ran.
+
+### Generative layer ([callback_notes.jsonl](callback_notes.jsonl), [granite_runtime.txt](granite_runtime.txt))
+
+- IBM Granite 3.3 2B Instruct (Q4_0, big-endian GGUF) runs in llama.cpp on the z17, on 127.0.0.1:8081 only.
+- 50 cited notes cover the top 5 callbacks in each of the 10 largest disasters. All 50 passed the citation, dollar-amount and no-promise checks.
+- Median 142s and 252 generated tokens per note. Throughput on the shared VM ranged from 1.1 to 4.5 tokens/s.
+- [dashboard_disaster_4559_granite.png](dashboard_disaster_4559_granite.png) and [dashboard_method_genai.png](dashboard_method_genai.png) are served by the Podman container on the z17.
 
 ## Containers
 

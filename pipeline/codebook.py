@@ -33,6 +33,19 @@ TIER_LABELS = {
 }
 
 
+# OpenFEMA incidentTypeCode, from docs/data/ihp_fields.json
+INCIDENT_NAMES = {
+    "0": "Not applicable", "1": "Explosion", "2": "Straight-line winds", "3": "Tidal wave",
+    "4": "Tropical storm", "5": "Winter storm", "8": "Tropical depression", "A": "Tsunami",
+    "B": "Biological", "C": "Coastal storm", "D": "Drought", "E": "Earthquake", "F": "Flood",
+    "G": "Freezing", "H": "Hurricane", "I": "Terrorist", "J": "Typhoon", "K": "Dam/levee break",
+    "L": "Chemical", "M": "Mud/landslide", "N": "Nuclear", "O": "Severe ice storm",
+    "P": "Fishing losses", "Q": "Crop losses", "R": "Fire", "S": "Snowstorm", "T": "Tornado",
+    "U": "Civil unrest", "V": "Volcanic eruption", "W": "Severe storm", "X": "Toxic substances",
+    "Y": "Human cause", "Z": "Other",
+}
+
+
 def reason_label(code):
     """Human-readable label for a reason code; unknown or missing codes get a neutral label."""
     if code is None:
