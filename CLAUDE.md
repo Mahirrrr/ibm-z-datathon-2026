@@ -193,7 +193,17 @@ Done so far: cohort, model, fairness, ranking and SQLite store, all on the Mac (
 - **Docs:** `docs/VIDEO_PLAN.md`, `docs/SUBMISSION.md` (form text with SSF2026, links, public-repo checklist) and `docs/deck/deck.html`, rendered to `docs/deck/Second Look_IBM Z Datathon 2026 Project.pdf`.
 - Evidence added: `docs/evidence/{twin_benchmark.json, callback_notes.jsonl, granite_runtime.txt, dashboard_disaster_4559_granite.png, dashboard_method_genai.png}`. VM DB backup from before GenAI: `~/secondlook.db.pre-genai`.
 - **Team confirmed (Oct 17): the team name is "Second Look" and Mahir Abdullah is the only member.** Deck slide 12 and the video plan are updated. The organizers still need to confirm that a solo entry is allowed.
-- Still open with Mahir: making the repo public (the event PDFs are in history), the portal screenshot, the lab screenshots, and recording the video.
+- **Public demo (Oct 17, ~10 AM CDT).**
+  - Static snapshot: https://mahirrrr.github.io/ibm-z-datathon-2026/, served from the `gh-pages` branch. Build it with `python -m pipeline.static_site --out <dir> --live-url <url>`, then push that dir to `gh-pages` from a separate clone. Never switch branches in this checkout.
+  - Live: a Cloudflare quick tunnel. `~/cloudflared` was cross-compiled for s390x and runs as the systemd user service `second-look-tunnel` (linger is on), with logs in `~/tunnel.log`.
+  - The current URL is https://divisions-films-jesse-nsw.trycloudflare.com. It **changes whenever the tunnel restarts**. Get the new one with `grep -oE "https://[a-z0-9-]+\.trycloudflare\.com" ~/tunnel.log | tail -1`, then rebuild and push the Pages banner, the README and SUBMISSION.md.
+  - The container now runs with `--restart=always`, with `podman-restart.service` enabled.
+- **Repo is public (Oct 17).** History was rewritten: the event PDFs were removed and the VM IP is shown as `<vm-ip>`. The real IP is only in the gitignored `.claude/memory/linuxone-vm-address.md`, so never commit it.
+- Done: the portal screenshot and both lab runs (`docs/evidence/labs`).
+- Still open with Mahir:
+  - Discord helpdesk answers: whether a solo entry is allowed, which notebook is the "hybrid" lab, and a reset of the ERROR label.
+  - Recording the video.
+  - The Hack2Skill form.
 
 ## Game plan from here (written Oct 17, ~6 AM CDT; deadline Sun Oct 18 11:29 AM CDT, target 9 AM)
 

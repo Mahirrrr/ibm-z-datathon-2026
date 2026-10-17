@@ -54,7 +54,7 @@ Settings below are visible in `container.txt`:
 - **Rootless Podman** (`rootless=true`), seccomp on, cgroups v2.
 - **Read-only root filesystem** (`ReadonlyRootfs=true`), **all Linux capabilities dropped**, `no-new-privileges`, runs as UID 1000.
 - **Database mounted read-only** (`rw=false`). The API also opens SQLite with `mode=ro`.
-- **No public port.** The container binds `127.0.0.1:8000` only, and the dashboard is reached through an SSH tunnel with key-only auth.
+- **No inbound port.** The container binds `127.0.0.1:8000` only. Caseworkers use an SSH tunnel with key-only auth, and the public demo uses an outbound Cloudflare quick tunnel to the same read-only API.
 - **No direct identifiers.** The OpenFEMA dataset has no names, addresses or phone numbers; households are opaque record IDs.
 
 ## Dashboard served from LinuxONE

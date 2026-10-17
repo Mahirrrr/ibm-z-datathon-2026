@@ -8,6 +8,7 @@ Submit at https://hack2skill.com/event/datathon-2026. The deadline is about Sun 
 - [ ] **Description** contains the event code **SSF2026** (text below).
 - [ ] **Demo video**, 3:00 or less, recorded on the LinuxONE VM (see `docs/VIDEO_PLAN.md`), uploaded as unlisted YouTube and linked.
 - [ ] **Pitch deck PDF** named exactly `Second Look_IBM Z Datathon 2026 Project.pdf`.
+- [x] **Working prototype** (optional): https://mahirrrr.github.io/ibm-z-datathon-2026/ (static snapshot, always up). Live on the z17, best effort: https://divisions-films-jesse-nsw.trycloudflare.com (the URL changes if the VM restarts; rebuild the snapshot to update its banner link).
 - [ ] **Repository link.** The repo is private now. Before making it public:
   - [ ] Remove `docs/research/*.pdf` (the event guidebook and kickoff deck). They are in git history, so `git rm` alone still leaves them reachable. Either rewrite history (`git filter-repo --path "docs/research/IBM Z Datathon 2026 Guidebook.pdf" --path "docs/research/IBM Z Datathon Kickoff Deck.pdf" --invert-paths`) or publish a fresh repo from a clean squash. **Mahir decides; both are destructive to history.**
   - [ ] Confirm no keys or tokens are in the tree: `git grep -n -I -E "BEGIN .*PRIVATE|token=|Your_Token"`.

@@ -173,7 +173,7 @@
     <div><b>Local LLM.</b> Granite runs on the VM and listens only on 127.0.0.1. No third-party AI API ever sees a household.</div>
     <div><b>Hardened container.</b> Rootless Podman with a read-only root filesystem, all capabilities dropped, no-new-privileges, and a non-root UID.</div>
     <div><b>Read-only data.</b> The database is mounted <code>:ro</code>, and the API opens SQLite with <code>mode=ro</code>.</div>
-    <div><b>No public port.</b> The dashboard binds to localhost and is reached through an SSH tunnel with key-only auth. We replaced the public default Jupyter token.</div>
+    <div><b>No inbound port.</b> The dashboard binds to localhost. Caseworkers use an SSH tunnel with key-only auth, and the public demo uses an outbound Cloudflare tunnel to the read-only API. We replaced the public default Jupyter token.</div>
     <div><b>No direct identifiers.</b> OpenFEMA has no names, addresses or phone numbers. Households are opaque record IDs.</div>
     <div><b>Guarded generation.</b> Citations, dollar amounts and promises are checked in code before any note is shown.</div>
   </div>
@@ -230,7 +230,7 @@
     </div>
   </div>
   <p class="lede" style="margin-top:40px">94,395 households. One callback each.</p>
-  <div class="foot"><span>github.com/Mahirrrr/ibm-z-datathon-2026 · SSF2026</span><span>12</span></div>
+  <div class="foot"><span>Demo: mahirrrr.github.io/ibm-z-datathon-2026 · Code: github.com/Mahirrrr/ibm-z-datathon-2026 · SSF2026</span><span>12</span></div>
 </section>
 
 </body>

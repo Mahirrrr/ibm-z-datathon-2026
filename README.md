@@ -4,7 +4,9 @@
 
 Team Second Look · IBM Z Datathon 2026 (Shooting Stars Foundation × IBM) · Theme 3: Wildcard · Event code SSF2026
 
-Built and run on **IBM LinuxONE (IBM z17, s390x)** with **IBM Snap ML**, the **Telum AI accelerator (NNPA)**, and a rootless **Podman** container.
+Built and run on **IBM LinuxONE (IBM z17, s390x)** with **IBM Snap ML**, the **Telum AI accelerator (NNPA)**, **IBM Granite**, and a rootless **Podman** container.
+
+**Try it:** [static snapshot on GitHub Pages](https://mahirrrr.github.io/ibm-z-datathon-2026/), which always works · [live on the z17](https://divisions-films-jesse-nsw.trycloudflare.com), best effort (a Cloudflare quick tunnel, so the URL changes if the VM restarts)
 
 ![Story page served from LinuxONE](docs/evidence/dashboard_story.png)
 
@@ -62,7 +64,7 @@ flowchart LR
         T & FA & R & B & G --> DB[(secondlook.db)]
         DB -->|read-only mount| P[Podman container<br/>FastAPI + dashboard<br/>127.0.0.1:8000]
     end
-    P -->|SSH tunnel| U[Browser]
+    P -->|SSH tunnel / outbound Cloudflare tunnel| U[Browser]
 ```
 
 ### Why two machines
@@ -122,7 +124,7 @@ Each of these cost real time, and each one is now handled in code:
 
 - The container runs **rootless**, with a **read-only root filesystem**, **all Linux capabilities dropped**, `no-new-privileges`, and a non-root UID.
 - The database is mounted **read-only**, and the API opens SQLite with `mode=ro`.
-- The container listens on **localhost only**. Viewers reach it through an SSH tunnel with key-only authentication.
+- The container listens on **localhost only**, and the VM opens no inbound port for it. Caseworkers use an SSH tunnel with key-only authentication. The public demo goes through an *outbound* Cloudflare quick tunnel (`cloudflared`, cross-compiled for s390x) to the same read-only API.
 - The dataset has no names, addresses, or phone numbers. Households are opaque record IDs.
 
 ## How to run it
@@ -194,6 +196,14 @@ ssh -N -i <key> -L 8100:127.0.0.1:8000 <user>@<vm-ip>
 
 Open http://localhost:8100.
 
+### 6. Public demo (optional)
+
+```bash
+python -m pipeline.static_site --out site --live-url https://<tunnel>   # GitHub Pages snapshot from the real API
+CGO_ENABLED=0 GOOS=linux GOARCH=s390x go build -o cloudflared ./cmd/cloudflared   # no official s390x build
+./cloudflared tunnel --no-autoupdate --url http://127.0.0.1:8000
+```
+
 ## Repository layout
 
 ```
@@ -211,6 +221,7 @@ pipeline/
   genai.py       Granite (llama.cpp) notes and scripts, citation/amount/promise checks
   twin.py        Keras twin of the model, CPU vs Telum NNPA via IBM's zDNN plugin
   store.py       everything into secondlook.db
+  static_site.py GitHub Pages snapshot: every API response written to JSON
 api/app.py       read-only FastAPI over secondlook.db + static dashboard
 dashboard/       Story, Disasters, Method pages (IBM Plex, Carbon colors)
 tests/           73 tests: cohort rules, fairness math, ranking, Arrow I/O, API, policy retrieval, Granite checks, twin encoding
