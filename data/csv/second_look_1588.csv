@@ -1,0 +1,15 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,20799.6494140625,Passaic (County),NJ,1,lowest income band,"FEMA verified $20,800 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.34625738859176636,3278508719
+2,1.375,missing_documents,7877.079833984375,Mercer (County),NJ,1,age 65+,"FEMA verified $7,877 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.32010385394096375,3285819511
+3,1.2857142857142856,missing_documents,11004.35986328125,Mercer (County),NJ,1,,"FEMA verified $11,004 in damage; denied for missing documents; home needs repairs to be livable.",0.3148885667324066,3286271881
+4,1.0714285714285714,missing_documents,5752.329833984375,Passaic (County),NJ,1,,"FEMA verified $5,752 in damage; denied for missing documents; home needs repairs to be livable.",0.3449491560459137,3281784374
+5,1.0446428571428572,unverified_ownership_or_occupancy,11861.6796875,Mercer (County),NJ,0,renter,"FEMA verified $11,862 in damage; ownership or occupancy never verified; renter.",0.46022048592567444,3276332022
+6,0.9642857142857144,missing_documents,5128.18994140625,Sussex (County),NJ,1,,"FEMA verified $5,128 in damage; denied for missing documents; home needs repairs to be livable.",0.34161484241485596,3281362585
+7,0.8571428571428571,missing_documents,4297.14990234375,Mercer (County),NJ,1,,"FEMA verified $4,297 in damage; denied for missing documents; home needs repairs to be livable.",0.2590794861316681,3278092510
+8,0.75,missing_documents,3957.2398681640625,Passaic (County),NJ,1,,"FEMA verified $3,957 in damage; denied for missing documents; home needs repairs to be livable.",0.27709054946899414,3273044766
+9,0.6428571428571428,missing_documents,2426.9398498535156,Bergen (County),NJ,1,,"FEMA verified $2,427 in damage; denied for missing documents; home needs repairs to be livable.",0.49502885341644287,3279395940
+10,0.44999999999999996,unverified_ownership_or_occupancy,1694.239990234375,Passaic (County),NJ,1,renter,"FEMA verified $1,694 in damage; ownership or occupancy never verified; home needs repairs to be livable; renter.",0.4210298955440521,3285416251
+11,0.4017857142857143,unverified_ownership_or_occupancy,1825.5999755859375,Morris (County),NJ,0,renter,"FEMA verified $1,826 in damage; ownership or occupancy never verified; renter.",0.41518259048461914,3271258588
+12,0.375,missing_documents,1042.3099365234375,Passaic (County),NJ,1,lowest income band,"FEMA verified $1,042 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.3118453323841095,3283469288
+13,0.21428571428571427,missing_documents,571.22998046875,Gloucester (County),NJ,1,,FEMA verified $571 in damage; denied for missing documents; home needs repairs to be livable.,0.5838755369186401,3268029722
+14,0.08035714285714285,unverified_ownership_or_occupancy,298.6999816894531,Hunterdon (County),NJ,0,renter,FEMA verified $299 in damage; ownership or occupancy never verified; renter.,0.5039409399032593,3291462256

@@ -1,0 +1,6 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.4000000000000001,missing_documents,8515.669799804688,Yellowstone (County),MT,1,lowest income band,"FEMA verified $8,516 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.8807946443557739,3287924769
+2,1.2000000000000002,lost_contact,19863.29052734375,Park (County),MT,1,,"FEMA verified $19,863 in damage; denied after fema lost contact; home needs repairs to be livable.",0.23550882935523987,3285492562
+3,1.2,missing_documents,2001.260009765625,Yellowstone (County),MT,1,"renter, lowest income band","FEMA verified $2,001 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.9398590922355652,3291196357
+4,0.7000000000000001,missing_documents,1945.3399658203125,Carbon (County),MT,1,lowest income band,"FEMA verified $1,945 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.40824320912361145,3279134146
+5,0.35000000000000003,missing_documents,1199.3699951171875,Park (County),MT,1,lowest income band,"FEMA verified $1,199 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.5404108762741089,3275838721

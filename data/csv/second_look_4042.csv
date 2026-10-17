@@ -1,0 +1,10 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,4720.97998046875,Louisa (County),VA,1,age 65+,"FEMA verified $4,721 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.2895606458187103,3271677818
+2,1.3333333333333333,missing_documents,2274.7099609375,Spotsylvania (County),VA,1,,"FEMA verified $2,275 in damage; denied for missing documents; home needs repairs to be livable.",0.14202448725700378,3280461137
+3,1.1666666666666667,missing_documents,2028.3399658203125,Louisa (County),VA,1,,"FEMA verified $2,028 in damage; denied for missing documents; home needs repairs to be livable.",0.1463727355003357,3291407161
+4,1.0,missing_documents,1521.8599853515625,Goochland (County),VA,1,,"FEMA verified $1,522 in damage; denied for missing documents; home needs repairs to be livable.",0.3693086802959442,3282189143
+5,0.8333333333333334,missing_documents,1187.679931640625,Louisa (County),VA,1,,"FEMA verified $1,188 in damage; denied for missing documents; home needs repairs to be livable.",0.14063861966133118,3272598961
+6,0.6666666666666666,missing_documents,925.1900024414062,Fluvanna (County),VA,1,,FEMA verified $925 in damage; denied for missing documents; home needs repairs to be livable.,0.19215165078639984,3267989892
+7,0.5,missing_documents,873.2899780273438,Spotsylvania (County),VA,1,,FEMA verified $873 in damage; denied for missing documents; home needs repairs to be livable.,0.10031039267778397,3288170707
+8,0.3,unverified_ownership_or_occupancy,537.8399658203125,Fluvanna (County),VA,1,,FEMA verified $538 in damage; ownership or occupancy never verified; home needs repairs to be livable.,0.3408205807209015,3270611073
+9,0.16666666666666666,missing_documents,128.5399932861328,Louisa (County),VA,1,,FEMA verified $129 in damage; denied for missing documents; home needs repairs to be livable.,0.14850033819675446,3271916426

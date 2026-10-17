@@ -1,0 +1,4 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.25,missing_documents,6682.8798828125,Salt Lake (County),UT,1,,"FEMA verified $6,683 in damage; denied for missing documents; home needs repairs to be livable.",0.5338196754455566,3273812749
+2,1.25,missing_documents,6682.8798828125,Salt Lake (County),UT,1,,"FEMA verified $6,683 in damage; denied for missing documents; home needs repairs to be livable.",0.6373827457427979,3285526345
+3,0.5833333333333333,missing_documents,581.739990234375,Salt Lake (County),UT,1,lowest income band,FEMA verified $582 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.,0.5982508063316345,3275354492

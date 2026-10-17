@@ -1,0 +1,5 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.5,missing_documents,5400.0,Sangamon (County),IL,1,,"FEMA verified $5,400 in damage; denied for missing documents; home needs repairs to be livable.",0.3769195079803467,3286207447
+2,1.0500000000000003,lost_contact,2804.4599609375,Sangamon (County),IL,1,lowest income band,"FEMA verified $2,804 in damage; denied after fema lost contact; home needs repairs to be livable; lowest income band.",0.47361841797828674,3273864703
+3,0.675,unverified_ownership_or_occupancy,322.1399841308594,Sangamon (County),IL,0,"renter, lowest income band","FEMA verified $322 in damage; ownership or occupancy never verified; renter, lowest income band.",0.7542483806610107,3274478673
+4,0.25,lost_contact,305.5299987792969,Sangamon (County),IL,0,lowest income band,FEMA verified $306 in damage; denied after fema lost contact; lowest income band.,0.38799506425857544,3281291530

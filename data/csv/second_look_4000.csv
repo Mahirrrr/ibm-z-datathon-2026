@@ -1,0 +1,5 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,45705.347900390625,Franklin (County),AR,1,lowest income band,"FEMA verified $45,705 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.5988892316818237,3269314339
+2,1.3125,missing_documents,23102.628662109375,Franklin (County),AR,1,lowest income band,"FEMA verified $23,103 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.8779036402702332,3285363430
+3,0.875,missing_documents,8575.499633789062,Franklin (County),AR,1,lowest income band,"FEMA verified $8,575 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.5424362421035767,3283066596
+4,0.30000000000000004,lost_contact,4201.9599609375,Franklin (County),AR,1,,"FEMA verified $4,202 in damage; denied after fema lost contact; home needs repairs to be livable.",0.2966228127479553,3279364917

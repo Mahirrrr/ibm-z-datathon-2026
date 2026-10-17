@@ -1,0 +1,13 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.5,missing_documents,32029.08984375,Tippah (County),MS,1,,"FEMA verified $32,029 in damage; denied for missing documents; home needs repairs to be livable.",0.7839003205299377,3287150250
+2,1.4583333333333335,missing_documents,18365.569091796875,Marshall (County),MS,1,lowest income band,"FEMA verified $18,366 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.8944904804229736,3274393627
+3,1.375,missing_documents,21068.928955078125,Marshall (County),MS,1,,"FEMA verified $21,069 in damage; denied for missing documents; home needs repairs to be livable.",0.49697574973106384,3275083549
+4,1.3125,missing_documents,6032.14990234375,Benton (County),MS,1,renter,"FEMA verified $6,032 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.7369720339775085,3270476589
+5,1.1666666666666667,missing_documents,2913.7099609375,Quitman (County),MS,1,"renter, lowest income band","FEMA verified $2,914 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.8952425718307495,3277057421
+6,1.0,missing_documents,4448.93994140625,Monroe (County),MS,1,,"FEMA verified $4,449 in damage; denied for missing documents; home needs repairs to be livable.",0.715237021446228,3289531327
+7,0.875,missing_documents,1430.1499633789062,Marshall (County),MS,1,lowest income band,"FEMA verified $1,430 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.638365626335144,3281947850
+8,0.5833333333333333,missing_documents,1223.0,Benton (County),MS,1,renter,"FEMA verified $1,223 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.8169779777526855,3282961148
+9,0.4166666666666667,missing_documents,1231.3399658203125,Coahoma (County),MS,0,,"FEMA verified $1,231 in damage; denied for missing documents.",0.14880169928073883,3271921715
+10,0.375,missing_documents,1011.6900024414062,Coahoma (County),MS,1,,"FEMA verified $1,012 in damage; denied for missing documents; home needs repairs to be livable.",0.363384485244751,3284497360
+11,0.3333333333333333,missing_documents,624.5499877929688,Quitman (County),MS,1,"renter, lowest income band","FEMA verified $625 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.8183850646018982,3278334261
+12,0.08333333333333333,lost_contact,111.29999542236328,Tippah (County),MS,0,lowest income band,FEMA verified $111 in damage; denied after fema lost contact; lowest income band.,0.3790181279182434,3274380228

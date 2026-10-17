@@ -1,0 +1,5 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,18281.830291748047,Jackson (County),TN,1,age 65+,"FEMA verified $18,282 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.5723111629486084,3282189584
+2,1.5,missing_documents,10773.759765625,Hamilton (County),TN,1,"renter, lowest income band","FEMA verified $10,774 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.39738789200782776,3289685276
+3,1.0,missing_documents,1124.919921875,Bradley (County),TN,1,"renter, lowest income band","FEMA verified $1,125 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.5353633165359497,3273910839
+4,0.39375,unverified_ownership_or_occupancy,1033.949966430664,Bradley (County),TN,1,lowest income band,"FEMA verified $1,034 in damage; ownership or occupancy never verified; home needs repairs to be livable; lowest income band.",0.6544988751411438,3285779485

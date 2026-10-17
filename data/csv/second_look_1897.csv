@@ -1,0 +1,13 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,18323.289428710938,Passaic (County),NJ,1,lowest income band,"FEMA verified $18,323 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.5187803506851196,3292222673
+2,1.4583333333333335,missing_documents,4674.98974609375,Passaic (County),NJ,1,age 65+,"FEMA verified $4,675 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.17666535079479218,3274529027
+3,1.375,missing_documents,6381.629943847656,Essex (County),NJ,1,,"FEMA verified $6,382 in damage; denied for missing documents; home needs repairs to be livable.",0.15398544073104858,3273639833
+4,1.125,missing_documents,3217.929931640625,Morris (County),NJ,1,,"FEMA verified $3,218 in damage; denied for missing documents; home needs repairs to be livable.",0.2024969458580017,3285786617
+5,1.0,missing_documents,3020.829833984375,Monmouth (County),NJ,1,,"FEMA verified $3,021 in damage; denied for missing documents; home needs repairs to be livable.",0.1042291522026062,3277543407
+6,0.875,missing_documents,2580.31005859375,Atlantic (County),NJ,1,,"FEMA verified $2,580 in damage; denied for missing documents; home needs repairs to be livable.",0.14903707802295685,3271212963
+7,0.75,missing_documents,2516.2999267578125,Morris (County),NJ,1,,"FEMA verified $2,516 in damage; denied for missing documents; home needs repairs to be livable.",0.18943963944911957,3267977559
+8,0.7291666666666667,missing_documents,2236.530029296875,Atlantic (County),NJ,1,renter,"FEMA verified $2,237 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.7031840682029724,3288620841
+9,0.5833333333333333,missing_documents,1893.6099853515625,Morris (County),NJ,1,renter,"FEMA verified $1,894 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.4698440432548523,3278931375
+10,0.375,missing_documents,1630.199951171875,Morris (County),NJ,1,,"FEMA verified $1,630 in damage; denied for missing documents; home needs repairs to be livable.",0.1803939938545227,3278485824
+11,0.22499999999999998,unverified_ownership_or_occupancy,814.6300048828125,Monmouth (County),NJ,1,,FEMA verified $815 in damage; ownership or occupancy never verified; home needs repairs to be livable.,0.13533663749694824,3291441723
+12,0.08333333333333333,lost_contact,174.72999572753906,Monmouth (County),NJ,0,age 65+,FEMA verified $175 in damage; denied after fema lost contact; age 65+.,0.13207966089248657,3284933626

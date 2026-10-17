@@ -1,0 +1,9 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,12497.74951171875,Caledonia (County),VT,1,"age 65+, needs accessibility support","FEMA verified $12,498 in damage; denied for missing documents; home needs repairs to be livable; age 65+, needs accessibility support.",0.26713770627975464,3278633417
+2,1.5,missing_documents,13577.2294921875,Addison (County),VT,1,,"FEMA verified $13,577 in damage; denied for missing documents; home needs repairs to be livable.",0.47445300221443176,3272749934
+3,1.0500000000000003,lost_contact,9886.01953125,Washington (County),VT,1,renter,"FEMA verified $9,886 in damage; denied after fema lost contact; home needs repairs to be livable; renter.",0.8239246010780334,3290710792
+4,0.875,lost_contact,3569.5,Chittenden (County),VT,1,age 65+,"FEMA verified $3,570 in damage; denied after fema lost contact; home needs repairs to be livable; age 65+.",0.3645898401737213,3276455079
+5,0.875,missing_documents,1786.6199951171875,Washington (County),VT,1,lowest income band,"FEMA verified $1,787 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.8036896586418152,3290730530
+6,0.65625,missing_documents,1689.43994140625,Caledonia (County),VT,1,lowest income band,"FEMA verified $1,689 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.4963761568069458,3270760548
+7,0.4375,missing_documents,1674.489990234375,Essex (County),VT,1,needs accessibility support,"FEMA verified $1,674 in damage; denied for missing documents; home needs repairs to be livable; needs accessibility support.",0.4317606985569,3288752341
+8,0.1875,missing_documents,1500.0,Caledonia (County),VT,1,,"FEMA verified $1,500 in damage; denied for missing documents; home needs repairs to be livable.",0.6823861002922058,3292828973

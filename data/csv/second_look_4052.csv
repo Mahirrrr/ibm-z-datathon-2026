@@ -1,0 +1,10 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,2.0,missing_documents,3071.919921875,Jefferson (County),AL,1,"renter, lowest income band","FEMA verified $3,072 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.8256208300590515,3280897027
+2,1.3333333333333333,missing_documents,1656.72998046875,Perry (County),AL,1,,"FEMA verified $1,657 in damage; denied for missing documents; home needs repairs to be livable.",0.5627709031105042,3277190721
+3,0.7777777777777778,lost_contact,1048.969970703125,Chilton (County),AL,,age 65+,"FEMA verified $1,049 in damage; denied after fema lost contact; age 65+.",0.9881128072738647,3269310665
+4,0.7777777777777777,missing_documents,410.28997802734375,Jefferson (County),AL,1,renter,FEMA verified $410 in damage; denied for missing documents; home needs repairs to be livable; renter.,0.6042140126228333,3281955575
+5,0.6666666666666666,lost_contact,945.719970703125,Jefferson (County),AL,,renter,FEMA verified $946 in damage; denied after fema lost contact; renter.,0.9943591952323914,3281953130
+6,0.4444444444444445,lost_contact,593.5999755859375,Jefferson (County),AL,,,FEMA verified $594 in damage; denied after fema lost contact.,0.9947969317436218,3268407159
+7,0.26666666666666666,lost_contact,332.6099853515625,Chilton (County),AL,,,FEMA verified $333 in damage; denied after fema lost contact.,0.9911002516746521,3273662306
+8,0.17777777777777778,lost_contact,156.1999969482422,Jefferson (County),AL,,,FEMA verified $156 in damage; denied after fema lost contact.,0.978223979473114,3286244890
+9,0.08888888888888889,lost_contact,61.439998626708984,Chilton (County),AL,,,FEMA verified $61 in damage; denied after fema lost contact.,0.9918633103370667,3287723105

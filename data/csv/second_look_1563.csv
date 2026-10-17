@@ -1,0 +1,2 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,4045.68994140625,Warren (County),NJ,1,lowest income band,"FEMA verified $4,046 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.38574084639549255,3275666540

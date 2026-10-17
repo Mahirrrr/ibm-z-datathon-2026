@@ -1,0 +1,10 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,4015.6298828125,Lincoln (County),WV,1,lowest income band,"FEMA verified $4,016 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.825411856174469,3276305459
+2,1.5555555555555554,missing_documents,3086.89990234375,Marion (County),WV,1,age 65+,"FEMA verified $3,087 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.174993634223938,3277188699
+3,1.1666666666666667,missing_documents,2073.25,Wayne (County),WV,1,,"FEMA verified $2,073 in damage; denied for missing documents; home needs repairs to be livable.",0.6001110672950745,3289671043
+4,1.0,missing_documents,1514.52001953125,Lincoln (County),WV,1,,"FEMA verified $1,515 in damage; denied for missing documents; home needs repairs to be livable.",0.9596681594848633,3278476834
+5,0.9722222222222223,missing_documents,1421.6500244140625,Wayne (County),WV,1,lowest income band,"FEMA verified $1,422 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.7332429885864258,3285382396
+6,0.7777777777777777,missing_documents,1244.510009765625,Harrison (County),WV,1,lowest income band,"FEMA verified $1,245 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.5815624594688416,3268846984
+7,0.5833333333333333,missing_documents,613.739990234375,Wayne (County),WV,1,lowest income band,FEMA verified $614 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.,0.581158459186554,3284052483
+8,0.2222222222222222,missing_documents,237.95999145507812,Wayne (County),WV,0,,FEMA verified $238 in damage; denied for missing documents.,0.5219403505325317,3280912211
+9,0.1111111111111111,missing_documents,47.79999923706055,Lincoln (County),WV,0,,FEMA verified $48 in damage; denied for missing documents.,0.43151089549064636,3277191144

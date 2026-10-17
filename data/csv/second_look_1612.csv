@@ -1,0 +1,8 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,131446.08984375,Warrick (County),IN,1,age 65+,"FEMA verified $131,446 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.5659326910972595,3273619052
+2,1.2857142857142856,missing_documents,81169.15625,Vanderburgh (County),IN,1,,"FEMA verified $81,169 in damage; denied for missing documents; home needs repairs to be livable.",0.5753580927848816,3285319197
+3,1.0714285714285714,missing_documents,70297.05810546875,Vanderburgh (County),IN,1,,"FEMA verified $70,297 in damage; denied for missing documents; home needs repairs to be livable.",0.6162848472595215,3268821284
+4,0.8999999999999999,unverified_ownership_or_occupancy,15443.3994140625,Warrick (County),IN,1,renter,"FEMA verified $15,443 in damage; ownership or occupancy never verified; home needs repairs to be livable; renter.",0.6856691837310791,3270573584
+5,0.6428571428571428,missing_documents,14522.689804077148,Warrick (County),IN,1,,"FEMA verified $14,523 in damage; denied for missing documents; home needs repairs to be livable.",0.29206791520118713,3268827441
+6,0.34285714285714286,lost_contact,3657.93994140625,Vanderburgh (County),IN,1,,"FEMA verified $3,658 in damage; denied after fema lost contact; home needs repairs to be livable.",0.5262176394462585,3293517195
+7,0.21428571428571427,missing_documents,1706.5799560546875,Vanderburgh (County),IN,1,,"FEMA verified $1,707 in damage; denied for missing documents; home needs repairs to be livable.",0.4731992185115814,3278013936

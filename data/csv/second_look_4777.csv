@@ -1,0 +1,6 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,2.0,missing_documents,133803.759765625,Logan (County),OH,1,"lowest income band, age 65+","FEMA verified $133,804 in damage; denied for missing documents; home needs repairs to be livable; lowest income band, age 65+.",0.7480667233467102,3287879614
+2,1.2000000000000002,missing_documents,28931.269165039062,Delaware (County),OH,1,,"FEMA verified $28,931 in damage; denied for missing documents; home needs repairs to be livable.",0.9415668845176697,3289823555
+3,1.2,missing_documents,12244.1796875,Logan (County),OH,1,"lowest income band, needs accessibility support","FEMA verified $12,244 in damage; denied for missing documents; home needs repairs to be livable; lowest income band, needs accessibility support.",0.47836050391197205,3287443343
+4,0.6000000000000001,missing_documents,6852.7998046875,Delaware (County),OH,1,,"FEMA verified $6,853 in damage; denied for missing documents; home needs repairs to be livable.",0.10245723277330399,3269423168
+5,0.35000000000000003,missing_documents,1700.72998046875,Logan (County),OH,1,renter,"FEMA verified $1,701 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.818648636341095,3288759088

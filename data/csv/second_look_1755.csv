@@ -1,0 +1,5 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.5,missing_documents,1725.5999755859375,Penobscot (County),ME,1,"renter, lowest income band","FEMA verified $1,726 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.4671935737133026,3276008018
+2,1.5,missing_documents,4119.31005859375,Aroostook (County),ME,0,"renter, lowest income band","FEMA verified $4,119 in damage; denied for missing documents; renter, lowest income band.",0.2429911196231842,3282147874
+3,0.7875,unverified_ownership_or_occupancy,693.6199951171875,Penobscot (County),ME,1,renter,FEMA verified $694 in damage; ownership or occupancy never verified; home needs repairs to be livable; renter.,0.5543889403343201,3282143267
+4,0.4375,missing_documents,45.34000015258789,Penobscot (County),ME,1,age 65+,FEMA verified $45 in damage; denied for missing documents; home needs repairs to be livable; age 65+.,0.24777746200561523,3288990562

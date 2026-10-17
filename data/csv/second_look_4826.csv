@@ -1,0 +1,2 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.2000000000000002,lost_contact,837.239990234375,Essex (County),VT,1,,FEMA verified $837 in damage; denied after fema lost contact; home needs repairs to be livable.,0.39248910546302795,3285538642

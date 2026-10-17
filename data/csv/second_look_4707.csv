@@ -1,0 +1,9 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.5,missing_documents,6677.119812011719,Hoopa Valley Indian Reservation,CA,1,,"FEMA verified $6,677 in damage; denied for missing documents; home needs repairs to be livable.",0.8575760126113892,3289246189
+2,1.3125,missing_documents,2219.550048828125,Hoopa Valley Indian Reservation,CA,1,lowest income band,"FEMA verified $2,220 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.9284830689430237,3268200520
+3,1.3125,missing_documents,2404.4400024414062,Hoopa Valley Indian Reservation,CA,1,,"FEMA verified $2,404 in damage; denied for missing documents; home needs repairs to be livable.",0.8560912013053894,3270376535
+4,0.9375,missing_documents,1824.5,Hoopa Valley Indian Reservation,CA,1,,"FEMA verified $1,824 in damage; denied for missing documents; home needs repairs to be livable.",0.626859188079834,3268194432
+5,0.65625,missing_documents,1500.0,Hoopa Valley Indian Reservation,CA,1,lowest income band,"FEMA verified $1,500 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.9209117889404297,3268606963
+6,0.5625,missing_documents,1500.0,Hoopa Valley Indian Reservation,CA,1,,"FEMA verified $1,500 in damage; denied for missing documents; home needs repairs to be livable.",0.6235436201095581,3282392676
+7,0.5625,missing_documents,1500.0,Hoopa Valley Indian Reservation,CA,1,,"FEMA verified $1,500 in damage; denied for missing documents; home needs repairs to be livable.",0.935857892036438,3287504042
+8,0.25,missing_documents,301.28997802734375,Hoopa Valley Indian Reservation,CA,1,"age 65+, needs accessibility support","FEMA verified $301 in damage; denied for missing documents; home needs repairs to be livable; age 65+, needs accessibility support.",0.6327646374702454,3271411219

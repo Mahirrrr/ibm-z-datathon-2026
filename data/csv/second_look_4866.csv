@@ -1,0 +1,4 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,2.0,missing_documents,3229.800048828125,Lincoln (County),OK,1,"renter, lowest income band","FEMA verified $3,230 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.9561050534248352,3291752523
+2,1.1666666666666665,missing_documents,1609.0799560546875,Payne (County),OK,1,lowest income band,"FEMA verified $1,609 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.2654893100261688,3286142058
+3,0.6666666666666666,missing_documents,472.5699768066406,Oklahoma (County),OK,1,"renter, lowest income band","FEMA verified $473 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.971453845500946,3289372211

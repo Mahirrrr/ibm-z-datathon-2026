@@ -1,0 +1,8 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.5,missing_documents,23938.600341796875,Hinds (County),MS,1,,"FEMA verified $23,939 in damage; denied for missing documents; home needs repairs to be livable.",0.3295632004737854,3280843545
+2,1.157142857142857,unverified_ownership_or_occupancy,4412.85009765625,Hinds (County),MS,1,,"FEMA verified $4,413 in damage; ownership or occupancy never verified; home needs repairs to be livable.",0.3804481625556946,3284860624
+3,0.8571428571428572,lost_contact,2383.429931640625,Hinds (County),MS,1,,"FEMA verified $2,383 in damage; denied after fema lost contact; home needs repairs to be livable.",0.41636204719543457,3288116939
+4,0.8571428571428571,missing_documents,702.5299682617188,Hinds (County),MS,1,,FEMA verified $703 in damage; denied for missing documents; home needs repairs to be livable.,0.43916043639183044,3268802621
+5,0.6428571428571428,missing_documents,563.4599609375,Hinds (County),MS,1,,FEMA verified $563 in damage; denied for missing documents; home needs repairs to be livable.,0.41636204719543457,3269246695
+6,0.42857142857142855,missing_documents,229.22000122070312,Hinds (County),MS,1,,FEMA verified $229 in damage; denied for missing documents; home needs repairs to be livable.,0.4912926256656647,3275569259
+7,0.17857142857142855,missing_documents,183.17999267578125,Hinds (County),MS,0,renter,FEMA verified $183 in damage; denied for missing documents; renter.,0.6519787907600403,3293912661

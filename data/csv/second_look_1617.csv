@@ -1,0 +1,3 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.5,missing_documents,130966.1083984375,Hopkins (County),KY,1,,"FEMA verified $130,966 in damage; denied for missing documents; home needs repairs to be livable.",0.48128363490104675,3277144799
+2,0.7000000000000001,lost_contact,106565.169921875,Hopkins (County),KY,1,renter,"FEMA verified $106,565 in damage; denied after fema lost contact; home needs repairs to be livable; renter.",0.6778448820114136,3292650063

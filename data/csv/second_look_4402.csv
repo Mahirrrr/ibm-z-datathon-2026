@@ -1,0 +1,11 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.5,missing_documents,21130.59033203125,Monroe (County),WI,1,,"FEMA verified $21,131 in damage; denied for missing documents; home needs repairs to be livable.",0.7286654710769653,3285504155
+2,1.4000000000000001,missing_documents,5320.759765625,La Crosse (County),WI,1,lowest income band,"FEMA verified $5,321 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.6091628074645996,3291207880
+3,1.2600000000000002,lost_contact,7363.5498046875,Crawford (County),WI,1,age 65+,"FEMA verified $7,364 in damage; denied after fema lost contact; home needs repairs to be livable; age 65+.",0.29481497406959534,3289220442
+4,1.2249999999999999,missing_documents,3878.199951171875,Juneau (County),WI,1,age 65+,"FEMA verified $3,878 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.3213343620300293,3292457177
+5,0.8999999999999999,missing_documents,2125.0399780273438,Dane (County),WI,1,,"FEMA verified $2,125 in damage; denied for missing documents; home needs repairs to be livable.",0.20770733058452606,3293328341
+6,0.7000000000000001,lost_contact,2050.5,Dane (County),WI,1,age 65+,"FEMA verified $2,050 in damage; denied after fema lost contact; home needs repairs to be livable; age 65+.",0.28882497549057007,3280376534
+7,0.56,lost_contact,1558.159912109375,Dane (County),WI,1,age 65+,"FEMA verified $1,558 in damage; denied after fema lost contact; home needs repairs to be livable; age 65+.",0.28191938996315,3280613988
+8,0.525,missing_documents,599.989990234375,Vernon (County),WI,1,renter,FEMA verified $600 in damage; denied for missing documents; home needs repairs to be livable; renter.,0.637545108795166,3292404554
+9,0.35000000000000003,missing_documents,547.1900024414062,Richland (County),WI,1,age 65+,FEMA verified $547 in damage; denied for missing documents; home needs repairs to be livable; age 65+.,0.5012354850769043,3275358749
+10,0.15000000000000002,missing_documents,481.8799743652344,Juneau (County),WI,1,,FEMA verified $482 in damage; denied for missing documents; home needs repairs to be livable.,0.377306193113327,3271003995

@@ -1,0 +1,2 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,4617.48974609375,McLennan (County),TX,1,renter,"FEMA verified $4,617 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.5410317182540894,3278044060

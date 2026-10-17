@@ -1,0 +1,3 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,9295.0595703125,Traverse (County),MN,1,renter,"FEMA verified $9,295 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.8349969387054443,3271671789
+2,0.875,missing_documents,9047.2001953125,Wilkin (County),MN,1,lowest income band,"FEMA verified $9,047 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.23921792209148407,3286683981

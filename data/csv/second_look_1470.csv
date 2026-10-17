@@ -1,0 +1,3 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.5,missing_documents,4920.10009765625,Chickasaw (County),MS,1,,"FEMA verified $4,920 in damage; denied for missing documents; home needs repairs to be livable.",0.747497022151947,3291677490
+2,0.75,missing_documents,3215.9599609375,Chickasaw (County),MS,1,,"FEMA verified $3,216 in damage; denied for missing documents; home needs repairs to be livable.",0.5691189765930176,3278303311

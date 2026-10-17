@@ -1,0 +1,7 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,2.25,missing_documents,6444.5596923828125,"New London (County)(in (P)MSA 3280,5520)",CT,1,"renter, lowest income band, age 65+","FEMA verified $6,445 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band, age 65+.",0.8022689819335938,3292611513
+2,1.25,missing_documents,4210.789978027344,"New London (County)(in (P)MSA 3280,5520)",CT,1,,"FEMA verified $4,211 in damage; denied for missing documents; home needs repairs to be livable.",0.07937201857566833,3277991889
+3,1.0,missing_documents,2718.9599609375,"Fairfield (County)(in PMSA 1160,1930,5760,8040)",CT,1,,"FEMA verified $2,719 in damage; denied for missing documents; home needs repairs to be livable.",0.21279162168502808,3292918959
+4,0.75,missing_documents,1601.22998046875,"New London (County)(in (P)MSA 3280,5520)",CT,1,,"FEMA verified $1,601 in damage; denied for missing documents; home needs repairs to be livable.",0.11299609392881393,3280246233
+5,0.4666666666666667,lost_contact,810.22998046875,"Fairfield (County)(in PMSA 1160,1930,5760,8040)",CT,1,age 65+,FEMA verified $810 in damage; denied after fema lost contact; home needs repairs to be livable; age 65+.,0.1581422984600067,3268870621
+6,0.2,lost_contact,613.239990234375,"Fairfield (County)(in PMSA 1160,1930,5760,8040)",CT,1,,FEMA verified $613 in damage; denied after fema lost contact; home needs repairs to be livable.,0.11228600144386292,3288591198

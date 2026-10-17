@@ -1,0 +1,7 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.575,unverified_ownership_or_occupancy,28646.71875,Skagit (County),WA,1,age 65+,"FEMA verified $28,647 in damage; ownership or occupancy never verified; home needs repairs to be livable; age 65+.",0.3322441577911377,3290367190
+2,1.1666666666666665,missing_documents,2892.81982421875,Skagit (County),WA,1,age 65+,"FEMA verified $2,893 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.4184187054634094,3277410357
+3,1.0,lost_contact,6279.2701416015625,Skagit (County),WA,1,,"FEMA verified $6,279 in damage; denied after fema lost contact; home needs repairs to be livable.",0.21632832288742065,3287570186
+4,0.875,missing_documents,1167.719970703125,Skagit (County),WA,1,lowest income band,"FEMA verified $1,168 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.6192430257797241,3278007775
+5,0.5,missing_documents,1157.669921875,Grays Harbor (County),WA,1,,"FEMA verified $1,158 in damage; denied for missing documents; home needs repairs to be livable.",0.6223633885383606,3293359107
+6,0.25,missing_documents,1035.0399169921875,Snohomish (County),WA,1,,"FEMA verified $1,035 in damage; denied for missing documents; home needs repairs to be livable.",0.32778850197792053,3273300119

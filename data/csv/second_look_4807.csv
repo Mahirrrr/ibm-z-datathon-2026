@@ -1,0 +1,5 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.5,missing_documents,6358.579650878906,Union (County),SD,1,"age 65+, needs accessibility support","FEMA verified $6,359 in damage; denied for missing documents; home needs repairs to be livable; age 65+, needs accessibility support.",0.07214155048131943,3278605063
+2,1.5,missing_documents,23982.980224609375,Turner (County),SD,1,,"FEMA verified $23,983 in damage; denied for missing documents; home needs repairs to be livable.",0.47610166668891907,3291120244
+3,0.875,missing_documents,2197.97998046875,Union (County),SD,1,age 65+,"FEMA verified $2,198 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.2768314480781555,3287916127
+4,0.375,missing_documents,1910.3499755859375,Lincoln (County),SD,1,,"FEMA verified $1,910 in damage; denied for missing documents; home needs repairs to be livable.",0.36150386929512024,3289217466

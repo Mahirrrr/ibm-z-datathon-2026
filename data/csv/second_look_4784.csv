@@ -1,0 +1,2 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.0,lost_contact,89.0,Jasper (County),IA,,renter,FEMA verified $89 in damage; denied after fema lost contact; renter.,0.9622992873191833,3282087843

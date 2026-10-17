@@ -1,0 +1,21 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.5,missing_documents,161582.1875,Prairie (County),AR,1,,"FEMA verified $161,582 in damage; denied for missing documents; home needs repairs to be livable.",0.8384350538253784,3293844010
+2,1.4249999999999998,missing_documents,31351.74853515625,Randolph (County),AR,1,,"FEMA verified $31,352 in damage; denied for missing documents; home needs repairs to be livable.",0.354554682970047,3270455306
+3,1.35,missing_documents,20384.77880859375,Clay (County),AR,1,,"FEMA verified $20,385 in damage; denied for missing documents; home needs repairs to be livable.",0.5835857391357422,3281811469
+4,1.275,missing_documents,13723.44921875,Faulkner (County),AR,1,,"FEMA verified $13,723 in damage; denied for missing documents; home needs repairs to be livable.",0.44474145770072937,3270039400
+5,1.2249999999999999,missing_documents,9693.529296875,Clay (County),AR,1,lowest income band,"FEMA verified $9,694 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.5427767634391785,3272889551
+6,1.2000000000000002,missing_documents,13372.5,Faulkner (County),AR,1,,"FEMA verified $13,372 in damage; denied for missing documents; home needs repairs to be livable.",0.266455739736557,3278366082
+7,1.125,missing_documents,13267.51953125,Randolph (County),AR,1,,"FEMA verified $13,268 in damage; denied for missing documents; home needs repairs to be livable.",0.22890618443489075,3291929016
+8,1.05,missing_documents,5020.93994140625,Prairie (County),AR,1,age 65+,"FEMA verified $5,021 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.9756330251693726,3276607696
+9,1.0125,missing_documents,2532.27001953125,Saline (County),AR,1,"renter, lowest income band, needs accessibility support","FEMA verified $2,532 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band, needs accessibility support.",0.6588601469993591,3277932717
+10,0.9750000000000001,missing_documents,9185.809814453125,Fulton (County),AR,1,,"FEMA verified $9,186 in damage; denied for missing documents; home needs repairs to be livable.",0.684131383895874,3278799863
+11,0.8250000000000001,missing_documents,4962.759765625,Pulaski (County),AR,1,,"FEMA verified $4,963 in damage; denied for missing documents; home needs repairs to be livable.",0.5933778285980225,3270450901
+12,0.7000000000000001,missing_documents,1616.409912109375,Washington (County),AR,1,lowest income band,"FEMA verified $1,616 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.35185736417770386,3271676698
+13,0.525,missing_documents,1068.6199951171875,Benton (County),AR,1,lowest income band,"FEMA verified $1,069 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.6775199174880981,3271105564
+14,0.5249999999999999,missing_documents,1360.489990234375,Yell (County),AR,1,,"FEMA verified $1,360 in damage; denied for missing documents; home needs repairs to be livable.",0.6152799725532532,3273338788
+15,0.4375,missing_documents,1000.0,Faulkner (County),AR,1,renter,"FEMA verified $1,000 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.7550567984580994,3281632088
+16,0.4,lost_contact,3771.419921875,Randolph (County),AR,0,,"FEMA verified $3,771 in damage; denied after fema lost contact.",0.30489444732666016,3269169688
+17,0.35000000000000003,missing_documents,746.219970703125,Washington (County),AR,1,lowest income band,FEMA verified $746 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.,0.5869070887565613,3278346078
+18,0.2625,missing_documents,644.5499877929688,Yell (County),AR,1,lowest income band,FEMA verified $645 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.,0.7499414086341858,3275925140
+19,0.10000000000000002,lost_contact,317.75,Pulaski (County),AR,0,age 65+,FEMA verified $318 in damage; denied after fema lost contact; age 65+.,0.26184871792793274,3286968675
+20,0.04000000000000001,lost_contact,30.719999313354492,Boone (County),AR,0,,FEMA verified $31 in damage; denied after fema lost contact.,0.4081188440322876,3286970954

@@ -1,0 +1,2 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.5,missing_documents,295.66998291015625,Pike (County),OH,1,,FEMA verified $296 in damage; denied for missing documents; home needs repairs to be livable.,0.2825261652469635,3277019522

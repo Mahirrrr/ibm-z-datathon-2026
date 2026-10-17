@@ -1,0 +1,8 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.5,missing_documents,17929.94921875,Lancaster (County),NE,1,,"FEMA verified $17,930 in damage; denied for missing documents; home needs repairs to be livable.",0.32306382060050964,3276042874
+2,1.157142857142857,unverified_ownership_or_occupancy,17895.33984375,Thayer (County),NE,1,,"FEMA verified $17,895 in damage; ownership or occupancy never verified; home needs repairs to be livable.",0.45067599415779114,3285635855
+3,1.0714285714285714,missing_documents,9979.579833984375,Lancaster (County),NE,1,,"FEMA verified $9,980 in damage; denied for missing documents; home needs repairs to be livable.",0.22899511456489563,3277144233
+4,0.8571428571428571,missing_documents,1649.64990234375,Cass (County),NE,1,,"FEMA verified $1,650 in damage; denied for missing documents; home needs repairs to be livable.",0.5432824492454529,3279319566
+5,0.6428571428571428,missing_documents,282.0,Douglas (County),NE,0,"renter, lowest income band","FEMA verified $282 in damage; denied for missing documents; renter, lowest income band.",0.8620672821998596,3291706585
+6,0.2571428571428571,unverified_ownership_or_occupancy,36.91999816894531,Douglas (County),NE,1,"renter, lowest income band","FEMA verified $37 in damage; ownership or occupancy never verified; home needs repairs to be livable; renter, lowest income band.",0.620596170425415,3275605522
+7,0.22857142857142856,lost_contact,172.16000366210938,Saline (County),NE,0,,FEMA verified $172 in damage; denied after fema lost contact.,0.45962220430374146,3281936761

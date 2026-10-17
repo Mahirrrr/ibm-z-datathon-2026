@@ -1,0 +1,7 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.5,missing_documents,7205.7998046875,Carter (County),KY,1,,"FEMA verified $7,206 in damage; denied for missing documents; home needs repairs to be livable.",0.5012646913528442,3284805723
+2,1.25,missing_documents,3855.739990234375,Jefferson (County),KY,1,,"FEMA verified $3,856 in damage; denied for missing documents; home needs repairs to be livable.",0.37645384669303894,3293234639
+3,1.1666666666666665,missing_documents,3249.06982421875,Carter (County),KY,1,renter,"FEMA verified $3,249 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.7827008962631226,3279841767
+4,0.5833333333333333,missing_documents,863.4299926757812,Jefferson (County),KY,1,renter,FEMA verified $863 in damage; denied for missing documents; home needs repairs to be livable; renter.,0.5324570536613464,3274198713
+5,0.5,missing_documents,2035.1199035644531,Jefferson (County),KY,0,,"FEMA verified $2,035 in damage; denied for missing documents.",0.15014542639255524,3284805727
+6,0.25,missing_documents,610.6199951171875,Jefferson (County),KY,1,,FEMA verified $611 in damage; denied for missing documents; home needs repairs to be livable.,0.20025840401649475,3271103024

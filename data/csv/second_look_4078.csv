@@ -1,0 +1,9 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,145115.44091796875,Cleveland (County),OK,1,lowest income band,"FEMA verified $145,115 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.6621965765953064,3274521441
+2,1.5,missing_documents,135803.2587890625,Creek (County),OK,1,"age 65+, needs accessibility support","FEMA verified $135,803 in damage; denied for missing documents; home needs repairs to be livable; age 65+, needs accessibility support.",0.5300133228302002,3289024174
+3,1.3125,missing_documents,137187.6728515625,Creek (County),OK,1,,"FEMA verified $137,188 in damage; denied for missing documents; home needs repairs to be livable.",0.7270530462265015,3290563164
+4,0.9375,missing_documents,34958.72998046875,Creek (County),OK,1,,"FEMA verified $34,959 in damage; denied for missing documents; home needs repairs to be livable.",0.688578188419342,3270596157
+5,0.75,missing_documents,17116.41015625,Creek (County),OK,1,,"FEMA verified $17,116 in damage; denied for missing documents; home needs repairs to be livable.",0.8247363567352295,3290568011
+6,0.65625,missing_documents,9068.0400390625,Creek (County),OK,1,renter,"FEMA verified $9,068 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.5611023902893066,3280906266
+7,0.4375,missing_documents,6058.2197265625,Creek (County),OK,1,renter,"FEMA verified $6,058 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.6690720915794373,3290991045
+8,0.125,lost_contact,875.0,Creek (County),OK,,age 65+,FEMA verified $875 in damage; denied after fema lost contact; age 65+.,0.9900936484336853,3283089536

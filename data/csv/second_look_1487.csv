@@ -1,0 +1,13 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.6041666666666665,missing_documents,3987.68994140625,Marion (County),IN,1,lowest income band,"FEMA verified $3,988 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.13559570908546448,3268680504
+2,1.5,missing_documents,6153.9996337890625,Marion (County),IN,1,,"FEMA verified $6,154 in damage; denied for missing documents; home needs repairs to be livable.",0.16927441954612732,3270846661
+3,1.25,missing_documents,3483.119873046875,Hamilton (County),IN,1,,"FEMA verified $3,483 in damage; denied for missing documents; home needs repairs to be livable.",0.39203712344169617,3291391838
+4,0.9000000000000001,lost_contact,2731.079833984375,Marion (County),IN,1,,"FEMA verified $2,731 in damage; denied after fema lost contact; home needs repairs to be livable.",0.302031010389328,3272115238
+5,0.8999999999999999,unverified_ownership_or_occupancy,2384.7999572753906,Marion (County),IN,1,,"FEMA verified $2,385 in damage; ownership or occupancy never verified; home needs repairs to be livable.",0.17749756574630737,3279600780
+6,0.875,missing_documents,1234.030029296875,Hamilton (County),IN,1,,"FEMA verified $1,234 in damage; denied for missing documents; home needs repairs to be livable.",0.5690169930458069,3286050823
+7,0.75,missing_documents,991.6300048828125,Boone (County),IN,1,,FEMA verified $992 in damage; denied for missing documents; home needs repairs to be livable.,0.30573782324790955,3283334221
+8,0.625,missing_documents,962.3399658203125,Marion (County),IN,1,,FEMA verified $962 in damage; denied for missing documents; home needs repairs to be livable.,0.20728321373462677,3288450088
+9,0.5,missing_documents,666.489990234375,Hamilton (County),IN,1,,FEMA verified $666 in damage; denied for missing documents; home needs repairs to be livable.,0.4356439709663391,3277006825
+10,0.375,missing_documents,349.6199951171875,Marion (County),IN,1,,FEMA verified $350 in damage; denied for missing documents; home needs repairs to be livable.,0.3899194300174713,3270128249
+11,0.2625,unverified_ownership_or_occupancy,235.84999084472656,Marion (County),IN,1,renter,FEMA verified $236 in damage; ownership or occupancy never verified; home needs repairs to be livable; renter.,0.7819987535476685,3272828342
+12,0.06666666666666667,lost_contact,132.0,Delaware (County),IN,0,,FEMA verified $132 in damage; denied after fema lost contact.,0.4678534269332886,3292503543

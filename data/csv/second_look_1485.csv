@@ -1,0 +1,6 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.35,unverified_ownership_or_occupancy,20184.349609375,Lackawanna (County),PA,1,,"FEMA verified $20,184 in damage; ownership or occupancy never verified; home needs repairs to be livable.",0.4055310785770416,3277007436
+2,1.2000000000000002,missing_documents,2260.519989013672,Venango (County),PA,1,,"FEMA verified $2,261 in damage; denied for missing documents; home needs repairs to be livable.",0.19986295700073242,3278892924
+3,0.8999999999999999,missing_documents,2021.659912109375,Crawford (County),PA,1,,"FEMA verified $2,022 in damage; denied for missing documents; home needs repairs to be livable.",0.3378133475780487,3278877927
+4,0.6400000000000001,lost_contact,1760.6199951171875,Wayne (County),PA,1,"lowest income band, age 65+","FEMA verified $1,761 in damage; denied after fema lost contact; home needs repairs to be livable; lowest income band, age 65+.",0.2518242299556732,3288455930
+5,0.31500000000000006,unverified_ownership_or_occupancy,1682.7899169921875,Lackawanna (County),PA,1,renter,"FEMA verified $1,683 in damage; ownership or occupancy never verified; home needs repairs to be livable; renter.",0.5756730437278748,3284445725

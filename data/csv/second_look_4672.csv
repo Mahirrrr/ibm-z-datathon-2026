@@ -1,0 +1,9 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.5,missing_documents,12047.539489746094,Bering Strait Regional Educational Attendance Area,AK,1,,"FEMA verified $12,048 in damage; denied for missing documents; home needs repairs to be livable.",0.8434473276138306,3280105559
+2,1.03125,missing_documents,5000.0,Lower Yukon Regional Educational Attendance Area,AK,0,"renter, lowest income band","FEMA verified $5,000 in damage; denied for missing documents; renter, lowest income band.",0.558773934841156,3287051149
+3,0.875,missing_documents,11859.0,Bering Strait Regional Educational Attendance Area,AK,0,,"FEMA verified $11,859 in damage; denied for missing documents.",0.9761306047439575,3293125564
+4,0.6875,missing_documents,5000.0,Lower Yukon Regional Educational Attendance Area,AK,0,,"FEMA verified $5,000 in damage; denied for missing documents.",0.42721647024154663,3285132124
+5,0.625,missing_documents,3635.0,Bering Strait Regional Educational Attendance Area,AK,0,age 65+,"FEMA verified $3,635 in damage; denied for missing documents; age 65+.",0.5472346544265747,3293117546
+6,0.546875,missing_documents,2705.14990234375,Kashunamiut Regional Educational Attendance Area,AK,1,age 65+,"FEMA verified $2,705 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.33879637718200684,3288734384
+7,0.46875,missing_documents,2705.14990234375,Lower Kuskokwim Regional Educational Attendance Area,AK,1,,"FEMA verified $2,705 in damage; denied for missing documents; home needs repairs to be livable.",0.527461588382721,3277799937
+8,0.15625,missing_documents,1109.0,Lower Kuskokwim Regional Educational Attendance Area,AK,0,renter,"FEMA verified $1,109 in damage; denied for missing documents; renter.",0.39925000071525574,3268197857

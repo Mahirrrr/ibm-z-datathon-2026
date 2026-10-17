@@ -1,0 +1,4 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,2.0,missing_documents,12679.41943359375,Geneva (County),AL,1,"renter, lowest income band","FEMA verified $12,679 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.537738025188446,3272165667
+2,1.1666666666666665,missing_documents,10891.310180664062,Geneva (County),AL,1,lowest income band,"FEMA verified $10,891 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.4346860349178314,3292928836
+3,0.4,lost_contact,217.0,Geneva (County),AL,0,"lowest income band, age 65+","FEMA verified $217 in damage; denied after fema lost contact; lowest income band, age 65+.",0.4577200710773468,3273664146

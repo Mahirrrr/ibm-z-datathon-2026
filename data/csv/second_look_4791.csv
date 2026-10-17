@@ -1,0 +1,6 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,125156.35009765625,Rogers (County),OK,1,needs accessibility support,"FEMA verified $125,156 in damage; denied for missing documents; home needs repairs to be livable; needs accessibility support.",0.44837847352027893,3272698977
+2,1.2000000000000002,missing_documents,12383.389404296875,Mayes (County),OK,1,,"FEMA verified $12,383 in damage; denied for missing documents; home needs repairs to be livable.",0.3900182247161865,3275816209
+3,1.05,missing_documents,10305.76953125,Rogers (County),OK,1,lowest income band,"FEMA verified $10,306 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.5346235632896423,3279047631
+4,0.7000000000000001,missing_documents,5668.60986328125,Rogers (County),OK,1,lowest income band,"FEMA verified $5,669 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.5849077105522156,3268970557
+5,0.30000000000000004,missing_documents,2594.31982421875,Custer (County),OK,1,,"FEMA verified $2,594 in damage; denied for missing documents; home needs repairs to be livable.",0.2953553795814514,3285498968

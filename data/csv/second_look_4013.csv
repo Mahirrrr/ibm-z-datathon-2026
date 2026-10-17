@@ -1,0 +1,5 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,151240.11376953125,Washington (County),NE,1,age 65+,"FEMA verified $151,240 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.3445529639720917,3271643204
+2,1.3125,missing_documents,136837.765625,Boyd (County),NE,1,age 65+,"FEMA verified $136,838 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.3582797944545746,3280478161
+3,0.75,missing_documents,51883.099853515625,Washington (County),NE,1,,"FEMA verified $51,883 in damage; denied for missing documents; home needs repairs to be livable.",0.58968585729599,3268850691
+4,0.375,missing_documents,3820.56982421875,Dakota (County),NE,1,,"FEMA verified $3,821 in damage; denied for missing documents; home needs repairs to be livable.",0.13721942901611328,3284499314

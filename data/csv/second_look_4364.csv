@@ -1,0 +1,4 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.5,missing_documents,2038.0999450683594,Guilford (County),NC,1,,"FEMA verified $2,038 in damage; denied for missing documents; home needs repairs to be livable.",0.5858820676803589,3275919424
+2,1.3333333333333333,missing_documents,1154.4599609375,Guilford (County),NC,1,"renter, lowest income band","FEMA verified $1,154 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.8151675462722778,3269991208
+3,0.3333333333333333,missing_documents,199.8199920654297,Guilford (County),NC,0,,FEMA verified $200 in damage; denied for missing documents.,0.4756224453449249,3292511660

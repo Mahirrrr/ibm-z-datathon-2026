@@ -1,0 +1,3 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,2.0,missing_documents,3192.679931640625,Weakley (County),TN,1,"lowest income band, needs accessibility support","FEMA verified $3,193 in damage; denied for missing documents; home needs repairs to be livable; lowest income band, needs accessibility support.",0.7450037598609924,3283823527
+2,1.0,missing_documents,1306.72998046875,Weakley (County),TN,1,"renter, lowest income band","FEMA verified $1,307 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.8288820385932922,3270276235

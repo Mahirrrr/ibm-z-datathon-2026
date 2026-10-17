@@ -1,0 +1,15 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,123720.7900390625,Lawrence (County),MO,1,renter,"FEMA verified $123,721 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.6601294875144958,3288141478
+2,1.625,missing_documents,72833.69970703125,Christian (County),MO,1,lowest income band,"FEMA verified $72,834 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.7667140960693359,3282619724
+3,1.5,missing_documents,66240.0,Lawrence (County),MO,1,renter,"FEMA verified $66,240 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.9260234236717224,3287263685
+4,1.375,missing_documents,14150.2900390625,Wright (County),MO,1,lowest income band,"FEMA verified $14,150 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.5391230583190918,3281293079
+5,1.0714285714285714,missing_documents,10656.3095703125,Monroe (County),MO,1,,"FEMA verified $10,656 in damage; denied for missing documents; home needs repairs to be livable.",0.5401185154914856,3287254522
+6,1.0,missing_documents,5400.0,Morgan (County),MO,1,renter,"FEMA verified $5,400 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.6380278468132019,3269698643
+7,1.0,missing_documents,5400.0,Morgan (County),MO,1,renter,"FEMA verified $5,400 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.6380278468132019,3278447542
+8,1.0,missing_documents,5400.0,Morgan (County),MO,1,renter,"FEMA verified $5,400 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.6380278468132019,3288564788
+9,0.6,lost_contact,2961.300048828125,Boone (County),MO,1,renter,"FEMA verified $2,961 in damage; denied after fema lost contact; home needs repairs to be livable; renter.",0.7769191861152649,3277131214
+10,0.5357142857142857,missing_documents,2917.4599609375,Morgan (County),MO,1,,"FEMA verified $2,917 in damage; denied for missing documents; home needs repairs to be livable.",0.5106391906738281,3278441418
+11,0.5142857142857142,unverified_ownership_or_occupancy,2437.739990234375,Crawford (County),MO,1,"renter, lowest income band","FEMA verified $2,438 in damage; ownership or occupancy never verified; home needs repairs to be livable; renter, lowest income band.",0.7932195663452148,3293940544
+12,0.3214285714285714,missing_documents,865.6099853515625,Morgan (County),MO,1,,FEMA verified $866 in damage; denied for missing documents; home needs repairs to be livable.,0.37576982378959656,3269271336
+13,0.14285714285714285,missing_documents,122.95999908447266,Cooper (County),MO,0,,FEMA verified $123 in damage; denied for missing documents.,0.6210008263587952,3282616690
+14,0.11249999999999999,unverified_ownership_or_occupancy,116.88999938964844,Lawrence (County),MO,1,renter,FEMA verified $117 in damage; ownership or occupancy never verified; home needs repairs to be livable; renter.,0.8109699487686157,3269701633

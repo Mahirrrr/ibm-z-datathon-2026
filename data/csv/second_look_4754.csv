@@ -1,0 +1,6 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,43717.12744140625,Somerset (County),ME,1,lowest income band,"FEMA verified $43,717 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.9039081931114197,3283280136
+2,1.2000000000000002,missing_documents,8507.439697265625,Oxford (County),ME,1,,"FEMA verified $8,507 in damage; denied for missing documents; home needs repairs to be livable.",0.6931496858596802,3291809130
+3,1.2,missing_documents,2102.6499633789062,Androscoggin (County),ME,1,"lowest income band, age 65+","FEMA verified $2,103 in damage; denied for missing documents; home needs repairs to be livable; lowest income band, age 65+.",0.6535378098487854,3292442328
+4,0.6000000000000001,missing_documents,1021.8899536132812,Androscoggin (County),ME,1,,"FEMA verified $1,022 in damage; denied for missing documents; home needs repairs to be livable.",0.30777397751808167,3275829600
+5,0.25,missing_documents,875.0,Franklin (County),ME,0,lowest income band,FEMA verified $875 in damage; denied for missing documents; lowest income band.,0.8928605914115906,3274290144

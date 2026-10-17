@@ -1,0 +1,6 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.5,missing_documents,9423.859985351562,"Hillsborough (County)(in (P)MSA 4560,4760,5350)",NH,1,,"FEMA verified $9,424 in damage; denied for missing documents; home needs repairs to be livable.",0.4237108826637268,3274715883
+2,1.2000000000000002,missing_documents,8875.359375,Strafford (County),NH,1,,"FEMA verified $8,875 in damage; denied for missing documents; home needs repairs to be livable.",0.5996296405792236,3272968965
+3,0.75,missing_documents,932.47998046875,"Rockingham (County)(in (P)MSA 4160,4760,6450)",NH,0,renter,FEMA verified $932 in damage; denied for missing documents; renter.,0.4329267740249634,3290175693
+4,0.7000000000000001,missing_documents,708.6300048828125,"Rockingham (County)(in (P)MSA 4160,4760,6450)",NH,1,lowest income band,FEMA verified $709 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.,0.2601954936981201,3275265489
+5,0.30000000000000004,missing_documents,514.3599853515625,"Rockingham (County)(in (P)MSA 4160,4760,6450)",NH,1,,FEMA verified $514 in damage; denied for missing documents; home needs repairs to be livable.,0.41999551653862,3268358863

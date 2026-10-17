@@ -1,0 +1,6 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,11858.519775390625,Holt (County),MO,1,renter,"FEMA verified $11,859 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.7927201986312866,3271840494
+2,1.6,missing_documents,1757.0,Gentry (County),MO,1,"renter, age 65+","FEMA verified $1,757 in damage; denied for missing documents; home needs repairs to be livable; renter, age 65+.",0.6879671216011047,3282158530
+3,0.8999999999999999,missing_documents,1141.1099853515625,Clinton (County),MO,1,,"FEMA verified $1,141 in damage; denied for missing documents; home needs repairs to be livable.",0.27526259422302246,3282593453
+4,0.5,missing_documents,284.55999755859375,Jackson (County),MO,0,age 65+,FEMA verified $285 in damage; denied for missing documents; age 65+.,0.37956058979034424,3280160396
+5,0.30000000000000004,missing_documents,51.57999801635742,Holt (County),MO,1,,FEMA verified $52 in damage; denied for missing documents; home needs repairs to be livable.,0.6968925595283508,3282148209

@@ -1,0 +1,11 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.575,missing_documents,2152.89990234375,Greene (County),MO,1,renter,"FEMA verified $2,153 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.3624139726161957,3270111700
+2,1.4000000000000001,lost_contact,109224.6171875,Adair (County),MO,1,age 65+,"FEMA verified $109,225 in damage; denied after fema lost contact; home needs repairs to be livable; age 65+.",0.5355129241943359,3287301990
+3,1.2600000000000002,unverified_ownership_or_occupancy,1460.699951171875,Madison (County),MO,1,renter,"FEMA verified $1,461 in damage; ownership or occupancy never verified; home needs repairs to be livable; renter.",0.7764425277709961,3270608974
+4,1.26,unverified_ownership_or_occupancy,1294.25,Bollinger (County),MO,1,"renter, lowest income band","FEMA verified $1,294 in damage; ownership or occupancy never verified; home needs repairs to be livable; renter, lowest income band.",0.8505426645278931,3289682676
+5,1.08,unverified_ownership_or_occupancy,629.1900024414062,St. Francois (County),MO,1,"renter, lowest income band","FEMA verified $629 in damage; ownership or occupancy never verified; home needs repairs to be livable; renter, lowest income band.",0.8275793790817261,3273876543
+6,0.75,missing_documents,573.0999755859375,Madison (County),MO,1,,FEMA verified $573 in damage; denied for missing documents; home needs repairs to be livable.,0.1385827362537384,3280414317
+7,0.4000000000000001,lost_contact,440.0,Adair (County),MO,0,age 65+,FEMA verified $440 in damage; denied after fema lost contact; age 65+.,0.2741132378578186,3279338726
+8,0.24,lost_contact,326.3999938964844,Greene (County),MO,0,,FEMA verified $326 in damage; denied after fema lost contact.,0.530794620513916,3274534167
+9,0.2,missing_documents,181.98999786376953,Polk (County),MO,0,,FEMA verified $182 in damage; denied for missing documents.,0.2249569594860077,3285364417
+10,0.1,missing_documents,110.07999420166016,Newton (County),MO,0,,FEMA verified $110 in damage; denied for missing documents.,0.5545827150344849,3288628485

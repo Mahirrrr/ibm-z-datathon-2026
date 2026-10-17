@@ -1,0 +1,4 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,112393.37841796875,Stephens (County),OK,1,renter,"FEMA verified $112,393 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.6351181864738464,3278040093
+2,1.0,missing_documents,108005.4267578125,Carter (County),OK,1,,"FEMA verified $108,005 in damage; denied for missing documents; home needs repairs to be livable.",0.7242917418479919,3287296151
+3,0.5833333333333333,missing_documents,39259.09765625,Carter (County),OK,1,lowest income band,"FEMA verified $39,259 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.8549395799636841,3285783527

@@ -1,0 +1,7 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,141433.62060546875,Forrest (County),MS,1,renter,"FEMA verified $141,434 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.5072442889213562,3275646178
+2,1.25,missing_documents,19316.44921875,Forrest (County),MS,1,,"FEMA verified $19,316 in damage; denied for missing documents; home needs repairs to be livable.",0.41612014174461365,3286957483
+3,1.0,missing_documents,8116.35986328125,Forrest (County),MS,1,,"FEMA verified $8,116 in damage; denied for missing documents; home needs repairs to be livable.",0.556946873664856,3284054788
+4,0.75,missing_documents,2998.27001953125,Forrest (County),MS,1,,"FEMA verified $2,998 in damage; denied for missing documents; home needs repairs to be livable.",0.5357601642608643,3281215213
+5,0.5333333333333333,lost_contact,369.989990234375,Perry (County),MS,1,"renter, lowest income band","FEMA verified $370 in damage; denied after fema lost contact; home needs repairs to be livable; renter, lowest income band.",0.6648913025856018,3272873956
+6,0.26666666666666666,lost_contact,256.8299865722656,Forrest (County),MS,1,"renter, lowest income band","FEMA verified $257 in damage; denied after fema lost contact; home needs repairs to be livable; renter, lowest income band.",0.6735646724700928,3270923690

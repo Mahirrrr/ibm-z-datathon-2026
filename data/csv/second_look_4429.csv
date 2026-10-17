@@ -1,0 +1,11 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.5,missing_documents,20475.740234375,Warren (County),MS,1,,"FEMA verified $20,476 in damage; denied for missing documents; home needs repairs to be livable.",0.8873445391654968,3287908141
+2,1.4000000000000001,missing_documents,14667.779541015625,Monroe (County),MS,1,age 65+,"FEMA verified $14,668 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.41328078508377075,3272728091
+3,1.35,missing_documents,16344.0693359375,Sharkey (County),MS,1,,"FEMA verified $16,344 in damage; denied for missing documents; home needs repairs to be livable.",0.3792588412761688,3290724148
+4,1.05,missing_documents,7236.44970703125,Issaquena (County),MS,1,age 65+,"FEMA verified $7,236 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.6580120325088501,3282794241
+5,1.0499999999999998,missing_documents,12524.449951171875,Warren (County),MS,1,,"FEMA verified $12,524 in damage; denied for missing documents; home needs repairs to be livable.",0.524125874042511,3274664565
+6,0.875,missing_documents,1400.260009765625,Humphreys (County),MS,1,lowest income band,"FEMA verified $1,400 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.313672810792923,3287903863
+7,0.7000000000000001,missing_documents,1380.9599609375,Lowndes (County),MS,1,lowest income band,"FEMA verified $1,381 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.5289881229400635,3270829033
+8,0.4,missing_documents,403.3999938964844,Warren (County),MS,1,"lowest income band, age 65+","FEMA verified $403 in damage; denied for missing documents; home needs repairs to be livable; lowest income band, age 65+.",0.3979797065258026,3272734645
+9,0.375,missing_documents,979.97998046875,Warren (County),MS,0,lowest income band,FEMA verified $980 in damage; denied for missing documents; lowest income band.,0.45083796977996826,3276527854
+10,0.1,missing_documents,267.5199890136719,Lowndes (County),MS,0,,FEMA verified $268 in damage; denied for missing documents.,0.42879197001457214,3290281864

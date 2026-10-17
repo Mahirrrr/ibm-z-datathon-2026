@@ -1,0 +1,2 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.6,lost_contact,1420.409912109375,Allegany (County),NY,1,"lowest income band, age 65+","FEMA verified $1,420 in damage; denied after fema lost contact; home needs repairs to be livable; lowest income band, age 65+.",0.2871597707271576,3289480800

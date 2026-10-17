@@ -1,0 +1,5 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.575,unverified_ownership_or_occupancy,6838.419616699219,Tazewell (County),VA,1,renter,"FEMA verified $6,838 in damage; ownership or occupancy never verified; home needs repairs to be livable; renter.",0.6213793754577637,3275166224
+2,1.1812500000000001,unverified_ownership_or_occupancy,1880.9599609375,Russell (County),VA,1,lowest income band,"FEMA verified $1,881 in damage; ownership or occupancy never verified; home needs repairs to be livable; lowest income band.",0.3154101073741913,3284320746
+3,0.75,missing_documents,1851.9599609375,Russell (County),VA,1,,"FEMA verified $1,852 in damage; denied for missing documents; home needs repairs to be livable.",0.2713125944137573,3289948932
+4,0.39375,unverified_ownership_or_occupancy,467.2799987792969,Russell (County),VA,1,renter,FEMA verified $467 in damage; ownership or occupancy never verified; home needs repairs to be livable; renter.,0.8324174284934998,3287538149

@@ -1,0 +1,5 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,13554.5595703125,Carter (County),KY,1,lowest income band,"FEMA verified $13,555 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.7581338882446289,3274061297
+2,1.3125,missing_documents,8586.8798828125,Jefferson (County),KY,1,renter,"FEMA verified $8,587 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.8092732429504395,3292413223
+3,0.75,missing_documents,4488.68994140625,Greenup (County),KY,1,,"FEMA verified $4,489 in damage; denied for missing documents; home needs repairs to be livable.",0.8971127271652222,3271403622
+4,0.4375,missing_documents,2697.369873046875,Boyd (County),KY,1,lowest income band,"FEMA verified $2,697 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.8307516574859619,3286399690

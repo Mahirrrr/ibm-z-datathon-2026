@@ -1,0 +1,2 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.2000000000000002,lost_contact,165.89999389648438,Washington (County),VT,0,"lowest income band, age 65+","FEMA verified $166 in damage; denied after fema lost contact; lowest income band, age 65+.",0.572712242603302,3269301250

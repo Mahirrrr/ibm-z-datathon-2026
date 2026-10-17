@@ -1,0 +1,2 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,0.8,lost_contact,300.0,"Worcester (County) (in (P)MSA 1120,2600,9240)",MA,0,,FEMA verified $300 in damage; denied after fema lost contact.,0.07388029247522354,3268562127

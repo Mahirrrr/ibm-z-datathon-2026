@@ -1,0 +1,5 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,49944.50830078125,Alaska Gateway Regional Educational Attendance Area,AK,1,age 65+,"FEMA verified $49,945 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.39904630184173584,3293855849
+2,1.5,missing_documents,25565.96875,Yukon Koyukuk Regional Educational Attendance Area,AK,1,"age 65+, needs accessibility support","FEMA verified $25,566 in damage; denied for missing documents; home needs repairs to be livable; age 65+, needs accessibility support.",0.2605549097061157,3281979758
+3,0.75,missing_documents,23829.618896484375,Yukon Koyukuk Regional Educational Attendance Area,AK,1,,"FEMA verified $23,830 in damage; denied for missing documents; home needs repairs to be livable.",0.6969922184944153,3290419646
+4,0.375,missing_documents,20531.359375,Yukon Koyukuk Regional Educational Attendance Area,AK,1,,"FEMA verified $20,531 in damage; denied for missing documents; home needs repairs to be livable.",0.3843878507614136,3290859523

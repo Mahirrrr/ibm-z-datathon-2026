@@ -1,0 +1,13 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,8489.719970703125,Clayton (County),IA,1,lowest income band,"FEMA verified $8,490 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.252083957195282,3279956529
+2,1.4583333333333335,missing_documents,5883.139892578125,Scott (County),IA,1,lowest income band,"FEMA verified $5,883 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.18111178278923035,3288020633
+3,1.375,missing_documents,8336.2802734375,Clayton (County),IA,1,,"FEMA verified $8,336 in damage; denied for missing documents; home needs repairs to be livable.",0.34281080961227417,3284891304
+4,1.3333333333333333,missing_documents,3135.280029296875,Clayton (County),IA,1,"lowest income band, age 65+","FEMA verified $3,135 in damage; denied for missing documents; home needs repairs to be livable; lowest income band, age 65+.",0.2786466181278229,3285634321
+5,1.3125,missing_documents,4621.35986328125,Polk (County),IA,1,renter,"FEMA verified $4,621 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.8751546144485474,3286056361
+6,0.8166666666666668,lost_contact,3058.7899627685547,Warren (County),IA,1,age 65+,"FEMA verified $3,059 in damage; denied after fema lost contact; home needs repairs to be livable; age 65+.",0.3185533881187439,3288453885
+7,0.75,missing_documents,2225.969970703125,Polk (County),IA,1,,"FEMA verified $2,226 in damage; denied for missing documents; home needs repairs to be livable.",0.3089177906513214,3270564274
+8,0.625,missing_documents,2122.8299560546875,Tama (County),IA,1,,"FEMA verified $2,123 in damage; denied for missing documents; home needs repairs to be livable.",0.2399015575647354,3279632853
+9,0.5833333333333333,missing_documents,1402.159912109375,Winnebago (County),IA,1,age 65+,"FEMA verified $1,402 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.5079420208930969,3292080321
+10,0.375,missing_documents,1224.0,Hancock (County),IA,1,,"FEMA verified $1,224 in damage; denied for missing documents; home needs repairs to be livable.",0.3856351971626282,3274495147
+11,0.25,missing_documents,770.1900024414062,Fayette (County),IA,1,,FEMA verified $770 in damage; denied for missing documents; home needs repairs to be livable.,0.32501929998397827,3279326023
+12,0.06666666666666667,lost_contact,286.1999816894531,Marshall (County),IA,0,,FEMA verified $286 in damage; denied after fema lost contact.,0.3145255744457245,3281604913

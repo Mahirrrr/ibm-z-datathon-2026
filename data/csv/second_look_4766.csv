@@ -1,0 +1,8 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.5,missing_documents,2580.260009765625,"Providence (County)(in PMSA 6060,6480)",RI,1,renter,"FEMA verified $2,580 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.7460023164749146,3290275390
+2,1.142857142857143,lost_contact,2549.419921875,"Providence (County)(in PMSA 6060,6480)",RI,1,"age 65+, needs accessibility support","FEMA verified $2,549 in damage; denied after fema lost contact; home needs repairs to be livable; age 65+, needs accessibility support.",0.3248247802257538,3270811654
+3,1.0,lost_contact,10016.9794921875,"Providence (County)(in PMSA 6060,6480)",RI,,lowest income band,"FEMA verified $10,017 in damage; denied after fema lost contact; lowest income band.",0.8184393048286438,3294133723
+4,0.8571428571428571,missing_documents,1537.409912109375,"Washington (County)(in (P)MSA 5520,6480)",RI,1,,"FEMA verified $1,537 in damage; denied for missing documents; home needs repairs to be livable.",0.3720490634441376,3279071548
+5,0.6428571428571428,missing_documents,800.3899536132812,"Washington (County)(in (P)MSA 5520,6480)",RI,1,,FEMA verified $800 in damage; denied for missing documents; home needs repairs to be livable.,0.41573211550712585,3283250782
+6,0.3571428571428571,missing_documents,300.0,Kent (County),RI,0,age 65+,FEMA verified $300 in damage; denied for missing documents; age 65+.,0.24437327682971954,3279561884
+7,0.21428571428571427,missing_documents,190.25999450683594,Kent (County),RI,1,,FEMA verified $190 in damage; denied for missing documents; home needs repairs to be livable.,0.19167618453502655,3283208204

@@ -1,0 +1,10 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.5,missing_documents,103341.76416015625,Callahan (County),TX,1,,"FEMA verified $103,342 in damage; denied for missing documents; home needs repairs to be livable.",0.505083441734314,3274490151
+2,1.3611111111111112,missing_documents,101586.81396484375,Callahan (County),TX,1,age 65+,"FEMA verified $101,587 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.6160104274749756,3292650950
+3,1.3333333333333333,missing_documents,102813.23388671875,Callahan (County),TX,1,,"FEMA verified $102,813 in damage; denied for missing documents; home needs repairs to be livable.",0.6917977929115295,3277585579
+4,1.05,unverified_ownership_or_occupancy,101387.7373046875,Montague (County),TX,1,renter,"FEMA verified $101,388 in damage; ownership or occupancy never verified; home needs repairs to be livable; renter.",0.7796500325202942,3282605277
+5,0.8333333333333334,missing_documents,100041.48706054688,Montague (County),TX,1,,"FEMA verified $100,041 in damage; denied for missing documents; home needs repairs to be livable.",0.7214847207069397,3277570420
+6,0.7777777777777777,missing_documents,95485.7568359375,Eastland (County),TX,1,age 65+,"FEMA verified $95,486 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.6387179493904114,3284022888
+7,0.5,missing_documents,95150.556640625,Eastland (County),TX,1,,"FEMA verified $95,151 in damage; denied for missing documents; home needs repairs to be livable.",0.6337036490440369,3279951586
+8,0.3333333333333333,missing_documents,63085.58984375,Hood (County),TX,1,,"FEMA verified $63,086 in damage; denied for missing documents; home needs repairs to be livable.",0.6705213189125061,3282168952
+9,0.16666666666666666,missing_documents,59205.57958984375,Eastland (County),TX,1,,"FEMA verified $59,206 in damage; denied for missing documents; home needs repairs to be livable.",0.6496633887290955,3276277905

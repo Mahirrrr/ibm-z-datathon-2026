@@ -1,0 +1,4 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.2000000000000002,lost_contact,11682.109375,Sullivan (County),NY,1,,"FEMA verified $11,682 in damage; denied after fema lost contact; home needs repairs to be livable.",0.35597944259643555,3279402418
+2,1.1666666666666665,missing_documents,1710.3400115966797,Ulster (County),NY,1,age 65+,"FEMA verified $1,710 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.32714006304740906,3280273431
+3,0.4,lost_contact,1351.9599609375,Sullivan (County),NY,1,,"FEMA verified $1,352 in damage; denied after fema lost contact; home needs repairs to be livable.",0.21704226732254028,3287777548

@@ -1,0 +1,2 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,2.0,missing_documents,7366.599609375,Douglas (County),NE,1,"renter, lowest income band","FEMA verified $7,367 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.8808406591415405,3274059324

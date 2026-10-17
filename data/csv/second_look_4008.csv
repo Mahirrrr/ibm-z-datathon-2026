@@ -1,0 +1,5 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.5,missing_documents,5041.93994140625,Bell (County),KY,1,,"FEMA verified $5,042 in damage; denied for missing documents; home needs repairs to be livable.",0.26105907559394836,3290979207
+2,1.3125,missing_documents,4285.3701171875,Perry (County),KY,1,lowest income band,"FEMA verified $4,285 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.4291952848434448,3277633818
+3,0.75,missing_documents,3206.08984375,Bell (County),KY,1,,"FEMA verified $3,206 in damage; denied for missing documents; home needs repairs to be livable.",0.5522566437721252,3280906734
+4,0.4375,missing_documents,1125.6500244140625,Bell (County),KY,1,lowest income band,"FEMA verified $1,126 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.42007312178611755,3275189682

@@ -1,0 +1,6 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.8,missing_documents,6204.2900390625,Boulder (County),CO,1,"renter, lowest income band, age 65+","FEMA verified $6,204 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band, age 65+.",0.9474557638168335,3290687670
+2,1.75,missing_documents,69864.9296875,Boulder (County),CO,1,lowest income band,"FEMA verified $69,865 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.8156320452690125,3281109720
+3,1.05,missing_documents,5304.40966796875,Boulder (County),CO,1,renter,"FEMA verified $5,304 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.8251888155937195,3287049738
+4,0.7000000000000001,missing_documents,907.0299682617188,Boulder (County),CO,1,renter,FEMA verified $907 in damage; denied for missing documents; home needs repairs to be livable; renter.,0.8532798886299133,3278684019
+5,0.35000000000000003,missing_documents,357.4599914550781,Boulder (County),CO,1,renter,FEMA verified $357 in damage; denied for missing documents; home needs repairs to be livable; renter.,0.8934778571128845,3291124970

@@ -1,0 +1,2 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,2.025,unverified_ownership_or_occupancy,9279.439453125,Erie (County),NY,1,"renter, lowest income band, age 65+","FEMA verified $9,279 in damage; ownership or occupancy never verified; home needs repairs to be livable; renter, lowest income band, age 65+.",0.603792667388916,3270552518

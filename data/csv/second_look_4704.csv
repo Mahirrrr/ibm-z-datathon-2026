@@ -1,0 +1,8 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.5,missing_documents,12991.499755859375,Johnson (County),IN,1,age 65+,"FEMA verified $12,991 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.2433967888355255,3291568970
+2,1.5,missing_documents,232265.376953125,Sullivan (County),IN,1,,"FEMA verified $232,265 in damage; denied for missing documents; home needs repairs to be livable.",0.8899677395820618,3291825553
+3,1.25,missing_documents,10865.169921875,Sullivan (County),IN,1,age 65+,"FEMA verified $10,865 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.38652220368385315,3293124000
+4,1.1428571428571428,missing_documents,5942.35009765625,Sullivan (County),IN,1,"renter, lowest income band","FEMA verified $5,942 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.872722327709198,3279556305
+5,0.75,missing_documents,5885.93994140625,Sullivan (County),IN,1,needs accessibility support,"FEMA verified $5,886 in damage; denied for missing documents; home needs repairs to be livable; needs accessibility support.",0.6696966886520386,3285136558
+6,0.42857142857142855,missing_documents,3600.119873046875,Allen (County),IN,1,,"FEMA verified $3,600 in damage; denied for missing documents; home needs repairs to be livable.",0.9065923690795898,3275406237
+7,0.25,missing_documents,799.5,Sullivan (County),IN,1,renter,FEMA verified $800 in damage; denied for missing documents; home needs repairs to be livable; renter.,0.8663871884346008,3288775209

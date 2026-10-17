@@ -1,0 +1,9 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,7255.58984375,Livingston (County),IL,1,needs accessibility support,"FEMA verified $7,256 in damage; denied for missing documents; home needs repairs to be livable; needs accessibility support.",0.4388355016708374,3271589863
+2,1.3125,missing_documents,4647.419921875,Iroquois (County),IL,1,,"FEMA verified $4,647 in damage; denied for missing documents; home needs repairs to be livable.",0.35259169340133667,3272971088
+3,1.125,missing_documents,3484.419921875,Livingston (County),IL,1,,"FEMA verified $3,484 in damage; denied for missing documents; home needs repairs to be livable.",0.3666745126247406,3285301671
+4,0.9375,missing_documents,2247.010009765625,Iroquois (County),IL,1,,"FEMA verified $2,247 in damage; denied for missing documents; home needs repairs to be livable.",0.44717690348625183,3280414053
+5,0.75,missing_documents,1068.679931640625,Livingston (County),IL,1,,"FEMA verified $1,069 in damage; denied for missing documents; home needs repairs to be livable.",0.39939168095588684,3290484710
+6,0.375,missing_documents,252.1899871826172,Livingston (County),IL,0,,FEMA verified $252 in damage; denied for missing documents.,0.43405881524086,3271606561
+7,0.375,missing_documents,217.39999389648438,Iroquois (County),IL,0,"renter, lowest income band","FEMA verified $217 in damage; denied for missing documents; renter, lowest income band.",0.29702380299568176,3277118211
+8,0.15625,missing_documents,123.48999786376953,Iroquois (County),IL,0,renter,FEMA verified $123 in damage; denied for missing documents; renter.,0.48455238342285156,3273829377

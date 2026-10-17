@@ -1,0 +1,3 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.5,missing_documents,6353.77001953125,"York (County)(in MSA 6400,6450)",ME,1,,"FEMA verified $6,354 in damage; denied for missing documents; home needs repairs to be livable.",0.3803189992904663,3290066887
+2,0.6000000000000001,lost_contact,164.6699981689453,"York (County)(in MSA 6400,6450)",ME,0,"lowest income band, age 65+","FEMA verified $165 in damage; denied after fema lost contact; lowest income band, age 65+.",0.33392244577407837,3276691511

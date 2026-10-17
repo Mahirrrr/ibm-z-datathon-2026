@@ -1,0 +1,5 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,2.0,missing_documents,2710.93994140625,Clark (County),IN,1,"renter, needs accessibility support","FEMA verified $2,711 in damage; denied for missing documents; home needs repairs to be livable; renter, needs accessibility support.",0.6220333576202393,3282208959
+2,1.125,missing_documents,2127.47998046875,Clark (County),IN,1,,"FEMA verified $2,127 in damage; denied for missing documents; home needs repairs to be livable.",0.4123542010784149,3275640726
+3,0.875,missing_documents,1835.77001953125,Washington (County),IN,1,lowest income band,"FEMA verified $1,836 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.5677937865257263,3274754084
+4,0.4375,missing_documents,1368.6400146484375,Clark (County),IN,1,age 65+,"FEMA verified $1,369 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.19061236083507538,3278466087

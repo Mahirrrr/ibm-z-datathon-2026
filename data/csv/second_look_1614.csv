@@ -1,0 +1,3 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.5,missing_documents,724.4299926757812,"Plymouth (County)(in (P)MSA 1120,1200,5400)",MA,1,,FEMA verified $724 in damage; denied for missing documents; home needs repairs to be livable.,0.311461478471756,3280860899
+2,0.5625,unverified_ownership_or_occupancy,251.9199981689453,"Middlesex (County)(in (P)MSA 1120,2600,4560)",MA,0,lowest income band,FEMA verified $252 in damage; ownership or occupancy never verified; lowest income band.,0.9664899110794067,3276700887

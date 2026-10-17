@@ -1,0 +1,3 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,2.0,missing_documents,114988.15380859375,Newton (County),MO,1,"lowest income band, age 65+","FEMA verified $114,988 in damage; denied for missing documents; home needs repairs to be livable; lowest income band, age 65+.",0.6735520362854004,3269670805
+2,0.75,missing_documents,1363.77001953125,Newton (County),MO,1,,"FEMA verified $1,364 in damage; denied for missing documents; home needs repairs to be livable.",0.5087502598762512,3274467687

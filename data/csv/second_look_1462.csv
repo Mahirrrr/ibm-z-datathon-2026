@@ -1,0 +1,12 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.5,missing_documents,12170.6494140625,Crawford (County),KS,1,,"FEMA verified $12,171 in damage; denied for missing documents; home needs repairs to be livable.",0.730999767780304,3287138682
+2,1.3636363636363635,missing_documents,10926.8193359375,Wyandotte (County),KS,1,,"FEMA verified $10,927 in damage; denied for missing documents; home needs repairs to be livable.",0.7495478391647339,3283590528
+3,1.2272727272727273,missing_documents,10718.16015625,Wyandotte (County),KS,1,,"FEMA verified $10,718 in damage; denied for missing documents; home needs repairs to be livable.",0.7674856781959534,3276696815
+4,1.0909090909090908,missing_documents,9994.990234375,Crawford (County),KS,1,,"FEMA verified $9,995 in damage; denied for missing documents; home needs repairs to be livable.",0.7267653346061707,3280190466
+5,0.9545454545454546,missing_documents,7833.89990234375,Wyandotte (County),KS,1,,"FEMA verified $7,834 in damage; denied for missing documents; home needs repairs to be livable.",0.7020137906074524,3284284342
+6,0.8181818181818181,missing_documents,7059.580078125,Crawford (County),KS,1,,"FEMA verified $7,060 in damage; denied for missing documents; home needs repairs to be livable.",0.789863646030426,3282608362
+7,0.6818181818181818,missing_documents,5009.9697265625,Seward (County),KS,1,,"FEMA verified $5,010 in damage; denied for missing documents; home needs repairs to be livable.",0.24283090233802795,3291242580
+8,0.5727272727272728,unverified_ownership_or_occupancy,4443.129821777344,Woodson (County),KS,1,age 65+,"FEMA verified $4,443 in damage; ownership or occupancy never verified; home needs repairs to be livable; age 65+.",0.21240827441215515,3282168908
+9,0.5454545454545454,missing_documents,4405.40966796875,Wyandotte (County),KS,1,"renter, lowest income band","FEMA verified $4,405 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.6076720356941223,3280689763
+10,0.2727272727272727,missing_documents,1330.0399169921875,Wyandotte (County),KS,1,,"FEMA verified $1,330 in damage; denied for missing documents; home needs repairs to be livable.",0.44106701016426086,3292641630
+11,0.18181818181818182,missing_documents,322.5199890136719,Crawford (County),KS,1,"renter, lowest income band","FEMA verified $323 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.5684150457382202,3285326049

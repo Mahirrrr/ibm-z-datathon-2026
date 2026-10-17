@@ -1,0 +1,4 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,2084.570068359375,Pulaski (County),KY,1,lowest income band,"FEMA verified $2,085 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.9238937497138977,3270057760
+2,0.9333333333333333,lost_contact,1168.419921875,Laurel (County),KY,1,renter,"FEMA verified $1,168 in damage; denied after fema lost contact; home needs repairs to be livable; renter.",0.9705091714859009,3277100333
+3,0.6666666666666666,missing_documents,268.41998291015625,Laurel (County),KY,1,"renter, needs accessibility support","FEMA verified $268 in damage; denied for missing documents; home needs repairs to be livable; renter, needs accessibility support.",0.5936049222946167,3288075730

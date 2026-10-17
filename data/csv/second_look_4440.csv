@@ -1,0 +1,13 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,9116.749877929688,Jackson (County),SD,1,lowest income band,"FEMA verified $9,117 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.7956514358520508,3270761938
+2,1.5,missing_documents,2574.800048828125,Oglala Lakota (County),SD,1,"lowest income band, needs accessibility support","FEMA verified $2,575 in damage; denied for missing documents; home needs repairs to be livable; lowest income band, needs accessibility support.",0.5996055603027344,3288758198
+3,1.375,missing_documents,6215.6798095703125,Oglala Lakota (County),SD,1,,"FEMA verified $6,216 in damage; denied for missing documents; home needs repairs to be livable.",0.6698204278945923,3276454314
+4,1.25,missing_documents,4284.89990234375,Todd (County),SD,1,,"FEMA verified $4,285 in damage; denied for missing documents; home needs repairs to be livable.",0.6542923450469971,3291669089
+5,1.0208333333333335,missing_documents,1797.5799560546875,Oglala Lakota (County),SD,1,lowest income band,"FEMA verified $1,798 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.6966865658760071,3279522895
+6,1.0,missing_documents,1338.22998046875,Hutchinson (County),SD,1,"lowest income band, age 65+","FEMA verified $1,338 in damage; denied for missing documents; home needs repairs to be livable; lowest income band, age 65+.",0.5697503685951233,3293699589
+7,0.625,missing_documents,1062.260009765625,Bennett (County),SD,1,,"FEMA verified $1,062 in damage; denied for missing documents; home needs repairs to be livable.",0.7072627544403076,3290729796
+8,0.5333333333333333,lost_contact,2095.070068359375,Minnehaha (County),SD,0,,"FEMA verified $2,095 in damage; denied after fema lost contact.",0.1441156417131424,3269888321
+9,0.5,missing_documents,231.9099884033203,Oglala Lakota (County),SD,1,,FEMA verified $232 in damage; denied for missing documents; home needs repairs to be livable.,0.6777125597000122,3292837125
+10,0.3125,missing_documents,188.3000030517578,Charles Mix (County),SD,0,lowest income band,FEMA verified $188 in damage; denied for missing documents; lowest income band.,0.32680994272232056,3280635306
+11,0.13333333333333333,lost_contact,161.83999633789062,Bennett (County),SD,,,FEMA verified $162 in damage; denied after fema lost contact.,0.9903203248977661,3293719444
+12,0.08333333333333333,lost_contact,100.0,Oglala Lakota (County),SD,0,age 65+,FEMA verified $100 in damage; denied after fema lost contact; age 65+.,0.36192789673805237,3292394940

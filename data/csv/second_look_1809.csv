@@ -1,0 +1,11 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.575,missing_documents,6116.909912109375,St. Charles (County),MO,1,renter,"FEMA verified $6,117 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.4880722463130951,3284034374
+2,1.5,missing_documents,33031.428955078125,Lincoln (County),MO,1,,"FEMA verified $33,031 in damage; denied for missing documents; home needs repairs to be livable.",0.3504897952079773,3277187848
+3,1.2249999999999999,missing_documents,4515.239990234375,St. Louis (County),MO,1,age 65+,"FEMA verified $4,515 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.3817440867424011,3272148569
+4,1.2000000000000002,missing_documents,5383.18994140625,St. Louis (County),MO,1,,"FEMA verified $5,383 in damage; denied for missing documents; home needs repairs to be livable.",0.4742811918258667,3275643021
+5,1.08,unverified_ownership_or_occupancy,2178.1199951171875,Lincoln (County),MO,1,"renter, lowest income band","FEMA verified $2,178 in damage; ownership or occupancy never verified; home needs repairs to be livable; renter, lowest income band.",0.7426166534423828,3271924085
+6,0.625,missing_documents,989.989990234375,St. Louis (County),MO,0,renter,FEMA verified $990 in damage; denied for missing documents; renter.,0.9419609904289246,3274704426
+7,0.6000000000000001,missing_documents,956.7899780273438,Callaway (County),MO,1,,FEMA verified $957 in damage; denied for missing documents; home needs repairs to be livable.,0.6472302675247192,3271894498
+8,0.35000000000000003,missing_documents,487.4499816894531,St. Louis (County),MO,1,age 65+,FEMA verified $487 in damage; denied for missing documents; home needs repairs to be livable; age 65+.,0.33377766609191895,3290993750
+9,0.3375,unverified_ownership_or_occupancy,495.0,St. Louis,MO,0,renter,FEMA verified $495 in damage; ownership or occupancy never verified; renter.,0.5523849725723267,3277158384
+10,0.125,missing_documents,372.4499816894531,St. Louis,MO,0,age 65+,FEMA verified $372 in damage; denied for missing documents; age 65+.,0.4135909676551819,3287316496

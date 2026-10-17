@@ -1,0 +1,17 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.640625,missing_documents,40045.159912109375,Martin (County),KY,1,lowest income band,"FEMA verified $40,045 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.760491132736206,3271922089
+2,1.5,missing_documents,47269.8896484375,Lawrence (County),KY,1,,"FEMA verified $47,270 in damage; denied for missing documents; home needs repairs to be livable.",0.3647642731666565,3282651944
+3,1.421875,missing_documents,13854.889404296875,Kenton (County),KY,1,age 65+,"FEMA verified $13,855 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.16967326402664185,3280227320
+4,1.375,missing_documents,2848.93994140625,Morgan (County),KY,1,"renter, lowest income band","FEMA verified $2,849 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.5920439958572388,3275185015
+5,1.3125,missing_documents,16860.91015625,Martin (County),KY,1,,"FEMA verified $16,861 in damage; denied for missing documents; home needs repairs to be livable.",0.5043069124221802,3272134218
+6,1.125,missing_documents,3778.5,Magoffin (County),KY,1,,"FEMA verified $3,778 in damage; denied for missing documents; home needs repairs to be livable.",0.40908384323120117,3282199430
+7,1.09375,missing_documents,2652.35986328125,Martin (County),KY,1,lowest income band,"FEMA verified $2,652 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.6623212099075317,3272597168
+8,0.984375,missing_documents,2523.1298828125,Lawrence (County),KY,1,lowest income band,"FEMA verified $2,523 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.7710510492324829,3276297738
+9,0.875,missing_documents,1642.6199340820312,Wolfe (County),KY,1,lowest income band,"FEMA verified $1,643 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.6183144450187683,3287287388
+10,0.5625,missing_documents,1220.72998046875,Ohio (County),KY,1,,"FEMA verified $1,221 in damage; denied for missing documents; home needs repairs to be livable.",0.4800764322280884,3278068094
+11,0.546875,missing_documents,924.22998046875,Morgan (County),KY,1,renter,FEMA verified $924 in damage; denied for missing documents; home needs repairs to be livable; renter.,0.5223198533058167,3268871391
+12,0.525,lost_contact,1440.3399658203125,Montgomery (County),KY,1,,"FEMA verified $1,440 in damage; denied after fema lost contact; home needs repairs to be livable.",0.1961912363767624,3282629783
+13,0.4375,missing_documents,252.0,Johnson (County),KY,1,lowest income band,FEMA verified $252 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.,0.512719452381134,3292944469
+14,0.15000000000000002,lost_contact,186.1999969482422,Magoffin (County),KY,0,,FEMA verified $186 in damage; denied after fema lost contact.,0.16684335470199585,3284480406
+15,0.1,lost_contact,115.79999542236328,Magoffin (County),KY,0,,FEMA verified $116 in damage; denied after fema lost contact.,0.29790550470352173,3292664901
+16,0.078125,missing_documents,72.86000061035156,Martin (County),KY,0,lowest income band,FEMA verified $73 in damage; denied for missing documents; lowest income band.,0.4459611475467682,3287730526

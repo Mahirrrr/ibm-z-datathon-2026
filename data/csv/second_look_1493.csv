@@ -1,0 +1,5 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,3303.260009765625,District of Columbia (County-equivalent),DC,1,age 65+,"FEMA verified $3,303 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.5861775279045105,3282621265
+2,0.75,missing_documents,436.47998046875,District of Columbia (County-equivalent),DC,0,,FEMA verified $436 in damage; denied for missing documents.,0.4796557128429413,3286891559
+3,0.5,missing_documents,325.41998291015625,District of Columbia (County-equivalent),DC,0,,FEMA verified $325 in damage; denied for missing documents.,0.34635084867477417,3273434728
+4,0.25,missing_documents,201.1599884033203,District of Columbia (County-equivalent),DC,0,,FEMA verified $201 in damage; denied for missing documents.,0.4665564298629761,3275035145

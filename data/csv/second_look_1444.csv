@@ -1,0 +1,4 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.5,missing_documents,231538.8095703125,Ottawa (County),OH,1,,"FEMA verified $231,539 in damage; denied for missing documents; home needs repairs to be livable.",0.49873021245002747,3276028232
+2,1.0,missing_documents,10818.6494140625,Paulding (County),OH,1,,"FEMA verified $10,819 in damage; denied for missing documents; home needs repairs to be livable.",0.39394932985305786,3278023181
+3,0.5,missing_documents,4770.76008605957,Ottawa (County),OH,1,,"FEMA verified $4,771 in damage; denied for missing documents; home needs repairs to be livable.",0.31555190682411194,3274484609

@@ -1,0 +1,9 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.53125,missing_documents,32945.0390625,Henderson (County),IL,1,renter,"FEMA verified $32,945 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.733088493347168,3275154723
+2,1.5,missing_documents,28766.62939453125,Adams (County),IL,1,"renter, lowest income band","FEMA verified $28,767 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.5348070859909058,3269239394
+3,1.5,missing_documents,123843.8203125,Henderson (County),IL,1,,"FEMA verified $123,844 in damage; denied for missing documents; home needs repairs to be livable.",0.6616507172584534,3288548017
+4,1.09375,missing_documents,22058.549438476562,Lawrence (County),IL,1,renter,"FEMA verified $22,059 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.4773098826408386,3282142499
+5,1.0,missing_documents,17984.52978515625,Jersey (County),IL,1,"renter, lowest income band","FEMA verified $17,985 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.5954177975654602,3285291897
+6,0.421875,unverified_ownership_or_occupancy,304.6800003051758,Rock Island (County),IL,0,renter,FEMA verified $305 in damage; ownership or occupancy never verified; renter.,0.3073275685310364,3281912818
+7,0.25,missing_documents,178.1599884033203,Clark (County),IL,0,,FEMA verified $178 in damage; denied for missing documents.,0.2085217386484146,3285746497
+8,0.1875,missing_documents,97.27999877929688,Rock Island (County),IL,0,"renter, lowest income band","FEMA verified $97 in damage; denied for missing documents; renter, lowest income band.",0.48436933755874634,3286620701

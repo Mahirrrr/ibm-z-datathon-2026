@@ -1,0 +1,12 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,9148.939453125,Camden (County),NJ,1,renter,"FEMA verified $9,149 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.39086368680000305,3275481061
+2,1.4318181818181817,unverified_ownership_or_occupancy,8245.490234375,Burlington (County),NJ,1,renter,"FEMA verified $8,245 in damage; ownership or occupancy never verified; home needs repairs to be livable; renter.",0.3871213495731354,3289294396
+3,1.2886363636363638,unverified_ownership_or_occupancy,6318.9697265625,Burlington (County),NJ,1,renter,"FEMA verified $6,319 in damage; ownership or occupancy never verified; home needs repairs to be livable; renter.",0.4441888928413391,3276568464
+4,1.0909090909090908,missing_documents,4992.6099853515625,Burlington (County),NJ,1,,"FEMA verified $4,993 in damage; denied for missing documents; home needs repairs to be livable.",0.23647460341453552,3286057842
+5,0.9545454545454546,missing_documents,1709.949951171875,Camden (County),NJ,1,,"FEMA verified $1,710 in damage; denied for missing documents; home needs repairs to be livable.",0.31667545437812805,3281164704
+6,0.6818181818181818,missing_documents,1200.0,Burlington (County),NJ,0,renter,"FEMA verified $1,200 in damage; denied for missing documents; renter.",0.8551557660102844,3291692470
+7,0.5454545454545454,lost_contact,852.8099975585938,Camden (County),NJ,1,,FEMA verified $853 in damage; denied after fema lost contact; home needs repairs to be livable.,0.3653254210948944,3276270282
+8,0.3068181818181818,unverified_ownership_or_occupancy,631.2799682617188,Camden (County),NJ,0,renter,FEMA verified $631 in damage; ownership or occupancy never verified; renter.,0.6564318537712097,3284466274
+9,0.29090909090909095,lost_contact,815.4099731445312,Camden (County),NJ,0,,FEMA verified $815 in damage; denied after fema lost contact.,0.4067932963371277,3286190135
+10,0.20454545454545453,unverified_ownership_or_occupancy,352.8699951171875,Camden (County),NJ,0,renter,FEMA verified $353 in damage; ownership or occupancy never verified; renter.,0.4970954954624176,3293364283
+11,0.13636363636363635,missing_documents,39.869998931884766,Camden (County),NJ,0,"renter, lowest income band","FEMA verified $40 in damage; denied for missing documents; renter, lowest income band.",0.7195240259170532,3269252499

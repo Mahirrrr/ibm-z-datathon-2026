@@ -1,0 +1,11 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.4000000000000001,missing_documents,2532.1398391723633,Lowndes (County),MS,1,age 65+,"FEMA verified $2,532 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.41348376870155334,3279942417
+2,1.25,missing_documents,5798.4697265625,Lowndes (County),MS,0,lowest income band,"FEMA verified $5,798 in damage; denied for missing documents; lowest income band.",0.9806919097900391,3293387202
+3,1.125,missing_documents,3161.449951171875,Lowndes (County),MS,0,lowest income band,"FEMA verified $3,161 in damage; denied for missing documents; lowest income band.",0.973717987537384,3274136379
+4,0.9450000000000001,unverified_ownership_or_occupancy,1191.6199951171875,Lowndes (County),MS,1,lowest income band,"FEMA verified $1,192 in damage; ownership or occupancy never verified; home needs repairs to be livable; lowest income band.",0.9457228183746338,3283575447
+5,0.875,missing_documents,1062.0399169921875,Lowndes (County),MS,1,lowest income band,"FEMA verified $1,062 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.506227970123291,3280421657
+6,0.7,missing_documents,2135.18994140625,Lowndes (County),MS,0,,"FEMA verified $2,135 in damage; denied for missing documents.",0.9758704304695129,3283454546
+7,0.5,missing_documents,713.6499633789062,Lowndes (County),MS,0,lowest income band,FEMA verified $714 in damage; denied for missing documents; lowest income band.,0.9841813445091248,3285765474
+8,0.44999999999999996,missing_documents,668.0299682617188,Lowndes (County),MS,1,,FEMA verified $668 in damage; denied for missing documents; home needs repairs to be livable.,0.312267929315567,3269249526
+9,0.30000000000000004,missing_documents,283.3999938964844,Lowndes (County),MS,1,,FEMA verified $283 in damage; denied for missing documents; home needs repairs to be livable.,0.44376909732818604,3273489420
+10,0.2,missing_documents,152.75999450683594,Lowndes (County),MS,1,"renter, lowest income band","FEMA verified $153 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.7322218418121338,3273610756

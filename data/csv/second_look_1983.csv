@@ -1,0 +1,5 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.5,missing_documents,11216.39013671875,Warren (County),MS,1,,"FEMA verified $11,216 in damage; denied for missing documents; home needs repairs to be livable.",0.1978740096092224,3281344848
+2,1.0500000000000003,lost_contact,2618.39990234375,Bolivar (County),MS,1,lowest income band,"FEMA verified $2,618 in damage; denied after fema lost contact; home needs repairs to be livable; lowest income band.",0.9070535898208618,3293971458
+3,0.75,missing_documents,609.9500122070312,Humphreys (County),MS,1,,FEMA verified $610 in damage; denied for missing documents; home needs repairs to be livable.,0.765164315700531,3281964958
+4,0.3125,missing_documents,500.0,Yazoo (County),MS,0,lowest income band,FEMA verified $500 in damage; denied for missing documents; lowest income band.,0.9779007434844971,3284034310

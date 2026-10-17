@@ -1,0 +1,4 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,1759.2999267578125,Yap (County-equivalent),FM,1,lowest income band,"FEMA verified $1,759 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.9166566133499146,3281120082
+2,1.1666666666666665,missing_documents,688.1099853515625,Yap (County-equivalent),FM,1,lowest income band,FEMA verified $688 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.,0.35416179895401,3276570855
+3,0.3333333333333333,lost_contact,500.0,Yap (County-equivalent),FM,0,lowest income band,FEMA verified $500 in damage; denied after fema lost contact; lowest income band.,0.6794878244400024,3272371028

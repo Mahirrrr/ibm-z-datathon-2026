@@ -1,0 +1,2 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.0,lost_contact,304.1300048828125,Waseca (County),MN,0,age 65+,FEMA verified $304 in damage; denied after fema lost contact; age 65+.,0.1483822613954544,3290425058

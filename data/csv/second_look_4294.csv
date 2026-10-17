@@ -1,0 +1,3 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.5,missing_documents,916.7799682617188,Dougherty (County),GA,1,,FEMA verified $917 in damage; denied for missing documents; home needs repairs to be livable.,0.5583557486534119,3286092682
+2,0.625,missing_documents,42.87999725341797,Dougherty (County),GA,0,lowest income band,FEMA verified $43 in damage; denied for missing documents; lowest income band.,0.40100178122520447,3277036098

@@ -1,0 +1,8 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.5,missing_documents,37592.64990234375,Rota (Municipality),MP,1,,"FEMA verified $37,593 in damage; denied for missing documents; home needs repairs to be livable.",0.500111997127533,3280187418
+2,1.2857142857142856,missing_documents,16893.349609375,Rota (Municipality),MP,1,,"FEMA verified $16,893 in damage; denied for missing documents; home needs repairs to be livable.",0.21936067938804626,3282185561
+3,1.0714285714285714,missing_documents,8122.64990234375,Rota (Municipality),MP,1,,"FEMA verified $8,123 in damage; denied for missing documents; home needs repairs to be livable.",0.5003042817115784,3283884289
+4,0.8571428571428571,missing_documents,6917.320068359375,Rota (Municipality),MP,1,,"FEMA verified $6,917 in damage; denied for missing documents; home needs repairs to be livable.",0.48356130719184875,3282599133
+5,0.7714285714285714,unverified_ownership_or_occupancy,4876.669921875,Rota (Municipality),MP,1,"renter, lowest income band","FEMA verified $4,877 in damage; ownership or occupancy never verified; home needs repairs to be livable; renter, lowest income band.",0.763556182384491,3276959227
+6,0.3214285714285714,unverified_ownership_or_occupancy,3050.31982421875,Rota (Municipality),MP,0,renter,"FEMA verified $3,050 in damage; ownership or occupancy never verified; renter.",0.7327806949615479,3293520967
+7,0.21428571428571427,missing_documents,604.2299957275391,Rota (Municipality),MP,1,,FEMA verified $604 in damage; denied for missing documents; home needs repairs to be livable.,0.5863502621650696,3280427778

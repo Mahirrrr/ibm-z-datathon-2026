@@ -1,0 +1,13 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,2.0,missing_documents,4751.56005859375,Lake (County),IN,1,"lowest income band, age 65+","FEMA verified $4,752 in damage; denied for missing documents; home needs repairs to be livable; lowest income band, age 65+.",0.48862066864967346,3272957566
+2,1.375,missing_documents,2825.639892578125,Lake (County),IN,1,,"FEMA verified $2,826 in damage; denied for missing documents; home needs repairs to be livable.",0.613575279712677,3276012530
+3,1.25,missing_documents,2107.239990234375,Lake (County),IN,1,,"FEMA verified $2,107 in damage; denied for missing documents; home needs repairs to be livable.",0.27086690068244934,3270105373
+4,1.1666666666666665,missing_documents,2047.9498901367188,Lake (County),IN,1,renter,"FEMA verified $2,048 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.41528263688087463,3275584129
+5,1.125,missing_documents,2076.0299072265625,Lake (County),IN,1,,"FEMA verified $2,076 in damage; denied for missing documents; home needs repairs to be livable.",0.3909505307674408,3284428577
+6,0.8166666666666668,lost_contact,1533.1400146484375,Lake (County),IN,1,age 65+,"FEMA verified $1,533 in damage; denied after fema lost contact; home needs repairs to be livable; age 65+.",0.5767030715942383,3287235864
+7,0.75,missing_documents,1298.1199951171875,Lake (County),IN,1,,"FEMA verified $1,298 in damage; denied for missing documents; home needs repairs to be livable.",0.47457149624824524,3274710449
+8,0.625,missing_documents,1258.0399780273438,Lake (County),IN,1,,"FEMA verified $1,258 in damage; denied for missing documents; home needs repairs to be livable.",0.5045107007026672,3267924555
+9,0.3333333333333333,missing_documents,1110.3399658203125,Lake (County),IN,0,,"FEMA verified $1,110 in damage; denied for missing documents.",0.33743056654930115,3283552378
+10,0.3125,missing_documents,521.5599975585938,Lake (County),IN,0,age 65+,FEMA verified $522 in damage; denied for missing documents; age 65+.,0.32446008920669556,3277112240
+11,0.25,missing_documents,351.6999816894531,Lake (County),IN,1,,FEMA verified $352 in damage; denied for missing documents; home needs repairs to be livable.,0.2080213874578476,3270550118
+12,0.125,missing_documents,268.3599853515625,Lake (County),IN,1,,FEMA verified $268 in damage; denied for missing documents; home needs repairs to be livable.,0.5559644103050232,3273594004

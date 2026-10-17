@@ -1,0 +1,6 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,2.0,missing_documents,126560.0,Muhlenberg (County),KY,1,"lowest income band, needs accessibility support","FEMA verified $126,560 in damage; denied for missing documents; home needs repairs to be livable; lowest income band, needs accessibility support.",0.9225072264671326,3292409581
+2,1.2000000000000002,missing_documents,13121.179954528809,Greenup (County),KY,1,,"FEMA verified $13,121 in damage; denied for missing documents; home needs repairs to be livable.",0.24787203967571259,3286336583
+3,1.2,missing_documents,11729.4892578125,Trigg (County),KY,1,"age 65+, needs accessibility support","FEMA verified $11,729 in damage; denied for missing documents; home needs repairs to be livable; age 65+, needs accessibility support.",0.7307868003845215,3269015835
+4,0.8,missing_documents,1500.0,Clay (County),KY,1,"lowest income band, needs accessibility support","FEMA verified $1,500 in damage; denied for missing documents; home needs repairs to be livable; lowest income band, needs accessibility support.",0.5403631329536438,3291592994
+5,0.25,missing_documents,300.0,Muhlenberg (County),KY,0,lowest income band,FEMA verified $300 in damage; denied for missing documents; lowest income band.,0.36166638135910034,3288332493

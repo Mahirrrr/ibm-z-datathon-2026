@@ -1,0 +1,4 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,24167.389526367188,Perry (County),OH,1,needs accessibility support,"FEMA verified $24,167 in damage; denied for missing documents; home needs repairs to be livable; needs accessibility support.",0.14208410680294037,3279889275
+2,1.1666666666666665,missing_documents,2565.119873046875,Hamilton (County),OH,1,needs accessibility support,"FEMA verified $2,565 in damage; denied for missing documents; home needs repairs to be livable; needs accessibility support.",0.3813458979129791,3289399184
+3,0.6666666666666666,missing_documents,371.0,Licking (County),OH,1,"renter, needs accessibility support","FEMA verified $371 in damage; denied for missing documents; home needs repairs to be livable; renter, needs accessibility support.",0.5514771938323975,3287006098

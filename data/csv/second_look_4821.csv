@@ -1,0 +1,8 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,12334.439453125,Chatham (County),GA,1,lowest income band,"FEMA verified $12,334 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.42006853222846985,3274040640
+2,1.5,missing_documents,4288.289863586426,Effingham (County),GA,1,lowest income band,"FEMA verified $4,288 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.5648959279060364,3275377917
+3,1.0714285714285714,missing_documents,4221.60986328125,Chatham (County),GA,1,,"FEMA verified $4,222 in damage; denied for missing documents; home needs repairs to be livable.",0.7791748046875,3287889688
+4,1.0,missing_documents,2797.27001953125,Screven (County),GA,1,needs accessibility support,"FEMA verified $2,797 in damage; denied for missing documents; home needs repairs to be livable; needs accessibility support.",0.5939191579818726,3288333370
+5,0.44642857142857145,missing_documents,300.0,Bulloch (County),GA,0,renter,FEMA verified $300 in damage; denied for missing documents; renter.,0.3216225504875183,3282817539
+6,0.4285714285714286,lost_contact,300.0,Chatham (County),GA,,"renter, lowest income band","FEMA verified $300 in damage; denied after fema lost contact; renter, lowest income band.",0.9797954559326172,3271722403
+7,0.19999999999999998,lost_contact,285.2599792480469,Chatham (County),GA,1,needs accessibility support,FEMA verified $285 in damage; denied after fema lost contact; home needs repairs to be livable; needs accessibility support.,0.07805230468511581,3278356374

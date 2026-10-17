@@ -1,0 +1,14 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.3326923076923076,unverified_ownership_or_occupancy,711.7799682617188,Monroe (County),NY,1,renter,FEMA verified $712 in damage; ownership or occupancy never verified; home needs repairs to be livable; renter.,0.5219730138778687,3277648026
+2,1.2461538461538462,unverified_ownership_or_occupancy,1417.909912109375,Monroe (County),NY,0,"renter, lowest income band","FEMA verified $1,418 in damage; ownership or occupancy never verified; renter, lowest income band.",0.30289986729621887,3291041959
+3,1.2000000000000002,lost_contact,3806.119903564453,Madison (County),NY,1,,"FEMA verified $3,806 in damage; denied after fema lost contact; home needs repairs to be livable.",0.43778738379478455,3285826484
+4,1.076923076923077,lost_contact,687.3900146484375,Broome (County),NY,1,lowest income band,FEMA verified $687 in damage; denied after fema lost contact; home needs repairs to be livable; lowest income band.,0.588525652885437,3291035517
+5,0.7875,unverified_ownership_or_occupancy,453.8699951171875,Monroe (County),NY,1,renter,FEMA verified $454 in damage; ownership or occupancy never verified; home needs repairs to be livable; renter.,0.4812178611755371,3289088293
+6,0.7355769230769231,unverified_ownership_or_occupancy,500.0,Monroe (County),NY,0,renter,FEMA verified $500 in damage; ownership or occupancy never verified; renter.,0.47410985827445984,3290591988
+7,0.675,unverified_ownership_or_occupancy,453.8699951171875,Monroe (County),NY,0,"renter, lowest income band","FEMA verified $454 in damage; ownership or occupancy never verified; renter, lowest income band.",0.5109990835189819,3270208286
+8,0.6538461538461539,missing_documents,500.0,Monroe (County),NY,0,,FEMA verified $500 in damage; denied for missing documents.,0.9852612614631653,3275684866
+9,0.43269230769230776,unverified_ownership_or_occupancy,376.2200012207031,Monroe (County),NY,0,renter,FEMA verified $376 in damage; ownership or occupancy never verified; renter.,0.5150457620620728,3278972322
+10,0.34615384615384615,unverified_ownership_or_occupancy,168.51998901367188,Monroe (County),NY,0,renter,FEMA verified $169 in damage; ownership or occupancy never verified; renter.,0.643001139163971,3283465639
+11,0.2076923076923077,unverified_ownership_or_occupancy,154.87998962402344,Monroe (County),NY,0,,FEMA verified $155 in damage; ownership or occupancy never verified.,0.409527063369751,3277650162
+12,0.17307692307692307,unverified_ownership_or_occupancy,70.63999938964844,Monroe (County),NY,0,lowest income band,FEMA verified $71 in damage; ownership or occupancy never verified; lowest income band.,0.4715617597103119,3294036708
+13,0.08653846153846154,unverified_ownership_or_occupancy,50.93000030517578,Monroe (County),NY,0,renter,FEMA verified $51 in damage; ownership or occupancy never verified; renter.,0.7003883719444275,3288634137

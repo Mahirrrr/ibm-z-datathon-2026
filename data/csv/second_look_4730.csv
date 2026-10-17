@@ -1,0 +1,4 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,2.0,missing_documents,10000.0,Kuspuk Regional Educational Attendance Area,AK,1,"renter, lowest income band","FEMA verified $10,000 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.8046212792396545,3283282725
+2,1.0,missing_documents,7682.0999755859375,Lower Kuskokwim Regional Educational Attendance Area,AK,1,,"FEMA verified $7,682 in damage; denied for missing documents; home needs repairs to be livable.",0.41730797290802,3272797219
+3,0.41666666666666663,missing_documents,5650.0,Kuspuk Regional Educational Attendance Area,AK,0,lowest income band,"FEMA verified $5,650 in damage; denied for missing documents; lowest income band.",0.3216701149940491,3273214374

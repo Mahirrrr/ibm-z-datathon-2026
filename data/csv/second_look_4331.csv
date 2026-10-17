@@ -1,0 +1,5 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.5,missing_documents,20706.449462890625,Wetzel (County),WV,1,,"FEMA verified $20,706 in damage; denied for missing documents; home needs repairs to be livable.",0.8956117033958435,3277047692
+2,1.3125,missing_documents,2706.169921875,Marshall (County),WV,1,lowest income band,"FEMA verified $2,706 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.36154448986053467,3268001715
+3,0.75,missing_documents,2157.0400390625,Marion (County),WV,1,,"FEMA verified $2,157 in damage; denied for missing documents; home needs repairs to be livable.",0.2777493894100189,3272874613
+4,0.3125,missing_documents,209.51998901367188,Marion (County),WV,0,lowest income band,FEMA verified $210 in damage; denied for missing documents; lowest income band.,0.4295978844165802,3283934621

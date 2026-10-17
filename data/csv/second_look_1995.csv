@@ -1,0 +1,2 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.5,missing_documents,9745.279296875,Grand Isle (County),VT,1,,"FEMA verified $9,745 in damage; denied for missing documents; home needs repairs to be livable.",0.19922813773155212,3283079801

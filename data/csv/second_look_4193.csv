@@ -1,0 +1,17 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,30910.55859375,Napa (County),CA,1,lowest income band,"FEMA verified $30,911 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.24751915037631989,3291005791
+2,1.53125,missing_documents,2632.300048828125,Solano (County),CA,1,age 65+,"FEMA verified $2,632 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.3589145541191101,3292118044
+3,1.40625,missing_documents,2827.719970703125,Napa (County),CA,1,,"FEMA verified $2,828 in damage; denied for missing documents; home needs repairs to be livable.",0.21815869212150574,3270920064
+4,0.9375,missing_documents,998.219970703125,Solano (County),CA,1,,FEMA verified $998 in damage; denied for missing documents; home needs repairs to be livable.,0.2087225615978241,3278357650
+5,0.9375,missing_documents,1034.0699462890625,Napa (County),CA,0,renter,"FEMA verified $1,034 in damage; denied for missing documents; renter.",0.506259560585022,3281820610
+6,0.859375,missing_documents,1012.8699951171875,Napa (County),CA,0,renter,"FEMA verified $1,013 in damage; denied for missing documents; renter.",0.28302693367004395,3291929469
+7,0.8125,missing_documents,1219.5199890136719,Napa (County),CA,0,,"FEMA verified $1,220 in damage; denied for missing documents.",0.08852085471153259,3291901033
+8,0.65625,missing_documents,498.8299865722656,Napa (County),CA,1,,FEMA verified $499 in damage; denied for missing documents; home needs repairs to be livable.,0.15582971274852753,3268271147
+9,0.5625,missing_documents,805.9299621582031,Napa (County),CA,0,,FEMA verified $806 in damage; denied for missing documents.,0.14586150646209717,3281836104
+10,0.5625,missing_documents,289.989990234375,Napa (County),CA,0,"renter, age 65+","FEMA verified $290 in damage; denied for missing documents; renter, age 65+.",0.24084995687007904,3284780127
+11,0.5,missing_documents,699.4599914550781,Napa (County),CA,0,,FEMA verified $699 in damage; denied for missing documents.,0.1407792717218399,3274388312
+12,0.4375,missing_documents,142.89999389648438,Napa (County),CA,1,"renter, needs accessibility support","FEMA verified $143 in damage; denied for missing documents; home needs repairs to be livable; renter, needs accessibility support.",0.47625502943992615,3270024378
+13,0.2734375,missing_documents,142.89999389648438,Napa (County),CA,0,renter,FEMA verified $143 in damage; denied for missing documents; renter.,0.3730139434337616,3291905404
+14,0.2625,lost_contact,142.89999389648438,Napa (County),CA,,"renter, lowest income band","FEMA verified $143 in damage; denied after fema lost contact; renter, lowest income band.",0.9801304340362549,3275637785
+15,0.2625,lost_contact,142.89999389648438,Napa (County),CA,,"renter, lowest income band","FEMA verified $143 in damage; denied after fema lost contact; renter, lowest income band.",0.9872646331787109,3291901036
+16,0.0625,lost_contact,95.27999877929688,Solano (County),CA,,lowest income band,FEMA verified $95 in damage; denied after fema lost contact; lowest income band.,0.9833360314369202,3286526392

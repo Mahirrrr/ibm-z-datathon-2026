@@ -1,0 +1,2 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,2.0,missing_documents,539.4199829101562,Tazewell (County),VA,1,"renter, lowest income band","FEMA verified $539 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.5163068771362305,3281798210

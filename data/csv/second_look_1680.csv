@@ -1,0 +1,5 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,2.0,missing_documents,82308.3193359375,Volusia (County),FL,1,"renter, lowest income band","FEMA verified $82,308 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.8323196172714233,3273827403
+2,1.3125,missing_documents,8978.98974609375,Volusia (County),FL,1,renter,"FEMA verified $8,979 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.5838207602500916,3292184511
+3,0.75,missing_documents,1056.0899658203125,Volusia (County),FL,0,"renter, lowest income band","FEMA verified $1,056 in damage; denied for missing documents; renter, lowest income band.",0.5724889039993286,3292869493
+4,0.375,missing_documents,757.6699829101562,Volusia (County),FL,1,,FEMA verified $758 in damage; denied for missing documents; home needs repairs to be livable.,0.5462456941604614,3288114347

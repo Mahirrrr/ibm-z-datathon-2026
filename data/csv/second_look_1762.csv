@@ -1,0 +1,6 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,11894.329467773438,Weld (County),CO,1,renter,"FEMA verified $11,894 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.5548579096794128,3281268345
+2,1.6,missing_documents,3068.510009765625,Weld (County),CO,1,"renter, lowest income band","FEMA verified $3,069 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.5688019394874573,3267939495
+3,1.05,missing_documents,1820.8900146484375,Weld (County),CO,1,renter,"FEMA verified $1,821 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.7059856653213501,3280170603
+4,0.7000000000000001,missing_documents,913.7999877929688,Weld (County),CO,1,renter,FEMA verified $914 in damage; denied for missing documents; home needs repairs to be livable; renter.,0.6940773129463196,3292866960
+5,0.2,missing_documents,20.03999900817871,Weld (County),CO,0,,FEMA verified $20 in damage; denied for missing documents.,0.5114645957946777,3276678542

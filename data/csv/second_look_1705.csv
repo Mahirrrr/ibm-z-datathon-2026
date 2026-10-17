@@ -1,0 +1,15 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.7142857142857142,missing_documents,2146.139892578125,Page (County),IA,1,"renter, lowest income band","FEMA verified $2,146 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.7950626611709595,3287685222
+2,1.5,missing_documents,3336.6298828125,Harrison (County),IA,1,,"FEMA verified $3,337 in damage; denied for missing documents; home needs repairs to be livable.",0.33960068225860596,3275587479
+3,1.3928571428571428,missing_documents,2319.820068359375,Page (County),IA,1,,"FEMA verified $2,320 in damage; denied for missing documents; home needs repairs to be livable.",0.36821407079696655,3283028809
+4,1.1785714285714286,missing_documents,1557.97998046875,Union (County),IA,1,,"FEMA verified $1,558 in damage; denied for missing documents; home needs repairs to be livable.",0.291336327791214,3276238640
+5,1.0714285714285714,missing_documents,1390.2599487304688,Mills (County),IA,1,,"FEMA verified $1,390 in damage; denied for missing documents; home needs repairs to be livable.",0.2586956322193146,3284440646
+6,0.9642857142857144,missing_documents,1245.2099609375,Montgomery (County),IA,1,,"FEMA verified $1,245 in damage; denied for missing documents; home needs repairs to be livable.",0.597341001033783,3290935242
+7,0.9142857142857143,lost_contact,1151.679931640625,Mills (County),IA,1,"lowest income band, age 65+","FEMA verified $1,152 in damage; denied after fema lost contact; home needs repairs to be livable; lowest income band, age 65+.",0.21279676258563995,3272974461
+8,0.6428571428571428,missing_documents,329.989990234375,Union (County),IA,0,"renter, lowest income band","FEMA verified $330 in damage; denied for missing documents; renter, lowest income band.",0.8868287801742554,3280178488
+9,0.6000000000000001,lost_contact,505.53997802734375,Page (County),IA,,"renter, lowest income band","FEMA verified $506 in damage; denied after fema lost contact; renter, lowest income band.",0.9957667589187622,3268373263
+10,0.5357142857142857,missing_documents,280.3399963378906,Page (County),IA,1,,FEMA verified $280 in damage; denied for missing documents; home needs repairs to be livable.,0.3734326958656311,3268356822
+11,0.3571428571428571,missing_documents,263.1399841308594,Ida (County),IA,0,age 65+,FEMA verified $263 in damage; denied for missing documents; age 65+.,0.4169010519981384,3277993687
+12,0.2142857142857143,lost_contact,199.989990234375,Cass (County),IA,0,lowest income band,FEMA verified $200 in damage; denied after fema lost contact; lowest income band.,0.31029170751571655,3286596151
+13,0.17857142857142855,missing_documents,77.86000061035156,Ida (County),IA,0,age 65+,FEMA verified $78 in damage; denied for missing documents; age 65+.,0.4045610725879669,3284878829
+14,0.07142857142857142,missing_documents,73.76000213623047,Taylor (County),IA,0,,FEMA verified $74 in damage; denied for missing documents.,0.4824497401714325,3272953293

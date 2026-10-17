@@ -1,0 +1,5 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,7395.75,Belmont (County),OH,1,renter,"FEMA verified $7,396 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.8340233564376831,3285319115
+2,1.1812500000000001,unverified_ownership_or_occupancy,5258.279846191406,Ross (County),OH,1,renter,"FEMA verified $5,258 in damage; ownership or occupancy never verified; home needs repairs to be livable; renter.",0.6392084360122681,3281184530
+3,0.875,missing_documents,3654.0799560546875,Franklin (County),OH,1,lowest income band,"FEMA verified $3,654 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.29532960057258606,3285162036
+4,0.375,missing_documents,1210.72998046875,Franklin (County),OH,1,,"FEMA verified $1,211 in damage; denied for missing documents; home needs repairs to be livable.",0.348762571811676,3267952344

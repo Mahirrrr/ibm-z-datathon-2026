@@ -1,0 +1,5 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.5,missing_documents,21629.048828125,Bolivar (County),MS,1,,"FEMA verified $21,629 in damage; denied for missing documents; home needs repairs to be livable.",0.5622753500938416,3274693061
+2,1.5,missing_documents,19162.12890625,Warren (County),MS,1,"renter, lowest income band","FEMA verified $19,162 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.6547418236732483,3284429412
+3,0.7000000000000001,lost_contact,12599.40966796875,Warren (County),MS,1,renter,"FEMA verified $12,599 in damage; denied after fema lost contact; home needs repairs to be livable; renter.",0.6226301789283752,3283985639
+4,0.375,missing_documents,370.5099792480469,Washington (County),MS,1,,FEMA verified $371 in damage; denied for missing documents; home needs repairs to be livable.,0.6703002452850342,3287670550

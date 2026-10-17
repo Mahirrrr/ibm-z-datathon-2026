@@ -1,0 +1,5 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.5,missing_documents,4281.25,Roanoke,VA,1,,"FEMA verified $4,281 in damage; denied for missing documents; home needs repairs to be livable.",0.39432087540626526,3282461185
+2,1.35,unverified_ownership_or_occupancy,2013.5699462890625,Pulaski (County),VA,1,"renter, lowest income band","FEMA verified $2,014 in damage; ownership or occupancy never verified; home needs repairs to be livable; renter, lowest income band.",0.8409738540649414,3278277113
+3,0.9,unverified_ownership_or_occupancy,323.75,Buchanan (County),VA,1,"renter, lowest income band","FEMA verified $324 in damage; ownership or occupancy never verified; home needs repairs to be livable; renter, lowest income band.",0.8165841698646545,3285186344
+4,0.4375,missing_documents,221.92999267578125,Buchanan (County),VA,1,lowest income band,FEMA verified $222 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.,0.4772730767726898,3276261741

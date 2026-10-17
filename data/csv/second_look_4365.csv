@@ -1,0 +1,7 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.6666666666666667,missing_documents,13042.81005859375,Kauai (County),HI,1,"lowest income band, age 65+","FEMA verified $13,043 in damage; denied for missing documents; home needs repairs to be livable; lowest income band, age 65+.",0.8128427863121033,3278763432
+2,1.5,missing_documents,14908.529296875,Kauai (County),HI,1,,"FEMA verified $14,909 in damage; denied for missing documents; home needs repairs to be livable.",0.8509677648544312,3286486683
+3,1.1666666666666665,missing_documents,1174.2999267578125,Kauai (County),HI,1,renter,"FEMA verified $1,174 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.8737116456031799,3282482230
+4,1.0,missing_documents,1041.0599365234375,Kauai (County),HI,1,"renter, lowest income band","FEMA verified $1,041 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.9325067400932312,3277441585
+5,0.5833333333333333,missing_documents,921.2799682617188,Honolulu (County),HI,1,lowest income band,FEMA verified $921 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.,0.34315991401672363,3278758091
+6,0.29166666666666663,missing_documents,430.5699768066406,Honolulu (County),HI,1,renter,FEMA verified $431 in damage; denied for missing documents; home needs repairs to be livable; renter.,0.7666257619857788,3276561721

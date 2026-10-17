@@ -1,0 +1,10 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,111468.61376953125,Grand Forks (County),ND,1,age 65+,"FEMA verified $111,469 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.7381183505058289,3284419651
+2,1.3333333333333333,missing_documents,111417.2236328125,Grand Forks (County),ND,1,,"FEMA verified $111,417 in damage; denied for missing documents; home needs repairs to be livable.",0.7399086356163025,3287254044
+3,1.1666666666666667,missing_documents,50696.287109375,Grand Forks (County),ND,1,,"FEMA verified $50,696 in damage; denied for missing documents; home needs repairs to be livable.",0.6122568845748901,3283561723
+4,1.0,missing_documents,13202.07958984375,Grand Forks (County),ND,1,,"FEMA verified $13,202 in damage; denied for missing documents; home needs repairs to be livable.",0.31598758697509766,3272969904
+5,0.8333333333333334,missing_documents,9542.719421386719,Grand Forks (County),ND,1,,"FEMA verified $9,543 in damage; denied for missing documents; home needs repairs to be livable.",0.30956968665122986,3285289846
+6,0.6666666666666666,missing_documents,7187.039947509766,Grand Forks (County),ND,1,,"FEMA verified $7,187 in damage; denied for missing documents; home needs repairs to be livable.",0.5208479166030884,3282151105
+7,0.6666666666666666,missing_documents,3432.909942626953,Grand Forks (County),ND,1,"renter, lowest income band","FEMA verified $3,433 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.8907801508903503,3288977372
+8,0.38888888888888884,missing_documents,2591.8398513793945,Grand Forks (County),ND,1,age 65+,"FEMA verified $2,592 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.5134167075157166,3292868813
+9,0.16666666666666666,missing_documents,957.719970703125,Grand Forks (County),ND,1,,FEMA verified $958 in damage; denied for missing documents; home needs repairs to be livable.,0.4708186984062195,3277989235

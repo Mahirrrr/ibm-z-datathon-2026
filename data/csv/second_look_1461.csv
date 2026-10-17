@@ -1,0 +1,6 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.4000000000000001,missing_documents,1000.0,Matanuska-Susitna (Borough),AK,1,renter,"FEMA verified $1,000 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.8583720326423645,3270438066
+2,1.2000000000000002,lost_contact,4295.18994140625,Matanuska-Susitna (Borough),AK,1,,"FEMA verified $4,295 in damage; denied after fema lost contact; home needs repairs to be livable.",0.6333140730857849,3273278852
+3,0.8999999999999999,missing_documents,740.0,Kenai Peninsula (Borough),AK,1,,FEMA verified $740 in damage; denied for missing documents; home needs repairs to be livable.,0.49079132080078125,3289495459
+4,0.6000000000000001,missing_documents,720.0999755859375,Matanuska-Susitna (Borough),AK,1,,FEMA verified $720 in damage; denied for missing documents; home needs repairs to be livable.,0.5383337736129761,3273615464
+5,0.27,unverified_ownership_or_occupancy,193.1999969482422,Anchorage (Borough),AK,1,,FEMA verified $193 in damage; ownership or occupancy never verified; home needs repairs to be livable.,0.9649495482444763,3279636096

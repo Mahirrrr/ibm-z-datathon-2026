@@ -1,0 +1,14 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,137282.87841796875,Houston (County),MN,1,renter,"FEMA verified $137,283 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.8244158029556274,3286606504
+2,1.6923076923076923,missing_documents,27586.0,Winona (County),MN,1,"renter, lowest income band","FEMA verified $27,586 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.9390917420387268,3275579530
+3,1.6153846153846154,missing_documents,136916.35864257812,Fillmore (County),MN,1,age 65+,"FEMA verified $136,916 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.6922417283058167,3290930522
+4,1.3461538461538463,missing_documents,26013.32958984375,Fillmore (County),MN,1,renter,"FEMA verified $26,013 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.42133843898773193,3281889668
+5,1.0384615384615383,missing_documents,10985.190185546875,Houston (County),MN,1,,"FEMA verified $10,985 in damage; denied for missing documents; home needs repairs to be livable.",0.38975590467453003,3284422516
+6,0.9230769230769231,missing_documents,1452.919921875,Houston (County),MN,1,,"FEMA verified $1,453 in damage; denied for missing documents; home needs repairs to be livable.",0.4641454517841339,3274707446
+7,0.6923076923076923,missing_documents,384.3999938964844,Olmsted (County),MN,1,,FEMA verified $384 in damage; denied for missing documents; home needs repairs to be livable.,0.44087061285972595,3275154074
+8,0.5384615384615384,missing_documents,1292.3599853515625,Winona (County),MN,0,,"FEMA verified $1,292 in damage; denied for missing documents.",0.5195708274841309,3287250836
+9,0.4807692307692308,missing_documents,199.989990234375,Winona (County),MN,0,age 65+,FEMA verified $200 in damage; denied for missing documents; age 65+.,0.9625333547592163,3277550959
+10,0.46153846153846156,missing_documents,185.3000030517578,Houston (County),MN,1,,FEMA verified $185 in damage; denied for missing documents; home needs repairs to be livable.,0.5323746800422668,3267926118
+11,0.27692307692307694,lost_contact,109.98999786376953,Fillmore (County),MN,0,"renter, lowest income band","FEMA verified $110 in damage; denied after fema lost contact; renter, lowest income band.",0.6424286365509033,3272099960
+12,0.15384615384615385,lost_contact,97.69999694824219,Steele (County),MN,0,age 65+,FEMA verified $98 in damage; denied after fema lost contact; age 65+.,0.3891211152076721,3274707445
+13,0.07692307692307693,missing_documents,16.079999923706055,Houston (County),MN,0,,FEMA verified $16 in damage; denied for missing documents.,0.38727739453315735,3271858396

@@ -1,0 +1,2 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,739.969970703125,Fremont (County),IA,1,needs accessibility support,FEMA verified $740 in damage; denied for missing documents; home needs repairs to be livable; needs accessibility support.,0.15460577607154846,3267982917

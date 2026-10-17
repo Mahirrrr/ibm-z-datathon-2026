@@ -1,0 +1,16 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.4000000000000001,lost_contact,65376.0,Crawford (County),GA,1,renter,"FEMA verified $65,376 in damage; denied after fema lost contact; home needs repairs to be livable; renter.",0.8643082976341248,3271606045
+2,1.4000000000000001,missing_documents,6005.11962890625,Sumter (County),GA,1,lowest income band,"FEMA verified $6,005 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.5673347115516663,3272523179
+3,1.4,missing_documents,6361.73974609375,Dougherty (County),GA,1,,"FEMA verified $6,362 in damage; denied for missing documents; home needs repairs to be livable.",0.6035559177398682,3276013372
+4,1.3,missing_documents,6142.269775390625,Sumter (County),GA,1,,"FEMA verified $6,142 in damage; denied for missing documents; home needs repairs to be livable.",0.4661237597465515,3270113881
+5,1.0999999999999999,missing_documents,3951.280029296875,Sumter (County),GA,1,,"FEMA verified $3,951 in damage; denied for missing documents; home needs repairs to be livable.",0.6410875916481018,3291363855
+6,1.05,missing_documents,3015.4599609375,Sumter (County),GA,1,age 65+,"FEMA verified $3,015 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.6085342764854431,3278862953
+7,1.0,missing_documents,3950.119873046875,Mitchell (County),GA,1,,"FEMA verified $3,950 in damage; denied for missing documents; home needs repairs to be livable.",0.6266100406646729,3285728360
+8,0.9333333333333333,missing_documents,1660.5799560546875,Sumter (County),GA,1,renter,"FEMA verified $1,661 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.9183650016784668,3278415830
+9,0.7000000000000001,missing_documents,1118.5399780273438,Sumter (County),GA,1,renter,"FEMA verified $1,119 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.4759542942047119,3282572874
+10,0.7,missing_documents,1293.1300048828125,McDuffie (County),GA,1,,"FEMA verified $1,293 in damage; denied for missing documents; home needs repairs to be livable.",0.47093862295150757,3283547304
+11,0.6666666666666666,missing_documents,975.5299682617188,Sumter (County),GA,1,"renter, lowest income band","FEMA verified $976 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.7190937995910645,3271596813
+12,0.4,missing_documents,908.0,Crawford (County),GA,1,,FEMA verified $908 in damage; denied for missing documents; home needs repairs to be livable.,0.5690133571624756,3272533773
+13,0.35000000000000003,missing_documents,444.47998046875,Sumter (County),GA,1,renter,FEMA verified $444 in damage; denied for missing documents; home needs repairs to be livable; renter.,0.7236915230751038,3282151687
+14,0.16666666666666666,missing_documents,90.0999984741211,Sumter (County),GA,0,renter,FEMA verified $90 in damage; denied for missing documents; renter.,0.8126068711280823,3276242266
+15,0.1,missing_documents,53.78999710083008,Sumter (County),GA,0,"renter, lowest income band","FEMA verified $54 in damage; denied for missing documents; renter, lowest income band.",0.8193051815032959,3272973568

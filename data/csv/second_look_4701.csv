@@ -1,0 +1,10 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.5,missing_documents,226203.3154296875,Hardin (County),TN,1,,"FEMA verified $226,203 in damage; denied for missing documents; home needs repairs to be livable.",0.8860066533088684,3284694384
+2,1.3611111111111112,missing_documents,12523.2197265625,Cannon (County),TN,1,lowest income band,"FEMA verified $12,523 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.9652348160743713,3282854252
+3,1.3333333333333333,missing_documents,29957.649658203125,McNairy (County),TN,1,,"FEMA verified $29,958 in damage; denied for missing documents; home needs repairs to be livable.",0.8852546811103821,3277376592
+4,1.1666666666666665,missing_documents,8035.649803161621,Wayne (County),TN,1,lowest income band,"FEMA verified $8,036 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.8316396474838257,3284258379
+5,0.8888888888888888,missing_documents,4154.72998046875,Cannon (County),TN,1,"renter, lowest income band","FEMA verified $4,155 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.8832358717918396,3288353601
+6,0.8333333333333334,missing_documents,7151.27001953125,Hardeman (County),TN,1,,"FEMA verified $7,151 in damage; denied for missing documents; home needs repairs to be livable.",0.6516098976135254,3280646406
+7,0.5,missing_documents,2632.6500549316406,Tipton (County),TN,1,,"FEMA verified $2,633 in damage; denied for missing documents; home needs repairs to be livable.",0.743872344493866,3277768346
+8,0.38888888888888884,missing_documents,1541.8499755859375,Wayne (County),TN,1,renter,"FEMA verified $1,542 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.916469395160675,3280654547
+9,0.2222222222222222,missing_documents,149.5,McNairy (County),TN,1,"renter, lowest income band","FEMA verified $150 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.6840001940727234,3269093688

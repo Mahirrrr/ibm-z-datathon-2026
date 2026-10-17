@@ -1,0 +1,3 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.125,unverified_ownership_or_occupancy,920.6799926757812,"Hillsborough (County)(in (P)MSA 4560,4760,5350)",NH,0,renter,FEMA verified $921 in damage; ownership or occupancy never verified; renter.,0.42565080523490906,3272994742
+2,0.7000000000000001,lost_contact,549.47998046875,Cheshire (County),NH,1,age 65+,FEMA verified $549 in damage; denied after fema lost contact; home needs repairs to be livable; age 65+.,0.42791667580604553,3292642329

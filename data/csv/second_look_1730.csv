@@ -1,0 +1,10 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.5555555555555554,missing_documents,2051.720001220703,Bexar (County),TX,1,renter,"FEMA verified $2,052 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.860528826713562,3283009788
+2,1.5,missing_documents,8532.969604492188,Bexar (County),TX,1,,"FEMA verified $8,533 in damage; denied for missing documents; home needs repairs to be livable.",0.5148140788078308,3279302012
+3,1.3611111111111112,missing_documents,1947.0699462890625,Jones (County),TX,1,lowest income band,"FEMA verified $1,947 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.4047103524208069,3277113017
+4,0.8333333333333333,missing_documents,1432.0699462890625,Harris (County),TX,0,renter,"FEMA verified $1,432 in damage; denied for missing documents; renter.",0.7381519079208374,3268373725
+5,0.5555555555555556,missing_documents,847.7899856567383,Harris (County),TX,0,lowest income band,FEMA verified $848 in damage; denied for missing documents; lowest income band.,0.3155200779438019,3272090182
+6,0.5555555555555556,missing_documents,866.3599853515625,Harris (County),TX,0,,FEMA verified $866 in damage; denied for missing documents.,0.39394018054008484,3276236029
+7,0.3333333333333333,missing_documents,358.0,Jones (County),TX,0,,FEMA verified $358 in damage; denied for missing documents.,0.21748954057693481,3275135249
+8,0.2777777777777778,missing_documents,331.47998046875,Jones (County),TX,0,lowest income band,FEMA verified $331 in damage; denied for missing documents; lowest income band.,0.6145254373550415,3281890307
+9,0.1111111111111111,missing_documents,105.27999877929688,Harris (County),TX,0,,FEMA verified $105 in damage; denied for missing documents.,0.6100285053253174,3286598090

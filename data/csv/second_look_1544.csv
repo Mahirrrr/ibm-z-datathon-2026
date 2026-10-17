@@ -1,0 +1,21 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.6624999999999999,missing_documents,22720.0,Henrico (County),VA,1,lowest income band,"FEMA verified $22,720 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.5571610331535339,3268905582
+2,1.4000000000000001,missing_documents,8600.76953125,Henrico (County),VA,1,age 65+,"FEMA verified $8,601 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.47025004029273987,3282682292
+3,1.4,missing_documents,5917.98974609375,Henrico (County),VA,1,"renter, lowest income band","FEMA verified $5,918 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.3274095952510834,3274802689
+4,1.35,missing_documents,10492.849609375,Richmond,VA,1,,"FEMA verified $10,493 in damage; denied for missing documents; home needs repairs to be livable.",0.19841010868549347,3286253372
+5,1.35,unverified_ownership_or_occupancy,26065.1796875,Hanover (County),VA,1,,"FEMA verified $26,065 in damage; ownership or occupancy never verified; home needs repairs to be livable.",0.3000181317329407,3287549827
+6,1.1900000000000002,lost_contact,10079.8798828125,Henrico (County),VA,1,renter,"FEMA verified $10,080 in damage; denied after fema lost contact; home needs repairs to be livable; renter.",0.35000544786453247,3276768203
+7,1.125,missing_documents,6836.15966796875,Hanover (County),VA,1,,"FEMA verified $6,836 in damage; denied for missing documents; home needs repairs to be livable.",0.26825180649757385,3268458528
+8,0.9750000000000001,missing_documents,3504.7998657226562,Hanover (County),VA,1,,"FEMA verified $3,505 in damage; denied for missing documents; home needs repairs to be livable.",0.21784186363220215,3269329434
+9,0.8999999999999999,missing_documents,3172.22998046875,Richmond,VA,1,,"FEMA verified $3,172 in damage; denied for missing documents; home needs repairs to be livable.",0.27948853373527527,3290793095
+10,0.8250000000000001,missing_documents,2408.72998046875,Richmond,VA,1,,"FEMA verified $2,409 in damage; denied for missing documents; home needs repairs to be livable.",0.17157000303268433,3272187270
+11,0.8,missing_documents,915.760009765625,Chesterfield (County),VA,1,"renter, lowest income band","FEMA verified $916 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.30417007207870483,3271715663
+12,0.75,missing_documents,2365.8499755859375,Chesterfield (County),VA,1,,"FEMA verified $2,366 in damage; denied for missing documents; home needs repairs to be livable.",0.2140737920999527,3269325160
+13,0.54,lost_contact,1275.0,Richmond,VA,1,,"FEMA verified $1,275 in damage; denied after fema lost contact; home needs repairs to be livable.",0.3220498263835907,3284081627
+14,0.5249999999999999,missing_documents,663.1599731445312,Richmond,VA,1,,FEMA verified $663 in damage; denied for missing documents; home needs repairs to be livable.,0.18003582954406738,3284513111
+15,0.4,missing_documents,295.8999938964844,Richmond,VA,1,"lowest income band, age 65+","FEMA verified $296 in damage; denied for missing documents; home needs repairs to be livable; lowest income band, age 65+.",0.3221653699874878,3290598440
+16,0.375,missing_documents,302.94000244140625,Richmond,VA,1,,FEMA verified $303 in damage; denied for missing documents; home needs repairs to be livable.,0.2876969873905182,3273678880
+17,0.375,missing_documents,500.0,Richmond,VA,0,lowest income band,FEMA verified $500 in damage; denied for missing documents; lowest income band.,0.9887971878051758,3288203169
+18,0.2625,missing_documents,223.17999267578125,Henrico (County),VA,1,renter,FEMA verified $223 in damage; denied for missing documents; home needs repairs to be livable; renter.,0.4880470633506775,3276985247
+19,0.15000000000000002,missing_documents,121.11000061035156,Richmond,VA,1,,FEMA verified $121 in damage; denied for missing documents; home needs repairs to be livable.,0.954828143119812,3279383795
+20,0.07,lost_contact,42.0,Henrico (County),VA,1,lowest income band,FEMA verified $42 in damage; denied after fema lost contact; home needs repairs to be livable; lowest income band.,0.28604599833488464,3290574710

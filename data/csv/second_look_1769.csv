@@ -1,0 +1,4 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,2.0,missing_documents,4293.210021972656,Gilmer (County),WV,1,"renter, lowest income band","FEMA verified $4,293 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.8629647493362427,3281909976
+2,1.1666666666666665,missing_documents,3383.119873046875,Taylor (County),WV,1,lowest income band,"FEMA verified $3,383 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.3839045464992523,3282587974
+3,0.3333333333333333,missing_documents,675.8899841308594,Jefferson (County),WV,0,,FEMA verified $676 in damage; denied for missing documents.,0.23547688126564026,3269245707

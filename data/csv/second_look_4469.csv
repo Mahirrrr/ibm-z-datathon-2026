@@ -1,0 +1,6 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,2.0,missing_documents,3944.849853515625,Lake (County),SD,1,"renter, lowest income band","FEMA verified $3,945 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.7306006550788879,3291131452
+2,1.2000000000000002,missing_documents,676.5700073242188,Hanson (County),SD,1,,FEMA verified $677 in damage; denied for missing documents; home needs repairs to be livable.,0.4094146192073822,3285963235
+3,0.8,missing_documents,638.4099731445312,Yankton (County),SD,1,"renter, lowest income band","FEMA verified $638 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.8106014132499695,3269024947
+4,0.72,lost_contact,662.5700073242188,Moody (County),SD,1,,FEMA verified $663 in damage; denied after fema lost contact; home needs repairs to be livable.,0.31912851333618164,3292847754
+5,0.35000000000000003,missing_documents,454.79998779296875,Lake (County),SD,1,renter,FEMA verified $455 in damage; denied for missing documents; home needs repairs to be livable; renter.,0.5678908824920654,3268584628

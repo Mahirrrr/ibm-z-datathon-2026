@@ -1,0 +1,8 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,13933.40991973877,Pulaski (County),IN,1,age 65+,"FEMA verified $13,933 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.16007837653160095,3285305596
+2,1.2857142857142856,missing_documents,12997.25,Carroll (County),IN,1,,"FEMA verified $12,997 in damage; denied for missing documents; home needs repairs to be livable.",0.5423552393913269,3284062522
+3,1.25,missing_documents,12558.51953125,Fulton (County),IN,1,age 65+,"FEMA verified $12,559 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.3599710762500763,3286674037
+4,0.8571428571428571,missing_documents,7038.52001953125,Fulton (County),IN,1,,"FEMA verified $7,039 in damage; denied for missing documents; home needs repairs to be livable.",0.20765480399131775,3286649495
+5,0.6428571428571428,missing_documents,5923.659912109375,Kosciusko (County),IN,1,,"FEMA verified $5,924 in damage; denied for missing documents; home needs repairs to be livable.",0.0956193059682846,3281911370
+6,0.5714285714285714,missing_documents,2276.18994140625,Lake (County),IN,1,"renter, lowest income band","FEMA verified $2,276 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.25609883666038513,3274465041
+7,0.25,missing_documents,1406.669921875,Allen (County),IN,1,age 65+,"FEMA verified $1,407 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.14933137595653534,3286661698

@@ -1,0 +1,6 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,2.0,missing_documents,236154.78515625,Spokane (County),WA,1,"age 65+, needs accessibility support","FEMA verified $236,155 in damage; denied for missing documents; home needs repairs to be livable; age 65+, needs accessibility support.",0.260989785194397,3287944415
+2,1.12,lost_contact,136612.875,Spokane (County),WA,1,needs accessibility support,"FEMA verified $136,613 in damage; denied after fema lost contact; home needs repairs to be livable; needs accessibility support.",0.35732799768447876,3273202363
+3,0.8999999999999999,missing_documents,35005.81884765625,Spokane (County),WA,1,,"FEMA verified $35,006 in damage; denied for missing documents; home needs repairs to be livable.",0.8930968046188354,3277824608
+4,0.56,lost_contact,5166.3896484375,Spokane (County),WA,1,renter,"FEMA verified $5,166 in damage; denied after fema lost contact; home needs repairs to be livable; renter.",0.8809813857078552,3279115765
+5,0.45,missing_documents,4386.08984375,Spokane (County),WA,1,"renter, lowest income band, age 65+","FEMA verified $4,386 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band, age 65+.",0.8514158725738525,3288817022

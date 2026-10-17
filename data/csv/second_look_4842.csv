@@ -1,0 +1,3 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,5183.330078125,Cheyenne River Indian Reservation,SD,1,lowest income band,"FEMA verified $5,183 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.7363916635513306,3272063474
+2,1.0,missing_documents,3950.809814453125,Cheyenne River Indian Reservation,SD,1,"lowest income band, needs accessibility support","FEMA verified $3,951 in damage; denied for missing documents; home needs repairs to be livable; lowest income band, needs accessibility support.",0.6283498406410217,3269888946

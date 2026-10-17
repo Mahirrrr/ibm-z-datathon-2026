@@ -1,0 +1,4 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,3749.10986328125,Somerset (County),MD,1,lowest income band,"FEMA verified $3,749 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.17512822151184082,3281205427
+2,1.3333333333333333,missing_documents,1482.0,Somerset (County),MD,1,"lowest income band, age 65+","FEMA verified $1,482 in damage; denied for missing documents; home needs repairs to be livable; lowest income band, age 65+.",0.22785723209381104,3269144266
+3,0.6666666666666666,missing_documents,1255.010009765625,Somerset (County),MD,1,"renter, lowest income band","FEMA verified $1,255 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.45860254764556885,3288459063

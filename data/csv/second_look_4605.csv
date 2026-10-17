@@ -1,0 +1,8 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,20087.720458984375,Wayne (County),WV,1,lowest income band,"FEMA verified $20,088 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.7292948365211487,3273805711
+2,1.5,missing_documents,14263.719482421875,Cabell (County),WV,1,lowest income band,"FEMA verified $14,264 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.8201776742935181,3289200486
+3,1.4285714285714286,missing_documents,4294.27001953125,Wayne (County),WV,1,"lowest income band, needs accessibility support","FEMA verified $4,294 in damage; denied for missing documents; home needs repairs to be livable; lowest income band, needs accessibility support.",0.5627784729003906,3291188436
+4,1.0,missing_documents,179.44000244140625,Mingo (County),WV,1,"age 65+, needs accessibility support","FEMA verified $179 in damage; denied for missing documents; home needs repairs to be livable; age 65+, needs accessibility support.",0.535645604133606,3286820664
+5,0.5,missing_documents,179.44000244140625,Mingo (County),WV,,,FEMA verified $179 in damage; denied for missing documents.,0.9665747880935669,3277757507
+6,0.3214285714285714,missing_documents,168.25,Mingo (County),WV,1,,FEMA verified $168 in damage; denied for missing documents; home needs repairs to be livable.,0.6507424712181091,3289248670
+7,0.3,lost_contact,168.25,Mingo (County),WV,1,lowest income band,FEMA verified $168 in damage; denied after fema lost contact; home needs repairs to be livable; lowest income band.,0.6596231460571289,3293318732

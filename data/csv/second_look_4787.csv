@@ -1,0 +1,4 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.5,missing_documents,7750.10986328125,Kanawha (County),WV,1,,"FEMA verified $7,750 in damage; denied for missing documents; home needs repairs to be livable.",0.2752769887447357,3274623440
+2,1.1666666666666665,missing_documents,2509.079833984375,Hancock (County),WV,1,renter,"FEMA verified $2,509 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.4845140278339386,3282785674
+3,0.4666666666666667,lost_contact,701.7199554443359,Kanawha (County),WV,1,lowest income band,FEMA verified $702 in damage; denied after fema lost contact; home needs repairs to be livable; lowest income band.,0.3972165286540985,3282803237

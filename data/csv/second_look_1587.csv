@@ -1,0 +1,8 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.2857142857142856,missing_documents,13198.380126953125,Pike (County),PA,1,,"FEMA verified $13,198 in damage; denied for missing documents; home needs repairs to be livable.",0.2684474289417267,3289732486
+2,1.2000000000000002,lost_contact,18280.23046875,Bucks (County),PA,1,,"FEMA verified $18,280 in damage; denied after fema lost contact; home needs repairs to be livable.",0.4955706000328064,3293587227
+3,0.8999999999999999,unverified_ownership_or_occupancy,5835.81005859375,Bucks (County),PA,1,renter,"FEMA verified $5,836 in damage; ownership or occupancy never verified; home needs repairs to be livable; renter.",0.7304999232292175,3271279260
+4,0.8571428571428572,lost_contact,9053.19970703125,Bucks (County),PA,1,,"FEMA verified $9,053 in damage; denied after fema lost contact; home needs repairs to be livable.",0.21347646415233612,3274541035
+5,0.75,missing_documents,4186.89013671875,Pike (County),PA,1,age 65+,"FEMA verified $4,187 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.4181393086910248,3282668209
+6,0.42857142857142855,missing_documents,3286.0599365234375,Monroe (County),PA,1,,"FEMA verified $3,286 in damage; denied for missing documents; home needs repairs to be livable.",0.2422877848148346,3276128144
+7,0.25,missing_documents,2816.0,Monroe (County),PA,1,age 65+,"FEMA verified $2,816 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.2580173909664154,3276357095

@@ -1,0 +1,7 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,180166.33544921875,Lee (County),AL,1,age 65+,"FEMA verified $180,166 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.6927618384361267,3289923016
+2,1.25,missing_documents,4975.769775390625,Lee (County),AL,1,,"FEMA verified $4,976 in damage; denied for missing documents; home needs repairs to be livable.",0.43498495221138,3282443767
+3,1.1666666666666665,missing_documents,2957.179931640625,Lee (County),AL,1,renter,"FEMA verified $2,957 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.8815419673919678,3275791810
+4,0.875,missing_documents,2632.25,Lee (County),AL,1,renter,"FEMA verified $2,632 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.9042100310325623,3285534503
+5,0.6666666666666666,missing_documents,1351.010009765625,Lee (County),AL,1,"renter, lowest income band","FEMA verified $1,351 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.8753365278244019,3289840450
+6,0.20833333333333331,missing_documents,171.8000030517578,Lee (County),AL,0,lowest income band,FEMA verified $172 in damage; denied for missing documents; lowest income band.,0.43588411808013916,3283495033

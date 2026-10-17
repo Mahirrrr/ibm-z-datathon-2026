@@ -1,0 +1,4 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,8743.1796875,Calhoun (County),AL,1,lowest income band,"FEMA verified $8,743 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.8867276310920715,3271507556
+2,1.1666666666666665,missing_documents,729.3699951171875,Cullman (County),AL,1,lowest income band,FEMA verified $729 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.,0.8975460529327393,3272832708
+3,0.3333333333333333,lost_contact,25.68000030517578,Etowah (County),AL,0,age 65+,FEMA verified $26 in damage; denied after fema lost contact; age 65+.,0.31173157691955566,3277885016

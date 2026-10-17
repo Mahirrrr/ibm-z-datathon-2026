@@ -1,0 +1,5 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.5,missing_documents,13305.0,San Luis Obispo (County),CA,1,,"FEMA verified $13,305 in damage; denied for missing documents; home needs repairs to be livable.",0.40698620676994324,3289009189
+2,0.7875,unverified_ownership_or_occupancy,1376.6300048828125,San Luis Obispo (County),CA,1,renter,"FEMA verified $1,377 in damage; ownership or occupancy never verified; home needs repairs to be livable; renter.",0.8015913963317871,3270145174
+3,0.6000000000000001,lost_contact,2248.719970703125,San Luis Obispo (County),CA,0,,"FEMA verified $2,249 in damage; denied after fema lost contact.",0.26121246814727783,3285759937
+4,0.39375,unverified_ownership_or_occupancy,1086.5799560546875,San Luis Obispo (County),CA,1,age 65+,"FEMA verified $1,087 in damage; ownership or occupancy never verified; home needs repairs to be livable; age 65+.",0.35577747225761414,3276052169

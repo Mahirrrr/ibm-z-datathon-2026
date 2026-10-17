@@ -1,0 +1,9 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,14561.3798828125,Sullivan (County),NY,1,renter,"FEMA verified $14,561 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.4177694618701935,3280511910
+2,1.3125,missing_documents,13118.6396484375,Ulster (County),NY,1,,"FEMA verified $13,119 in damage; denied for missing documents; home needs repairs to be livable.",0.2785085439682007,3287343182
+3,1.125,missing_documents,7694.419921875,Ulster (County),NY,1,,"FEMA verified $7,694 in damage; denied for missing documents; home needs repairs to be livable.",0.2871543765068054,3273917710
+4,0.9375,missing_documents,7648.77001953125,Sullivan (County),NY,1,,"FEMA verified $7,649 in damage; denied for missing documents; home needs repairs to be livable.",0.19900192320346832,3292959387
+5,0.9,unverified_ownership_or_occupancy,5516.85986328125,Broome (County),NY,1,"renter, lowest income band","FEMA verified $5,517 in damage; ownership or occupancy never verified; home needs repairs to be livable; renter, lowest income band.",0.7688522934913635,3271268622
+6,0.5906250000000001,unverified_ownership_or_occupancy,4677.89990234375,Ulster (County),NY,1,renter,"FEMA verified $4,678 in damage; ownership or occupancy never verified; home needs repairs to be livable; renter.",0.5152555108070374,3290172589
+7,0.375,missing_documents,4562.7098388671875,Tioga (County),NY,1,,"FEMA verified $4,563 in damage; denied for missing documents; home needs repairs to be livable.",0.23459762334823608,3271689321
+8,0.1875,missing_documents,2108.0,Delaware (County),NY,1,,"FEMA verified $2,108 in damage; denied for missing documents; home needs repairs to be livable.",0.3270930051803589,3278074737

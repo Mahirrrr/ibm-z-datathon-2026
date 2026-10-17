@@ -1,0 +1,15 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.625,missing_documents,16887.01953125,White (County),IN,1,lowest income band,"FEMA verified $16,887 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.28061217069625854,3290928271
+2,1.5,missing_documents,4198.809783935547,Pulaski (County),IN,1,renter,"FEMA verified $4,199 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.4237680435180664,3271595205
+3,1.5,missing_documents,122467.0703125,Carroll (County),IN,1,,"FEMA verified $122,467 in damage; denied for missing documents; home needs repairs to be livable.",0.28677770495414734,3273571904
+4,1.375,missing_documents,2684.8798828125,Jasper (County),IN,1,renter,"FEMA verified $2,685 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.6858373880386353,3271175186
+5,1.0000000000000002,lost_contact,2072.139892578125,Kosciusko (County),IN,1,age 65+,"FEMA verified $2,072 in damage; denied after fema lost contact; home needs repairs to be livable; age 65+.",0.25237876176834106,3290491754
+6,1.0,missing_documents,1125.5899658203125,Allen (County),IN,1,age 65+,"FEMA verified $1,126 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.3610425591468811,3272518615
+7,0.9642857142857144,missing_documents,1126.47998046875,Allen (County),IN,1,,"FEMA verified $1,126 in damage; denied for missing documents; home needs repairs to be livable.",0.3737501800060272,3278867444
+8,0.8571428571428571,missing_documents,659.3200073242188,Lake (County),IN,1,"renter, lowest income band","FEMA verified $659 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.5620406270027161,3281270683
+9,0.75,missing_documents,689.4599914550781,Lake (County),IN,0,"renter, lowest income band","FEMA verified $689 in damage; denied for missing documents; renter, lowest income band.",0.5846760869026184,3279914553
+10,0.625,missing_documents,645.760009765625,Lake (County),IN,1,age 65+,FEMA verified $646 in damage; denied for missing documents; home needs repairs to be livable; age 65+.,0.2168271392583847,3281908333
+11,0.5,missing_documents,287.45999908447266,Tippecanoe (County),IN,1,lowest income band,FEMA verified $287 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.,0.36658474802970886,3276249793
+12,0.21428571428571427,missing_documents,82.04000091552734,Elkhart (County),IN,0,,FEMA verified $82 in damage; denied for missing documents.,0.238697350025177,3280165502
+13,0.14285714285714285,missing_documents,41.02000045776367,Elkhart (County),IN,0,,FEMA verified $41 in damage; denied for missing documents.,0.3785180151462555,3270555551
+14,0.08928571428571427,missing_documents,40.31999969482422,Fulton (County),IN,0,lowest income band,FEMA verified $40 in damage; denied for missing documents; lowest income band.,0.3618573546409607,3275150327

@@ -1,0 +1,6 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.5,missing_documents,3383.459930419922,Norfolk,VA,1,,"FEMA verified $3,383 in damage; denied for missing documents; home needs repairs to be livable.",0.3370460569858551,3272453540
+2,1.4,missing_documents,587.6799926757812,Virginia Beach,VA,1,"renter, lowest income band","FEMA verified $588 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.6926059722900391,3277908563
+3,1.2249999999999999,missing_documents,587.6799926757812,Virginia Beach,VA,1,renter,FEMA verified $588 in damage; denied for missing documents; home needs repairs to be livable; renter.,0.6736804246902466,3288166936
+4,0.6000000000000001,missing_documents,476.8999938964844,Norfolk,VA,1,,FEMA verified $477 in damage; denied for missing documents; home needs repairs to be livable.,0.2598790228366852,3279833344
+5,0.35000000000000003,missing_documents,56.27000045776367,Virginia Beach,VA,1,renter,FEMA verified $56 in damage; denied for missing documents; home needs repairs to be livable; renter.,0.5741651058197021,3271922516

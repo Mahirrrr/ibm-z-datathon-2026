@@ -1,0 +1,9 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.5,missing_documents,25902.37890625,Stephenson (County),IL,1,,"FEMA verified $25,902 in damage; denied for missing documents; home needs repairs to be livable.",0.5454835295677185,3285310732
+2,1.3125,missing_documents,16462.889892578125,Winnebago (County),IL,1,,"FEMA verified $16,463 in damage; denied for missing documents; home needs repairs to be livable.",0.4411779046058655,3267927497
+3,1.125,missing_documents,14184.85009765625,Winnebago (County),IL,1,,"FEMA verified $14,185 in damage; denied for missing documents; home needs repairs to be livable.",0.4232172667980194,3284858652
+4,0.9375,missing_documents,7443.36962890625,Winnebago (County),IL,1,,"FEMA verified $7,443 in damage; denied for missing documents; home needs repairs to be livable.",0.282744824886322,3268811134
+5,0.875,missing_documents,6803.830078125,Winnebago (County),IL,1,lowest income band,"FEMA verified $6,804 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.4029073715209961,3276247400
+6,0.65625,missing_documents,5658.6201171875,Winnebago (County),IL,1,lowest income band,"FEMA verified $5,659 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.3717343807220459,3280835447
+7,0.375,missing_documents,3298.5299072265625,Winnebago (County),IL,1,,"FEMA verified $3,299 in damage; denied for missing documents; home needs repairs to be livable.",0.40107956528663635,3280835446
+8,0.1875,missing_documents,749.9599914550781,Winnebago (County),IL,1,,FEMA verified $750 in damage; denied for missing documents; home needs repairs to be livable.,0.4739595949649811,3293932051

@@ -1,0 +1,8 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.7142857142857142,missing_documents,113630.4140625,Gibson (County),TN,1,"renter, lowest income band","FEMA verified $113,630 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.7452478408813477,3292207055
+2,1.575,unverified_ownership_or_occupancy,117746.6787109375,Dyer (County),TN,1,renter,"FEMA verified $117,747 in damage; ownership or occupancy never verified; home needs repairs to be livable; renter.",0.760388195514679,3278029253
+3,1.0714285714285714,missing_documents,3663.93994140625,Gibson (County),TN,1,,"FEMA verified $3,664 in damage; denied for missing documents; home needs repairs to be livable.",0.41434767842292786,3292191765
+4,0.8571428571428571,missing_documents,1261.280029296875,Gibson (County),TN,1,"renter, lowest income band","FEMA verified $1,261 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.7899656295776367,3267957008
+5,0.8571428571428571,missing_documents,2116.8798828125,Cannon (County),TN,1,,"FEMA verified $2,117 in damage; denied for missing documents; home needs repairs to be livable.",0.4741218686103821,3280170962
+6,0.3214285714285714,unverified_ownership_or_occupancy,1098.2699890136719,Davidson (County),TN,0,renter,"FEMA verified $1,098 in damage; ownership or occupancy never verified; renter.",0.6412778496742249,3268830461
+7,0.1607142857142857,unverified_ownership_or_occupancy,314.6000061035156,Maury (County),TN,0,renter,FEMA verified $315 in damage; ownership or occupancy never verified; renter.,0.7449990510940552,3273617531

@@ -1,0 +1,4 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,2.0,missing_documents,16851.889892578125,Lewis (County),MO,1,"renter, lowest income band","FEMA verified $16,852 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.6285973787307739,3279294051
+2,1.3333333333333333,missing_documents,8070.259765625,St. Charles (County),MO,1,"renter, lowest income band","FEMA verified $8,070 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.8074132800102234,3286612786
+3,0.5,missing_documents,239.33999633789062,Pike (County),MO,1,,FEMA verified $239 in damage; denied for missing documents; home needs repairs to be livable.,0.3218672573566437,3273579038

@@ -1,0 +1,7 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,13900.97998046875,Umatilla (County),OR,1,lowest income band,"FEMA verified $13,901 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.5788029432296753,3280141422
+2,1.4583333333333335,missing_documents,12851.27978515625,Umatilla (County),OR,1,lowest income band,"FEMA verified $12,851 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.9285984039306641,3276537334
+3,1.0,missing_documents,5254.9697265625,Umatilla (County),OR,1,"lowest income band, age 65+","FEMA verified $5,255 in damage; denied for missing documents; home needs repairs to be livable; lowest income band, age 65+.",0.9025779366493225,3284195001
+4,1.0,missing_documents,12315.559326171875,Umatilla (County),OR,1,,"FEMA verified $12,316 in damage; denied for missing documents; home needs repairs to be livable.",0.9343639016151428,3286013747
+5,0.5833333333333333,missing_documents,4217.669921875,Umatilla (County),OR,1,renter,"FEMA verified $4,218 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.9521045684814453,3273198833
+6,0.29166666666666663,missing_documents,1191.43994140625,Umatilla (County),OR,1,renter,"FEMA verified $1,191 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.8349424600601196,3285078931

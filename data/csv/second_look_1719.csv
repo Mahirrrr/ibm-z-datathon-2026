@@ -1,0 +1,20 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,14454.7197265625,Sauk (County),WI,1,lowest income band,"FEMA verified $14,455 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.5035275816917419,3277117093
+2,1.4736842105263157,missing_documents,3366.8798828125,Iowa (County),WI,1,renter,"FEMA verified $3,367 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.7718783020973206,3290939753
+3,1.4210526315789473,missing_documents,7517.269775390625,Dane (County),WI,1,,"FEMA verified $7,517 in damage; denied for missing documents; home needs repairs to be livable.",0.36116984486579895,3293918634
+4,1.3421052631578947,missing_documents,4395.330078125,Grant (County),WI,1,,"FEMA verified $4,395 in damage; denied for missing documents; home needs repairs to be livable.",0.40085867047309875,3279292471
+5,1.1842105263157894,missing_documents,3061.619873046875,Vernon (County),WI,1,,"FEMA verified $3,062 in damage; denied for missing documents; home needs repairs to be livable.",0.5026143193244934,3274461530
+6,1.1052631578947367,missing_documents,2238.300048828125,Crawford (County),WI,1,,"FEMA verified $2,238 in damage; denied for missing documents; home needs repairs to be livable.",0.5116866230964661,3277566130
+7,1.0526315789473684,missing_documents,796.3499755859375,Vernon (County),WI,1,"renter, lowest income band","FEMA verified $796 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.5569647550582886,3270110241
+8,1.0263157894736843,missing_documents,2216.47998046875,Vernon (County),WI,1,,"FEMA verified $2,216 in damage; denied for missing documents; home needs repairs to be livable.",0.640548825263977,3282581278
+9,0.9473684210526315,missing_documents,1762.7999267578125,Kenosha (County),WI,1,,"FEMA verified $1,763 in damage; denied for missing documents; home needs repairs to be livable.",0.6017374992370605,3276674415
+10,0.6447368421052632,missing_documents,412.0,Richland (County),WI,1,age 65+,FEMA verified $412 in damage; denied for missing documents; home needs repairs to be livable; age 65+.,0.3214801847934723,3279912484
+11,0.5789473684210527,missing_documents,1269.3599853515625,Richland (County),WI,0,,"FEMA verified $1,269 in damage; denied for missing documents.",0.448453813791275,3275151257
+12,0.47368421052631576,missing_documents,570.3499755859375,La Crosse (County),WI,0,,FEMA verified $570 in damage; denied for missing documents.,0.2868281602859497,3280179995
+13,0.42105263157894735,missing_documents,497.9499816894531,Kenosha (County),WI,0,,FEMA verified $498 in damage; denied for missing documents.,0.3602287471294403,3281907806
+14,0.39473684210526316,missing_documents,174.66000366210938,Crawford (County),WI,1,,FEMA verified $175 in damage; denied for missing documents; home needs repairs to be livable.,0.4218553900718689,3276689444
+15,0.3157894736842105,missing_documents,364.6499938964844,Green (County),WI,0,,FEMA verified $365 in damage; denied for missing documents.,0.19225668907165527,3272098706
+16,0.25263157894736843,lost_contact,129.83999633789062,Richland (County),WI,0,"renter, lowest income band","FEMA verified $130 in damage; denied after fema lost contact; renter, lowest income band.",0.6834236979484558,3279921536
+17,0.19736842105263158,missing_documents,103.56999969482422,Vernon (County),WI,0,lowest income band,FEMA verified $104 in damage; denied for missing documents; lowest income band.,0.6058489680290222,3279921541
+18,0.10526315789473684,missing_documents,88.55999755859375,Richland (County),WI,0,,FEMA verified $89 in damage; denied for missing documents.,0.3231705129146576,3287680635
+19,0.05263157894736842,missing_documents,45.5,Racine (County),WI,0,,FEMA verified $46 in damage; denied for missing documents.,0.5127590298652649,3268355294

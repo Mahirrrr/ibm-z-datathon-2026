@@ -1,0 +1,7 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,2.0,missing_documents,107911.25,Oklahoma (County),OK,1,"renter, lowest income band","FEMA verified $107,911 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.7506847381591797,3273612961
+2,1.4583333333333335,missing_documents,64116.0,Creek (County),OK,1,lowest income band,"FEMA verified $64,116 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.6699780821800232,3276050901
+3,1.05,unverified_ownership_or_occupancy,62102.259765625,Seminole (County),OK,1,renter,"FEMA verified $62,102 in damage; ownership or occupancy never verified; home needs repairs to be livable; renter.",0.8498958945274353,3290527864
+4,0.875,missing_documents,2008.5,Seminole (County),OK,1,lowest income band,"FEMA verified $2,008 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.6225472688674927,3271866777
+5,0.3333333333333333,missing_documents,189.989990234375,Seminole (County),OK,0,,FEMA verified $190 in damage; denied for missing documents.,0.40285465121269226,3292630291
+6,0.26666666666666666,lost_contact,132.72000122070312,Oklahoma (County),OK,1,"renter, lowest income band","FEMA verified $133 in damage; denied after fema lost contact; home needs repairs to be livable; renter, lowest income band.",0.7438737750053406,3283038372

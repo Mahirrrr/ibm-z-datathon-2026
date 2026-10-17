@@ -1,0 +1,5 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,2.0,missing_documents,3194.510009765625,McClain (County),OK,1,"renter, lowest income band","FEMA verified $3,195 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.5507606267929077,3273002394
+2,1.3125,missing_documents,3153.760009765625,Grady (County),OK,1,lowest income band,"FEMA verified $3,154 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.5477519035339355,3271916588
+3,0.75,missing_documents,3012.0,Grady (County),OK,1,,"FEMA verified $3,012 in damage; denied for missing documents; home needs repairs to be livable.",0.6008980870246887,3277178126
+4,0.4375,missing_documents,2312.639892578125,McClain (County),OK,1,renter,"FEMA verified $2,313 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.5733937621116638,3268436494

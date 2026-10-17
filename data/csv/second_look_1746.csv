@@ -1,0 +1,7 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,34531.149658203125,Muhlenberg (County),KY,1,age 65+,"FEMA verified $34,531 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.3148540258407593,3282160639
+2,1.25,missing_documents,5717.44970703125,Meade (County),KY,1,,"FEMA verified $5,717 in damage; denied for missing documents; home needs repairs to be livable.",0.41379648447036743,3283548756
+3,1.1666666666666665,missing_documents,4801.85009765625,Bath (County),KY,1,age 65+,"FEMA verified $4,802 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.41875267028808594,3276020852
+4,0.5833333333333333,missing_documents,2260.239990234375,Bath (County),KY,1,lowest income band,"FEMA verified $2,260 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.4494555592536926,3270540418
+5,0.4,lost_contact,4299.7900390625,Hopkins (County),KY,,,"FEMA verified $4,300 in damage; denied after fema lost contact.",0.9897647500038147,3272535239
+6,0.16666666666666666,missing_documents,259.79998779296875,Muhlenberg (County),KY,0,,FEMA verified $260 in damage; denied for missing documents.,0.33359482884407043,3290934282

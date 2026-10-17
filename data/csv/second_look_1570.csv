@@ -1,0 +1,3 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.5,missing_documents,3263.739990234375,Craig (County),VA,1,,"FEMA verified $3,264 in damage; denied for missing documents; home needs repairs to be livable.",0.3135473430156708,3286721437
+2,0.5,missing_documents,121.11000061035156,Botetourt (County),VA,0,,FEMA verified $121 in damage; denied for missing documents.,0.32024434208869934,3278076086

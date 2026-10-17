@@ -1,0 +1,9 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,16368.259887695312,McCracken (County),KY,1,age 65+,"FEMA verified $16,368 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.17869609594345093,3281350187
+2,1.53125,missing_documents,4212.0498046875,Henderson (County),KY,1,lowest income band,"FEMA verified $4,212 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.3949429392814636,3274512121
+3,1.25,missing_documents,2622.8599853515625,Henderson (County),KY,1,"lowest income band, age 65+","FEMA verified $2,623 in damage; denied for missing documents; home needs repairs to be livable; lowest income band, age 65+.",0.7105613350868225,3290101342
+4,1.125,missing_documents,3313.10986328125,Henderson (County),KY,1,,"FEMA verified $3,313 in damage; denied for missing documents; home needs repairs to be livable.",0.18731001019477844,3288616228
+5,0.875,missing_documents,1585.7099609375,Hardin (County),KY,1,renter,"FEMA verified $1,586 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.619350254535675,3288591871
+6,0.5625,missing_documents,1321.7099609375,Jefferson (County),KY,1,,"FEMA verified $1,322 in damage; denied for missing documents; home needs repairs to be livable.",0.1500217616558075,3276059284
+7,0.4375,missing_documents,713.5999755859375,Lawrence (County),KY,1,lowest income band,FEMA verified $714 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.,0.5624614953994751,3290098902
+8,0.21875,missing_documents,582.5299682617188,Jefferson (County),KY,1,lowest income band,FEMA verified $583 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.,0.13722997903823853,3285364531

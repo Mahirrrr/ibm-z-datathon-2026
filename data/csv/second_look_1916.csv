@@ -1,0 +1,3 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,2.0,missing_documents,4685.419921875,Alcorn (County),MS,1,"renter, lowest income band","FEMA verified $4,685 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.7794858813285828,3281328468
+2,1.0,missing_documents,508.7699890136719,Alcorn (County),MS,1,"lowest income band, age 65+","FEMA verified $509 in damage; denied for missing documents; home needs repairs to be livable; lowest income band, age 65+.",0.2420058399438858,3281333519

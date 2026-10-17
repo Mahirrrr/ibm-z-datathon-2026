@@ -1,0 +1,14 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.6153846153846154,missing_documents,9187.10986328125,Cowlitz (County),WA,1,renter,"FEMA verified $9,187 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.6177240014076233,3283459029
+2,1.2692307692307692,missing_documents,6265.89990234375,Cowlitz (County),WA,1,,"FEMA verified $6,266 in damage; denied for missing documents; home needs repairs to be livable.",0.530210554599762,3292608517
+3,1.2307692307692308,missing_documents,1605.72998046875,Whatcom (County),WA,1,"renter, lowest income band","FEMA verified $1,606 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.9256795048713684,3290558337
+4,1.2000000000000002,lost_contact,26110.369140625,King (County),WA,1,,"FEMA verified $26,110 in damage; denied after fema lost contact; home needs repairs to be livable.",0.28606006503105164,3276253352
+5,1.153846153846154,missing_documents,5190.010009765625,King (County),WA,1,,"FEMA verified $5,190 in damage; denied for missing documents; home needs repairs to be livable.",0.2275310605764389,3292676784
+6,0.8307692307692308,lost_contact,1882.0999755859375,Cowlitz (County),WA,1,,"FEMA verified $1,882 in damage; denied after fema lost contact; home needs repairs to be livable.",0.11981222033500671,3281912021
+7,0.7000000000000001,lost_contact,1036.0999755859375,Cowlitz (County),WA,1,age 65+,"FEMA verified $1,036 in damage; denied after fema lost contact; home needs repairs to be livable; age 65+.",0.18212071061134338,3274758681
+8,0.6000000000000001,lost_contact,1036.0999755859375,Cowlitz (County),WA,1,,"FEMA verified $1,036 in damage; denied after fema lost contact; home needs repairs to be livable.",0.31823524832725525,3269746619
+9,0.5538461538461539,unverified_ownership_or_occupancy,438.0,Pacific (County),WA,1,"renter, lowest income band","FEMA verified $438 in damage; ownership or occupancy never verified; home needs repairs to be livable; renter, lowest income band.",0.8236950039863586,3283603651
+10,0.5384615384615385,lost_contact,941.6799926757812,Cowlitz (County),WA,1,age 65+,FEMA verified $942 in damage; denied after fema lost contact; home needs repairs to be livable; age 65+.,0.16427387297153473,3279353131
+11,0.2884615384615385,missing_documents,174.30999755859375,Pacific (County),WA,0,age 65+,FEMA verified $174 in damage; denied for missing documents; age 65+.,0.21700912714004517,3280246385
+12,0.12307692307692308,lost_contact,162.989990234375,Cowlitz (County),WA,0,,FEMA verified $163 in damage; denied after fema lost contact.,0.18024423718452454,3287253748
+13,0.11538461538461539,missing_documents,46.55999755859375,Thurston (County),WA,1,,FEMA verified $47 in damage; denied for missing documents; home needs repairs to be livable.,0.7841228246688843,3279355575

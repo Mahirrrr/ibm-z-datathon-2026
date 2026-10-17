@@ -1,0 +1,6 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.6,missing_documents,8558.4296875,Perry (County),KY,1,"renter, lowest income band","FEMA verified $8,558 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.8098201155662537,3292650393
+2,1.4000000000000001,lost_contact,14132.08984375,Washington (County),KY,1,lowest income band,"FEMA verified $14,132 in damage; denied after fema lost contact; home needs repairs to be livable; lowest income band.",0.3863556683063507,3272559577
+3,1.05,missing_documents,7673.099853515625,Carter (County),KY,1,renter,"FEMA verified $7,673 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.6542035341262817,3271015712
+4,0.7000000000000001,missing_documents,3535.58984375,Estill (County),KY,1,renter,"FEMA verified $3,536 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.3990502953529358,3269952937
+5,0.31500000000000006,unverified_ownership_or_occupancy,1721.93994140625,Carter (County),KY,1,renter,"FEMA verified $1,722 in damage; ownership or occupancy never verified; home needs repairs to be livable; renter.",0.8572015762329102,3288135642

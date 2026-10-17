@@ -1,0 +1,4 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.5,missing_documents,6974.93994140625,Greene (County),AR,1,,"FEMA verified $6,975 in damage; denied for missing documents; home needs repairs to be livable.",0.3962170481681824,3274578755
+2,1.1666666666666665,missing_documents,1090.989990234375,Lawrence (County),AR,1,renter,"FEMA verified $1,091 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.7603131532669067,3283679658
+3,0.5833333333333333,missing_documents,781.6199951171875,Randolph (County),AR,1,lowest income band,FEMA verified $782 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.,0.6220165491104126,3282141989

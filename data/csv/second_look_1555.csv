@@ -1,0 +1,7 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.5,missing_documents,26710.0703125,Butler (County),PA,1,,"FEMA verified $26,710 in damage; denied for missing documents; home needs repairs to be livable.",0.315133661031723,3291460101
+2,1.4583333333333335,missing_documents,10983.330078125,Beaver (County),PA,1,renter,"FEMA verified $10,983 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.3684994578361511,3288206770
+3,1.0,missing_documents,3471.4599609375,Butler (County),PA,1,,"FEMA verified $3,471 in damage; denied for missing documents; home needs repairs to be livable.",0.1712433099746704,3284970381
+4,0.75,missing_documents,1842.1299438476562,Blair (County),PA,1,,"FEMA verified $1,842 in damage; denied for missing documents; home needs repairs to be livable.",0.16637519001960754,3271934155
+5,0.375,missing_documents,1275.0,Blair (County),PA,1,,"FEMA verified $1,275 in damage; denied for missing documents; home needs repairs to be livable.",0.26574259996414185,3277215757
+6,0.375,missing_documents,1275.0,Crawford (County),PA,1,,"FEMA verified $1,275 in damage; denied for missing documents; home needs repairs to be livable.",0.20967331528663635,3281388389

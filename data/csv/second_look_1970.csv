@@ -1,0 +1,3 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,448.67999267578125,Atoka (County),OK,1,lowest income band,FEMA verified $449 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.,0.618876039981842,3286248825
+2,1.0,missing_documents,339.8699951171875,Atoka (County),OK,1,"renter, lowest income band","FEMA verified $340 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.5981720685958862,3293535397

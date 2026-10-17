@@ -1,0 +1,5 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.2000000000000002,lost_contact,6147.90966796875,Hunterdon (County),NJ,1,,"FEMA verified $6,148 in damage; denied after fema lost contact; home needs repairs to be livable.",0.385226309299469,3276245907
+2,1.0125000000000002,unverified_ownership_or_occupancy,5679.989990234375,Warren (County),NJ,1,,"FEMA verified $5,680 in damage; ownership or occupancy never verified; home needs repairs to be livable.",0.4928351640701294,3272534329
+3,0.8,lost_contact,2477.33984375,Mercer (County),NJ,1,"lowest income band, age 65+","FEMA verified $2,477 in damage; denied after fema lost contact; home needs repairs to be livable; lowest income band, age 65+.",0.37012702226638794,3283027017
+4,0.4375,missing_documents,1174.93994140625,Hunterdon (County),NJ,1,age 65+,"FEMA verified $1,175 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.598470151424408,3271160802

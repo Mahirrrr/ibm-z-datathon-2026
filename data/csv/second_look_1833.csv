@@ -1,0 +1,5 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.8,unverified_ownership_or_occupancy,3687.739990234375,Lanier (County),GA,1,"renter, lowest income band","FEMA verified $3,688 in damage; ownership or occupancy never verified; home needs repairs to be livable; renter, lowest income band.",0.7154176235198975,3277621016
+2,1.5,missing_documents,1962.419921875,Early (County),GA,1,"renter, lowest income band","FEMA verified $1,962 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.7622491717338562,3280458732
+3,1.0,missing_documents,1373.7999267578125,Worth (County),GA,1,"lowest income band, age 65+","FEMA verified $1,374 in damage; denied for missing documents; home needs repairs to be livable; lowest income band, age 65+.",0.30979013442993164,3278069937
+4,0.375,missing_documents,912.0499877929688,Berrien (County),GA,1,,FEMA verified $912 in damage; denied for missing documents; home needs repairs to be livable.,0.19807948172092438,3280244028

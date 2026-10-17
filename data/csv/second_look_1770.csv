@@ -1,0 +1,13 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,2.0,missing_documents,8948.309692382812,Dawson (County),NE,1,"renter, lowest income band","FEMA verified $8,948 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.544347882270813,3282584931
+2,1.8333333333333333,missing_documents,5813.350036621094,Dawson (County),NE,1,"renter, age 65+","FEMA verified $5,813 in damage; denied for missing documents; home needs repairs to be livable; renter, age 65+.",0.5567030310630798,3293490042
+3,1.4583333333333335,missing_documents,1952.739990234375,Dawson (County),NE,1,renter,"FEMA verified $1,953 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.5222654938697815,3273585861
+4,1.35,unverified_ownership_or_occupancy,864.4099731445312,Dawson (County),NE,1,"renter, lowest income band","FEMA verified $864 in damage; ownership or occupancy never verified; home needs repairs to be livable; renter, lowest income band.",0.9031822085380554,3275138293
+5,1.0,missing_documents,392.6199951171875,Dawson (County),NE,1,"renter, lowest income band","FEMA verified $393 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.8312630653381348,3287247139
+6,0.8,lost_contact,696.4400024414062,Dawson (County),NE,0,"renter, lowest income band","FEMA verified $696 in damage; denied after fema lost contact; renter, lowest income band.",0.489515095949173,3276687041
+7,0.5833333333333334,missing_documents,631.6799926757812,Dawson (County),NE,0,,FEMA verified $632 in damage; denied for missing documents.,0.4338587522506714,3290057871
+8,0.41666666666666674,lost_contact,315.1600036621094,Butler (County),NE,0,lowest income band,FEMA verified $315 in damage; denied after fema lost contact; lowest income band.,0.516620934009552,3292188912
+9,0.41666666666666663,missing_documents,219.38999938964844,Buffalo (County),NE,0,lowest income band,FEMA verified $219 in damage; denied for missing documents; lowest income band.,0.46436673402786255,3287685820
+10,0.25,missing_documents,119.61000061035156,Colfax (County),NE,0,"renter, lowest income band","FEMA verified $120 in damage; denied for missing documents; renter, lowest income band.",0.6267648935317993,3282584929
+11,0.2,lost_contact,169.989990234375,Saunders (County),NE,,,FEMA verified $170 in damage; denied after fema lost contact.,0.9764007925987244,3280168617
+12,0.10416666666666666,missing_documents,65.29000091552734,Buffalo (County),NE,0,renter,FEMA verified $65 in damage; denied for missing documents; renter.,0.7283838391304016,3276688515

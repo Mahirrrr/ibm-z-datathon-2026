@@ -1,0 +1,10 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.5,missing_documents,14899.95947265625,Carroll (County),IN,1,,"FEMA verified $14,900 in damage; denied for missing documents; home needs repairs to be livable.",0.27706751227378845,3274130390
+2,1.3333333333333333,missing_documents,3019.829833984375,Harrison (County),IN,1,"lowest income band, age 65+","FEMA verified $3,020 in damage; denied for missing documents; home needs repairs to be livable; lowest income band, age 65+.",0.3196239769458771,3279800121
+3,1.3333333333333333,missing_documents,10129.9501953125,Marshall (County),IN,1,,"FEMA verified $10,130 in damage; denied for missing documents; home needs repairs to be livable.",0.4689093828201294,3284765667
+4,1.1666666666666667,missing_documents,4234.929931640625,Elkhart (County),IN,1,,"FEMA verified $4,235 in damage; denied for missing documents; home needs repairs to be livable.",0.6202223300933838,3268245981
+5,0.8333333333333334,missing_documents,1217.5899658203125,Fulton (County),IN,1,,"FEMA verified $1,218 in damage; denied for missing documents; home needs repairs to be livable.",0.28904929757118225,3268707287
+6,0.5555555555555556,missing_documents,919.97998046875,Marshall (County),IN,0,renter,FEMA verified $920 in damage; denied for missing documents; renter.,0.5906195640563965,3274362825
+7,0.5,missing_documents,862.1599731445312,Clark (County),IN,1,,FEMA verified $862 in damage; denied for missing documents; home needs repairs to be livable.,0.4899608790874481,3276990704
+8,0.3333333333333333,missing_documents,458.3199768066406,Elkhart (County),IN,1,,FEMA verified $458 in damage; denied for missing documents; home needs repairs to be livable.,0.3753841817378998,3280720274
+9,0.19444444444444442,missing_documents,119.94999694824219,Elkhart (County),IN,1,renter,FEMA verified $120 in damage; denied for missing documents; home needs repairs to be livable; renter.,0.8836850523948669,3289305110

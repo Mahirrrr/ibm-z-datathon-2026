@@ -1,0 +1,2 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,2268.2900390625,Holt (County),MO,1,age 65+,"FEMA verified $2,268 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.32941681146621704,3276721832

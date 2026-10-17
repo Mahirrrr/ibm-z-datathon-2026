@@ -1,0 +1,8 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,104590.97399902344,Ottawa (County),OK,1,renter,"FEMA verified $104,591 in damage; denied for missing documents; home needs repairs to be livable; renter.",0.8309923410415649,3275132996
+2,1.2857142857142856,missing_documents,46925.8203125,Ottawa (County),OK,1,,"FEMA verified $46,926 in damage; denied for missing documents; home needs repairs to be livable.",0.5415099263191223,3272525426
+3,1.0714285714285714,missing_documents,5891.3798828125,Ottawa (County),OK,1,,"FEMA verified $5,891 in damage; denied for missing documents; home needs repairs to be livable.",0.5064883828163147,3281280380
+4,0.8571428571428571,missing_documents,4427.699951171875,Ottawa (County),OK,1,,"FEMA verified $4,428 in damage; denied for missing documents; home needs repairs to be livable.",0.3417099416255951,3280166225
+5,0.6428571428571428,missing_documents,715.8499755859375,Ottawa (County),OK,1,,FEMA verified $716 in damage; denied for missing documents; home needs repairs to be livable.,0.9471147656440735,3280408267
+6,0.2857142857142857,missing_documents,178.95999145507812,Ottawa (County),OK,1,"lowest income band, age 65+","FEMA verified $179 in damage; denied for missing documents; home needs repairs to be livable; lowest income band, age 65+.",0.4635690152645111,3285735076
+7,0.2857142857142857,missing_documents,452.7799987792969,Ottawa (County),OK,0,,FEMA verified $453 in damage; denied for missing documents.,0.3176281452178955,3290917009

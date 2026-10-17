@@ -1,0 +1,3 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,45893.88037109375,Polk (County),IA,1,lowest income band,"FEMA verified $45,894 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.932601273059845,3290725633
+2,1.0,missing_documents,304.9499816894531,Polk (County),IA,1,"renter, lowest income band","FEMA verified $305 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.9695324301719666,3294154908

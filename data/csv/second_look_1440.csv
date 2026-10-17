@@ -1,0 +1,3 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.8,unverified_ownership_or_occupancy,802.3399658203125,Denali (Borough),AK,1,"renter, lowest income band","FEMA verified $802 in damage; ownership or occupancy never verified; home needs repairs to be livable; renter, lowest income band.",0.7968063950538635,3288582846
+2,1.0,missing_documents,300.29998779296875,Denali (Borough),AK,1,"renter, lowest income band","FEMA verified $300 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.5134746432304382,3281762782

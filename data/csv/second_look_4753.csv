@@ -1,0 +1,2 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.4000000000000001,lost_contact,13585.849365234375,"Providence (County)(in PMSA 6060,6480)",RI,1,needs accessibility support,"FEMA verified $13,586 in damage; denied after fema lost contact; home needs repairs to be livable; needs accessibility support.",0.24061742424964905,3276927450

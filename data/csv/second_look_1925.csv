@@ -1,0 +1,18 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.75,missing_documents,45394.669677734375,Pike (County),KY,1,lowest income band,"FEMA verified $45,395 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.9690757989883423,3278908758
+2,1.6470588235294117,missing_documents,18982.98046875,Pike (County),KY,1,"lowest income band, age 65+","FEMA verified $18,983 in damage; denied for missing documents; home needs repairs to be livable; lowest income band, age 65+.",0.23329009115695953,3272568809
+3,1.5441176470588234,missing_documents,21738.888671875,Pike (County),KY,1,lowest income band,"FEMA verified $21,739 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.6697642207145691,3281979281
+4,1.4117647058823528,missing_documents,26234.568725585938,Carter (County),KY,1,,"FEMA verified $26,235 in damage; denied for missing documents; home needs repairs to be livable.",0.9444612264633179,3292179950
+5,1.1470588235294117,missing_documents,18710.839233398438,Rowan (County),KY,1,,"FEMA verified $18,711 in damage; denied for missing documents; home needs repairs to be livable.",0.5374212265014648,3286674959
+6,1.0588235294117647,missing_documents,13579.5498046875,Pike (County),KY,1,,"FEMA verified $13,580 in damage; denied for missing documents; home needs repairs to be livable.",0.605997622013092,3271212422
+7,0.9705882352941178,missing_documents,12610.400024414062,Lewis (County),KY,1,,"FEMA verified $12,610 in damage; denied for missing documents; home needs repairs to be livable.",0.6337464451789856,3276085570
+8,0.8823529411764706,missing_documents,3668.369873046875,Pike (County),KY,1,,"FEMA verified $3,668 in damage; denied for missing documents; home needs repairs to be livable.",0.5263788104057312,3283069384
+9,0.7941176470588236,missing_documents,2984.6298828125,Pike (County),KY,1,,"FEMA verified $2,985 in damage; denied for missing documents; home needs repairs to be livable.",0.23845063149929047,3292874046
+10,0.7058823529411764,missing_documents,2340.0,Carter (County),KY,1,,"FEMA verified $2,340 in damage; denied for missing documents; home needs repairs to be livable.",0.2010851502418518,3292234260
+11,0.6176470588235294,missing_documents,1437.7999267578125,Pike (County),KY,1,age 65+,"FEMA verified $1,438 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.35191553831100464,3275575843
+12,0.6176470588235294,missing_documents,2086.159912109375,Carter (County),KY,1,,"FEMA verified $2,086 in damage; denied for missing documents; home needs repairs to be livable.",0.20649412274360657,3278472853
+13,0.4411764705882353,missing_documents,1097.5599365234375,Pike (County),KY,1,,"FEMA verified $1,098 in damage; denied for missing documents; home needs repairs to be livable.",0.40135133266448975,3291371397
+14,0.3088235294117647,missing_documents,625.239990234375,Pike (County),KY,1,lowest income band,FEMA verified $625 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.,0.3712008595466614,3284853534
+15,0.29411764705882354,missing_documents,699.989990234375,Pike (County),KY,0,age 65+,FEMA verified $700 in damage; denied for missing documents; age 65+.,0.4295259714126587,3270615522
+16,0.10588235294117647,unverified_ownership_or_occupancy,348.0,Pike (County),KY,0,,FEMA verified $348 in damage; ownership or occupancy never verified.,0.4061554968357086,3270595811
+17,0.07058823529411765,lost_contact,46.95000076293945,Pike (County),KY,1,,FEMA verified $47 in damage; denied after fema lost contact; home needs repairs to be livable.,0.1572534441947937,3292678815

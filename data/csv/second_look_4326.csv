@@ -1,0 +1,7 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,2.0,missing_documents,2807.219970703125,Isabella (County),MI,1,"renter, lowest income band","FEMA verified $2,807 in damage; denied for missing documents; home needs repairs to be livable; renter, lowest income band.",0.7739078402519226,3291297764
+2,1.25,missing_documents,1538.6400146484375,Midland (County),MI,1,,"FEMA verified $1,539 in damage; denied for missing documents; home needs repairs to be livable.",0.20133301615715027,3280750071
+3,1.1666666666666665,missing_documents,1073.949951171875,Midland (County),MI,1,age 65+,"FEMA verified $1,074 in damage; denied for missing documents; home needs repairs to be livable; age 65+.",0.27522116899490356,3287594589
+4,0.7000000000000001,lost_contact,1070.0,Midland (County),MI,1,age 65+,"FEMA verified $1,070 in damage; denied after fema lost contact; home needs repairs to be livable; age 65+.",0.2605970501899719,3277486723
+5,0.5,missing_documents,867.1599731445312,Midland (County),MI,1,,FEMA verified $867 in damage; denied for missing documents; home needs repairs to be livable.,0.15982379019260406,3285657954
+6,0.25,missing_documents,812.4599609375,Isabella (County),MI,1,,FEMA verified $812 in damage; denied for missing documents; home needs repairs to be livable.,0.29357048869132996,3281843785

@@ -1,0 +1,3 @@
+rank_in_disaster,priority,tier,verified_loss,county,damagedStateAbbreviation,habitabilityRepairsRequired,factors,why_flagged,risk_score,id
+1,1.5,missing_documents,3752.260009765625,San Carlos Indian Reservation,AZ,1,"age 65+, needs accessibility support","FEMA verified $3,752 in damage; denied for missing documents; home needs repairs to be livable; age 65+, needs accessibility support.",0.7013612389564514,3287218984
+2,1.3125,missing_documents,3752.260009765625,San Carlos Indian Reservation,AZ,1,lowest income band,"FEMA verified $3,752 in damage; denied for missing documents; home needs repairs to be livable; lowest income band.",0.8518726229667664,3270933953
