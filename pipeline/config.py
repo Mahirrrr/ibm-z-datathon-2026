@@ -7,8 +7,8 @@ RAW_DIR = ROOT / "data" / "raw"
 PROCESSED_DIR = ROOT / "data" / "processed"
 
 IHP_RAW = RAW_DIR / "ihp_registrations_v2.parquet"
-IHP_SLIM = PROCESSED_DIR / "ihp_slim.parquet"
-COHORT = PROCESSED_DIR / "cohort.parquet"
+IHP_SLIM = PROCESSED_DIR / "ihp_slim.arrow"
+COHORT = PROCESSED_DIR / "cohort.arrow"
 
 IHP_URL = (
     "https://www.fema.gov/about/reports-and-data/openfema/v2/"
@@ -58,10 +58,11 @@ MONEY_COLUMNS = ["ihpAmount", "rpfvl", "ppfvl", "unmetNeedRp", "unmetNeedPp"]
 MODELS_DIR = ROOT / "models"
 MODEL_PATH = MODELS_DIR / "second_look.joblib"
 METRICS = PROCESSED_DIR / "model_metrics.json"
-FAIRNESS = PROCESSED_DIR / "fairness.parquet"
-ADJUSTED_ODDS = PROCESSED_DIR / "adjusted_odds.parquet"
-CALLBACKS = PROCESSED_DIR / "callbacks.parquet"
-SCORES = PROCESSED_DIR / "scores.parquet"
+BENCHMARK = PROCESSED_DIR / "inference_benchmark.json"
+FAIRNESS = PROCESSED_DIR / "fairness.arrow"
+ADJUSTED_ODDS = PROCESSED_DIR / "adjusted_odds.arrow"
+CALLBACKS = PROCESSED_DIR / "callbacks.arrow"
+SCORES = PROCESSED_DIR / "scores.arrow"
 DB_PATH = ROOT / "secondlook.db"
 
 # Model features: only what FEMA knows once an inspection confirms damage, BEFORE the

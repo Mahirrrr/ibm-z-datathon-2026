@@ -11,6 +11,7 @@ import numpy as np
 import pandas as pd
 from sklearn.linear_model import LogisticRegression
 
+from pipeline import frames
 from pipeline.config import ADJUSTED_ODDS, COHORT, FAIRNESS, FAIRNESS_GROUPS
 
 Z = 1.959964
@@ -89,12 +90,11 @@ def adjusted_odds(df, sample_size=1_500_000, seed=7):
 def main():
     cols = ["second_look", "verified_damage", "verified_loss", "habitabilityRepairsRequired",
             "destroyed", "incidentTypeCode", "declarationDate"] + list(FAIRNESS_GROUPS)
-    df = pd.read_parquet(COHORT, columns=cols)
-    df = df[df["verified_damage"]]
+    df = frames.read(COHORT, columns=cols, where="verified_damage")
     rates = pd.concat([group_rates(df, g, ref) for g, ref in FAIRNESS_GROUPS.items()], ignore_index=True)
-    rates.to_parquet(FAIRNESS, index=False)
+    frames.write(rates, FAIRNESS)
     odds = adjusted_odds(df)
-    odds.to_parquet(ADJUSTED_ODDS, index=False)
+    frames.write(odds, ADJUSTED_ODDS)
     pd.set_option("display.width", 160)
     print(rates[["group", "category", "households", "rate", "ci_low", "ci_high", "ratio_vs_reference"]]
           .to_string(index=False, float_format=lambda v: f"{v:.4f}"))

@@ -1,13 +1,18 @@
 """Read only the needed columns from the 760 MB OpenFEMA parquet, one row group at a time,
-and write a slim working table. Peak memory stays at one row group plus the output.
+and write a slim Arrow IPC table. Peak memory stays at one row group plus the output.
+
+Run this step on a little-endian machine: pyarrow 19 for s390x misreads Parquet numbers
+(see pipeline/frames.py). Every later step reads the IPC output and runs on LinuxONE.
 """
 
+import sys
 import time
 
 import pyarrow as pa
 import pyarrow.parquet as pq
 
 from pipeline.config import IHP_RAW, IHP_SLIM, MONEY_COLUMNS, PROCESSED_DIR, SLIM_COLUMNS
+from pipeline.frames import COMPRESSION
 
 
 def slim_table(table):
@@ -20,6 +25,9 @@ def slim_table(table):
 
 
 def main():
+    if sys.byteorder != "little":
+        sys.exit("ingest reads Parquet, which pyarrow misreads on big-endian; run it on a little-endian "
+                 "machine and copy data/processed/ihp_slim.arrow over (make ingest, then make pipeline)")
     PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
     source = pq.ParquetFile(IHP_RAW)
     start = time.perf_counter()
@@ -28,7 +36,8 @@ def main():
         for i in range(source.num_row_groups):
             table = slim_table(source.read_row_group(i, columns=SLIM_COLUMNS))
             if writer is None:
-                writer = pq.ParquetWriter(IHP_SLIM, table.schema, compression="zstd")
+                options = pa.ipc.IpcWriteOptions(compression=COMPRESSION)
+                writer = pa.ipc.new_file(IHP_SLIM, table.schema, options=options)
             writer.write_table(table)
     finally:
         if writer is not None:

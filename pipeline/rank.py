@@ -8,6 +8,7 @@ Each row gets a one-sentence "why flagged" a caseworker can read aloud.
 
 import pandas as pd
 
+from pipeline import frames
 from pipeline.codebook import TIER_LABELS
 from pipeline.config import (
     CALLBACKS,
@@ -62,12 +63,11 @@ def main():
     cols = ["id", "disasterNumber", "declarationDate", "damagedStateAbbreviation", "county",
             "incidentTypeCode", "tier", "second_look", "verified_loss", "habitabilityRepairsRequired",
             "ownRent", "grossIncome", "applicantAge", "accessFunctionalNeeds", "ineligibleReason"]
-    df = pd.read_parquet(COHORT, columns=cols)
-    df = df[df["second_look"]].drop(columns="second_look")
+    df = frames.read(COHORT, columns=[c for c in cols if c != "second_look"], where="second_look")
     df["accessFunctionalNeeds"] = df["accessFunctionalNeeds"].astype(object)
     df["habitabilityRepairsRequired"] = df["habitabilityRepairsRequired"].astype(object)
     ranked = rank(df)
-    ranked.to_parquet(CALLBACKS, index=False)
+    frames.write(ranked, CALLBACKS)
     top = ranked[ranked["disasterNumber"] == ranked["disasterNumber"].value_counts().idxmax()].head(5)
     print(f"ranked {len(ranked):,} households across {ranked['disasterNumber'].nunique():,} disasters")
     for _, row in top.iterrows():

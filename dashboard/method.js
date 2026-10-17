@@ -27,7 +27,7 @@ const FEATURE_LABELS = {
 const STACK = [
   ["IBM LinuxONE Community Cloud (s390x)", "Runs the pipeline, model, API, and dashboard", "machine"],
   ["IBM Snap ML", "Gradient-boosted model training and batch scoring", "backend"],
-  ["Telum on-chip AI accelerator (NNPA)", "Checked with /proc/cpuinfo; claimed only if present", null],
+  ["Telum on-chip AI accelerator (NNPA)", "Snap ML zdnn_tensors engine scores every household on the AI accelerator", "nnpa"],
   ["llama.cpp local LLM", "Writes callback scripts without data leaving the machine", null],
   ["Podman container", "Packages the API and dashboard", null],
 ];
@@ -74,15 +74,19 @@ function render({ metrics: m, feature_importance: fi, policy }) {
     `reason weights:\n${weights}`;
 
   const onZ = m.machine === "s390x";
+  const engines = m.inference_benchmark ? Object.values(m.inference_benchmark.engines) : [];
+  const fastest = Math.max(m.records_per_second, ...engines.map((e) => e.records_per_second));
   document.getElementById("runtime").replaceChildren(
     tile("Machine", m.machine, onZ),
     tile("Model backend", m.backend),
     tile("Households scored", fmt.int(m.score_rows)),
-    tile("Scoring throughput", `${fmt.int(m.records_per_second)}/s`, true),
+    tile("Fastest scoring", `${fmt.compact(fastest)}/s`, true),
     tile("Training time", `${m.fit_seconds}s`)
   );
 
-  const done = { machine: onZ, backend: m.backend === "snapml" };
+  const bench = m.inference_benchmark;
+  const nnpa = bench && bench.engines.zdnn_tensors && bench.engines.zdnn_tensors.engine === "zdnn_tensors";
+  const done = { machine: onZ, backend: m.backend === "snapml", nnpa };
   document.getElementById("stack").replaceChildren(
     ...STACK.map(([name, what, key]) => {
       const ok = key ? done[key] : false;
@@ -91,6 +95,32 @@ function render({ metrics: m, feature_importance: fi, policy }) {
         el("td", {}, what),
         el("td", {}, el("span", { class: ok ? "status ok" : "status pending" }, ok ? "● running" : "○ pending")));
     })
+  );
+  renderEngines(bench);
+}
+
+const ENGINE_LABELS = {
+  cpu_default: "CPU, standard trees",
+  compress_trees: "CPU, Snap ML compressed trees",
+  zdnn_tensors: "Telum AI accelerator (NNPA)",
+};
+
+function renderEngines(bench) {
+  const target = document.getElementById("engines");
+  if (!bench) {
+    target.replaceChildren(el("p", { class: "note" }, "Engine benchmark runs on LinuxONE with Snap ML."));
+    return;
+  }
+  const rows = Object.entries(bench.engines);
+  const max = Math.max(...rows.map(([, e]) => e.records_per_second));
+  target.replaceChildren(
+    el("p", { class: "panel-title" }, `Scoring all ${fmt.int(bench.rows)} verified-damage households, by inference engine`),
+    ...rows.map(([key, e]) =>
+      el("div", { class: "hbar" },
+        el("span", {}, ENGINE_LABELS[key] || key),
+        el("div", { class: "track" }, el("div", { class: "fill", style: `width:${(e.records_per_second / max) * 100}%;background:${key === "zdnn_tensors" ? "#42be65" : "#78a9ff"}` })),
+        el("span", { class: "n", style: "width:auto" }, `${fmt.compact(e.records_per_second)}/s`))),
+    el("p", { class: "note" }, "Every engine returns the same scores (max difference shown in the API). Measured, not claimed.")
   );
 }
 

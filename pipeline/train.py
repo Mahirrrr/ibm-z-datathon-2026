@@ -5,6 +5,7 @@ verified-damage population afterwards and times it (records/sec).
 """
 
 import json
+import os
 import platform
 import time
 
@@ -15,6 +16,7 @@ from sklearn.ensemble import HistGradientBoostingClassifier
 from sklearn.inspection import permutation_importance
 from sklearn.metrics import average_precision_score, roc_auc_score
 
+from pipeline import frames
 from pipeline.config import COHORT, METRICS, MODEL_PATH, MODELS_DIR, SCORES
 from pipeline.features import (
     FEATURES,
@@ -35,12 +37,19 @@ LOAD_COLUMNS = [
 ] + [f for f in FEATURES if f not in ("rpfvl", "ppfvl", "declarationYear")]
 
 
+SNAPML_MISSING = -1.0
+
+
 def make_model():
     """Snap ML boosting if available (s390x / Telum path), else scikit-learn."""
     try:
         from snapml import BoostingMachineClassifier
 
-        return "snapml", BoostingMachineClassifier(num_round=300, max_depth=6, n_jobs=-1)
+        # 300 rounds on 7M rows trips a Snap ML 1.17.2 assertion on s390x (convert_mbit:
+        # tree_ensemble_models.size() > 0); 100 rounds is stable and already beats sklearn's 300.
+        return "snapml", BoostingMachineClassifier(
+            num_round=100, max_depth=6, n_jobs=os.cpu_count(), class_weight="balanced", random_state=7
+        )
     except ImportError:
         return "sklearn", HistGradientBoostingClassifier(
             max_iter=300,
@@ -60,15 +69,21 @@ def predict_proba(model, X):
     return model.predict_proba(X)[:, 1]
 
 
+def model_matrix(X, backend):
+    """Snap ML 1.17.2 on s390x corrupts its heap on NaN inputs. Codes and amounts are never
+    negative, so -1 is a safe "missing" value the trees can split on."""
+    return np.nan_to_num(X, nan=SNAPML_MISSING) if backend == "snapml" else X
+
+
 def main():
-    df = pd.read_parquet(COHORT, columns=LOAD_COLUMNS)
-    df = df[df["verified_damage"]].reset_index(drop=True)
+    df = frames.read(COHORT, columns=LOAD_COLUMNS, where="verified_damage")
     maps = category_maps(df)
     X = build_matrix(df, maps)
     y = df["second_look"].to_numpy(dtype=np.int8)
 
     train_idx, test_idx = disaster_split(df)
     backend, model = make_model()
+    X = model_matrix(X, backend)
     print(f"backend={backend} train={len(train_idx):,} test={len(test_idx):,} pos_rate={y.mean():.4f}")
 
     start = time.perf_counter()
@@ -114,7 +129,7 @@ def main():
 
     MODELS_DIR.mkdir(exist_ok=True)
     joblib.dump({"model": model, "maps": maps, "features": FEATURES, "backend": backend}, MODEL_PATH)
-    pd.DataFrame({"id": df["id"], "risk_score": all_scores.astype("float32")}).to_parquet(SCORES, index=False)
+    frames.write(pd.DataFrame({"id": df["id"], "risk_score": all_scores.astype("float32")}), SCORES)
     METRICS.write_text(json.dumps(metrics, indent=2))
 
     summary = {k: v for k, v in metrics.items() if k != "feature_importance"}

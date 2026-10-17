@@ -89,3 +89,33 @@ def test_reason_labels():
     assert reason_label("4") == "Needs to submit documentation"
     assert reason_label(None) == "No reason recorded"
     assert reason_label("42") == "Unknown code"
+
+
+def test_label_file_streams_batches_with_stable_schema(tmp_path):
+    import pyarrow as pa
+
+    from pipeline import frames
+    from pipeline.cohort import label_file
+
+    schema = pa.schema([
+        ("inspnReturned", pa.bool_()), ("rpfvl", pa.float32()), ("ppfvl", pa.float32()),
+        ("ihpEligible", pa.bool_()), ("ineligibleReason", pa.string()),
+        ("verifiedOwnership", pa.bool_()), ("verifiedOccupancy", pa.bool_()), ("county", pa.string()),
+    ])
+    in_cohort = pa.record_batch([[True], [5000.0], [0.0], [False], ["4"], [True], [True], ["Cameron"]], schema=schema)
+    # Second batch: nobody qualifies and the string columns are all null.
+    excluded = pa.record_batch([[True, None], [0.0, None], [0.0, None], [True, None], [None, None],
+                                [True, None], [True, None], [None, None]], schema=schema)
+    src, dst = tmp_path / "slim.arrow", tmp_path / "cohort.arrow"
+    with pa.ipc.new_file(src, schema) as writer:
+        writer.write_batch(in_cohort)
+        writer.write_batch(excluded)
+
+    stats = label_file(src, dst)
+
+    out = frames.read(dst)
+    assert stats == {"rows": 3, "verified_damage": 1, "denied_verified": 1, "second_look": 1,
+                     "tiers": {"missing_documents": 1}}
+    assert list(out["second_look"]) == [True, False, False]
+    assert list(out["tier"].isna()) == [False, True, True]
+    assert out.loc[0, "county"] == "Cameron"
