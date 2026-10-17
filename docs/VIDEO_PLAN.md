@@ -1,4 +1,4 @@
-# Demo video plan (target 2:50, hard cap 3:00)
+# Demo video plan (target 2:55, hard cap 3:00)
 
 The screen footage is already recorded, from the live deployment on the z17. The browser clips go through the SSH tunnel to the Podman container, and the terminal clip runs on the VM itself. The files are in `video/clips/` (gitignored, local only):
 
@@ -10,43 +10,68 @@ The screen footage is already recorded, from the live deployment on the z17. The
 | `04_public_demo.mp4` | 7s | The same console on GitHub Pages, with the snapshot banner |
 | `05_terminal_linuxone.mp4` | 46s | On the VM: `s390x`, `machine = 9175`, `nnpa`, the running container, its read-only/caps-dropped config, the live API, the Granite GGUF, the NNPA 1.23x result |
 
-The clips are silent. Record your voice-over separately, then cut the clips to fit it. To re-record any clip, run `node record.mjs` (browser) or `vhs terminal.tape` (terminal) in the session scratchpad's `rec/` folder.
+The opener is finished: `~/Downloads/second-look-opener/second_look_opener.mp4` (13.8s, with sound; details in `docs/VIDEO_OPENER.md`).
 
-## Timeline and script (about 400 words, roughly 150 words per minute)
+The screen clips are silent. Record the on-camera parts and the voice-over separately, then cut the clips to fit the voice.
 
-| Time | Picture | Voice-over |
-|---|---|---|
-| 0:00–0:15 | Higgsfield B-roll (below), then a title card: **Second Look** · Team Second Look · IBM Z Datathon 2026 · SSF2026 | "I grew up in Bangladesh, watching floods take homes. The second loss came later, on paper: families with no deed, no lease, nothing to prove the home was theirs." |
-| 0:15–0:40 | `01_story` 0:00–0:12 (hero → denial bar) | "FEMA publishes every aid application, 26.2 million of them. In 94,395, an inspector verified the damage and FEMA said no anyway, for reasons a phone call could fix: a missing document, lost contact, or ownership nobody checked. That's 612 million dollars of verified loss, and 71,674 homes that weren't livable." |
-| 0:40–0:58 | `01_story` 0:12–0:24 (odds chart) | "It falls hardest on renters, at 1.88 times the odds, and on households reporting zero income, at 3.02 times, even after controlling for damage. People with access needs are actually *less* likely, and I report that as found." |
-| 0:58–1:45 | `02_disaster` (whole clip; speed the scroll to 1.3x if needed) | "This is the caseworker console. Pick a disaster and you get a ranked callback list. For each household, IBM Granite, running on the mainframe, writes why the denial looks fixable and a script for the call, citing FEMA's own policy guide. It's IBM's loan-approval lab in reverse: instead of explaining why a bank said no, it finds families the system wrongly turned away. Before anything is shown, my code checks every citation, every dollar amount, and that nothing promises approval. All 50 notes passed." |
-| 1:45–2:25 | `05_terminal_linuxone` (first 25s), then `03_method` from the runtime band (about 0:20 onward) | "Everything runs on an IBM z17 in the LinuxONE Community Cloud. A Snap ML model, tested on 114 disasters it never saw, reaches a ROC AUC of 0.785 and scores all 8.9 million households in 3.9 seconds. A TensorFlow twin runs on the Telum AI accelerator, 1.23 times faster than the CPU. Granite runs locally in llama.cpp, from a big-endian build." |
-| 2:25–2:40 | `05_terminal_linuxone` at the `podman inspect` line (zoom in) | "Nothing leaves the machine. It's a rootless, read-only container with every capability dropped, behind a tunnel, and no third-party AI API ever sees a household." |
-| 2:40–2:55 | Deck slide 12, then `04_public_demo` with the URL as a caption | "I'm Mahir Abdullah, and I built Second Look solo. Next, I want to take it home to Bangladesh, where proving you own your home is even harder. 94,395 households. One callback each." |
+## Script (about 350 spoken words, roughly 150 words per minute)
 
-## Higgsfield: opener only
+**[0:00–0:14] Opener.** No voice. Calm village, blink, fire, "IBM Z Datathon 2026", "Second Look", blink, aftermath with the blowing paper.
 
-Use Higgsfield only for the first 10–15 seconds. **Don't run the demo footage through it.** Generative video can redraw the UI and the numbers, and the rubric wants a real recording of the demo running live on LinuxONE.
+**[0:14–0:30] On camera.** Cut yourself out over the aftermath clip, then cut to plain you.
 
-Make 2–3 clips of about 5 seconds each, in one style:
+> All four of us grew up in Bangladesh. Every monsoon, we watched floods take homes. Then came the second loss, on paper: families with no deed and no lease, nothing to prove the home was theirs, turned away from help.
 
-1. "Cinematic slow dolly shot over a flooded rural village in a river delta at dawn, tin-roof homes half submerged, monsoon clouds, soft golden light breaking through, muted teal and amber palette, documentary realism, no text, no faces in close-up"
-2. "Close-up of a waterlogged paper document floating in muddy floodwater, ink running, shallow depth of field, slow push-in, somber documentary tone, muted colors, no readable text"
-3. "Slow transition from floodwater ripples to a clean dark screen with soft blue light, minimal, cinematic, 16:9" (the bridge into the title card)
+**[0:30–0:52] `01_story`, hero number.** Count-up from 0 to 94,395. A red DENIED stamp lands on the beat of "said no", with half a second of silence after it.
 
-Caption these clips "AI-generated illustration". They illustrate your story; they are not footage of real events.
+> That paperwork wall isn't only a Bangladesh problem. FEMA, America's disaster relief agency, publishes every application for aid: 26 million records. So I looked. In 94,395 cases, an inspector confirmed the damage in person, and FEMA still said no. Second Look finds them and gets them a callback.
+
+**[0:52–1:10] `01_story`, denial-reason bar.** A phone rings out unanswered under "couldn't reach".
+
+> They weren't denied because the damage wasn't real. They were denied for a missing document, a phone number FEMA couldn't reach, or ownership nobody checked. That's 612 million dollars of verified loss, and 71,674 homes that weren't safe to live in.
+
+**[1:10–1:25] `01_story`, odds chart.** Zoom on the red bars.
+
+> It falls hardest on renters, at 1.88 times the odds, and on households reporting zero income, at 3.02 times, even after controlling for damage.
+
+**[1:25–2:05] `02_disaster`, whole clip.** Speed the scroll to 1.3x if needed. Keyboard typing under the Granite note, a soft ding when it finishes. Zoom on the cited passage.
+
+> So I built Second Look. A caseworker picks a disaster and gets a ranked callback list. For each household, IBM Granite, running on the mainframe, explains why the denial looks fixable and drafts the call, citing FEMA's own policy guide. It's IBM's loan-approval lab in reverse: instead of explaining why a bank said no, it finds the people the system wrongly turned away. My code checks every note's citations and dollar amounts, and that nothing promises approval. All 50 passed.
+
+**[2:05–2:35] `05_terminal_linuxone` (first 25s), then `03_method` from the runtime band (about 0:20 on).** Speed-ramp the scoring run with a whoosh, then slow down on "3.9 seconds" and on the `nnpa` and `1.23` lines.
+
+> All of it runs on an IBM z17 in the LinuxONE Community Cloud. A Snap ML model, tested on 114 disasters it never saw, reaches a ROC AUC of 0.785 and scores all 8.9 million households in 3.9 seconds. A TensorFlow twin runs on the Telum AI accelerator, 1.23 times faster than the CPU.
+
+**[2:35–2:45] `05_terminal_linuxone` at the `podman inspect` line.** Zoom in.
+
+> Nothing leaves the machine. It's a rootless, read-only container with every capability dropped, behind a tunnel, and no outside AI service ever sees a household.
+
+**[2:45–2:58] All four of you on camera (plain, no cutout; one shared shot, or a quick cut of each person with a name caption), then deck slide 12, then `04_public_demo` with the URL as a caption.** End on the phone from 0:52 being picked up: the ring cuts off with a handset click.
+
+> We're Team Second Look. I built it, and together we want to take it home to Bangladesh, where proving you own your home is even harder. 94,395 households. One callback each.
+
+## Recording tips
+
+- Mahir records the full voice-over. Each teammate only needs a few seconds on camera for the 2:45 team shot.
+- Read the on-camera lines (0:14 and 2:45) to the lens, not the screen. Record each one 3 times and keep the best.
+- Record the voice-over in a closet or under a blanket for a dead room. Leave a one-second pause between paragraphs so it's easy to cut.
+- If a section runs long, trim the terminal shot first, then the method page.
+- The access-needs finding (those households are *less* likely to be in the cohort, OR 0.70) is cut from the voice-over for time. Keep it in the deck so the honesty point still reaches judges.
+- Background removal: CapCut, **Video → Remove background → Auto removal**. Use a plain wall, front light, a locked camera, and framing from the waist up.
 
 ## Editing (CapCut, iMovie or Descript)
 
-- Cut, zoom and caption in a normal editor. Descript can remove filler words and auto-caption.
-- Zoom (Ken Burns, 120–140%) on the Granite note, the cited passage, and the `nnpa` and `1.23` lines in the terminal.
-- Burn in captions. Judges often watch muted.
-- Play quiet instrumental music under the voice, ducked to about -20 dB.
-- Export 1080p, H.264, 2:45–2:55. Upload it to YouTube as unlisted.
+- Burn in captions. Judges often watch muted. Highlight "denied" in Carbon red `#DA1E28` and "Second Look" in IBM Blue `#0F62FE`.
+- Cut or zoom every 2–4 seconds.
+- Play quiet instrumental music under the voice, ducked to about -20 dB. Let it drop out completely for the DENIED beat.
+- Sound effects (stamp, phone ring, typing, ding, whoosh): Pixabay Sound Effects. Don't use meme sounds or copyrighted songs.
+- Export 1080p, H.264, 2:50–2:58. Upload it to YouTube as unlisted.
 
 ## Rules for the cut
 
-- Keep it to 3:00 or less. If it runs long, trim the terminal shot first.
-- Show the team (Mahir Abdullah, solo) on screen.
+- Keep it to 3:00 or less.
+- Show all four team members on screen with name captions. Credit the build to Mahir; don't caption roles nobody did.
+- Caption the opener "AI-generated illustration". It illustrates the story; it isn't footage of real events.
+- Don't run demo footage through any generative tool. The rubric wants a real recording of the demo running live on LinuxONE.
 - Never show the `.pem` key path, the VM IP or any Jupyter token. The recorded clips already hide them.
-- The NNPA claim is the TensorFlow twin only: 1.23x faster than CPU. Never credit Snap ML's `zdnn_tensors` engine with acceleration.
+- The NNPA claim is the TensorFlow twin only: 1.23x faster than the CPU. Never credit Snap ML's `zdnn_tensors` engine with acceleration.

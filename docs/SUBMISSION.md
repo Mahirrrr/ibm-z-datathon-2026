@@ -14,7 +14,7 @@ Submit at https://hack2skill.com/event/datathon-2026. The deadline is about Sun 
   - [ ] Confirm no keys or tokens are in the tree: `git grep -n -I -E "BEGIN .*PRIVATE|token=|Your_Token"`.
 - [ ] **Open-source links** (list below).
 - [ ] Optional: architecture flowchart (the Mermaid diagram in README.md, exported as PNG).
-- [ ] Team: confirm with the organizers that a solo entry is accepted (the rules say 4–6). The message is drafted in Discord #helpdesk.
+- [ ] Team: all 4 members (Mahir Abdullah, Arnab Dev, Azfar Islam, Raihan Ahmed) are added to the Hack2Skill team, which meets the 4–6 rule.
 - [ ] Both mandatory labs done, with screenshots.
 
 ## Description (paste into the form)
