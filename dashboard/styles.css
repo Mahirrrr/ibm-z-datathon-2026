@@ -18,6 +18,8 @@
 }
 
 * { box-sizing: border-box; }
+.snapshot { padding: 8px 16px; background: var(--blue-60); color: #fff; font: 13px/1.4 var(--sans); }
+.snapshot a { color: #fff; font-weight: 600; }
 body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.5 var(--sans); }
 a { color: var(--interactive); }
 

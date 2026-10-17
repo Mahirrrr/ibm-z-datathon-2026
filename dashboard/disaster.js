@@ -22,7 +22,7 @@ function renderDisaster(d) {
   document.title = `Second Look · ${d.incident_name} #${d.disasterNumber}`;
   $("crumb").textContent = `second-look / disasters / ${d.disasterNumber}`;
   $("title").textContent = `${d.incident_name} · #${d.disasterNumber} · ${d.states.replaceAll(",", ", ")} · ${d.year}`;
-  $("csv").href = `/api/disasters/${d.disasterNumber}/callbacks.csv`;
+  $("csv").href = csvUrl(d.disasterNumber);
 
   const tiles = [
     ["Second Look households", fmt.int(d.cohort), true],

@@ -5,10 +5,38 @@ const TIERS = {
   lost_contact: { label: "Denied after FEMA lost contact", color: "#8d8d8d" },
 };
 
+// Static snapshot (GitHub Pages): static.js sets SECOND_LOOK_STATIC and the API's responses
+// are read from data/*.json, written by pipeline/static_site.py from the real API.
+const STATIC = window.SECOND_LOOK_STATIC || null;
+
+function staticRequest(path) {
+  const url = new URL(path, location.origin);
+  const q = url.searchParams;
+  const slice = (rows) => rows.slice(Number(q.get("offset") || 0), Number(q.get("offset") || 0) + Number(q.get("limit") || rows.length));
+  let m;
+  if (url.pathname === "/api/disasters") return ["data/disasters.json", slice];
+  if ((m = url.pathname.match(/^\/api\/disasters\/(\d+)\/callbacks$/))) return [`data/callbacks/${m[1]}.json`, slice];
+  if ((m = url.pathname.match(/^\/api\/disasters\/(\d+)$/))) return [`data/disasters/${m[1]}.json`, (x) => x];
+  return [`data/${url.pathname.replace("/api/", "")}.json`, (x) => x];
+}
+
 async function api(path) {
-  const res = await fetch(path);
+  const [target, shape] = STATIC ? staticRequest(path) : [path, (x) => x];
+  const res = await fetch(target);
   if (!res.ok) throw new Error(`${path} returned ${res.status}`);
-  return res.json();
+  return shape(await res.json());
+}
+
+function csvUrl(number) {
+  return STATIC ? `data/csv/second_look_${number}.csv` : `/api/disasters/${number}/callbacks.csv`;
+}
+
+if (STATIC) {
+  document.addEventListener("DOMContentLoaded", () => {
+    const live = STATIC.live_url ? [" · ", el("a", { href: STATIC.live_url }, "Open the live version on IBM LinuxONE")] : [];
+    document.body.prepend(el("div", { class: "snapshot" },
+      `Static snapshot (${STATIC.snapshot}) of the dashboard that runs in a hardened container on IBM z17. Same data, same API responses.`, ...live));
+  });
 }
 
 const fmt = {
