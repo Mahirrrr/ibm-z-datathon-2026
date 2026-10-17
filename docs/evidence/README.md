@@ -65,6 +65,6 @@ These screenshots were taken through the SSH tunnel from the Podman container on
 - [dashboard_disaster_4559.png](dashboard_disaster_4559.png): caseworker console for Hurricane Laura (LA, 2020) with the ranked callback list
 - [dashboard_method_linuxone.png](dashboard_method_linuxone.png): method, model metrics, and the LinuxONE runtime panel (s390x, Snap ML, NNPA, Podman)
 
-## Still to add (manual)
+## Provisioned instance
 
-- Screenshot of the LinuxONE Community Cloud portal's **expanded instance details** (image Ubuntu24.04-Datathon, flavor AI_LAB, 3 vCPU, 8192 MB, 50 GB). Don't use the status row: it shows ERROR although the VM runs (see CLAUDE.md).
+[portal_instance_details.png](portal_instance_details.png) is the LinuxONE Community Cloud portal's instance details: flavor **AI_LAB**, 3 vCPU, 8192 MB RAM, 50 GB disk, image **Ubuntu24.04-Datathon**. The portal's status row reads ERROR, but that label is stale. `uptime` on the VM shows it has run continuously since it was created, and the organizers have been asked to reset the label.
