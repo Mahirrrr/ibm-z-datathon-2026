@@ -28,6 +28,14 @@ Mahir's entry for the IBM Z Datathon 2026 (Shooting Stars Foundation × IBM). Re
   4. Execution + pitch quality
 
   A separate AI Innovation Excellence Award rewards unconventional AI and technical excellence.
+
+  In the tech prep session, IBM said **Technical Design carries the most weight**. Their scoring checklist:
+  - Criterion 3: video screenshots of workloads running live on L1CC; at least 2 open-source AI frameworks; a Docker/Podman deployment; platform security or Telum acceleration.
+  - Novelty: don't submit the lab notebooks unchanged; pair predictive models with **Granite** LLM reasoning.
+  - Pitch: show each team member's role, and record the live demo on LinuxONE.
+  - Community: a quantified beneficiary population, "AI for Good" framing, and transparent decision reasoning.
+
+  Full notes: `docs/research/TECH_PREP_SESSION_NOTES.md`.
 - **Themes:** (1) Real-Time AI for Critical Decisions, (2) AI Secured: Innovation Without Exposure, (3) Wildcard: Beyond the Obvious.
 - **Platform:**
   - LinuxONE Community Cloud: https://linuxone.cloud.marist.edu (s390x, big-endian)
@@ -50,7 +58,14 @@ Mahir's entry for the IBM Z Datathon 2026 (Shooting Stars Foundation × IBM). Re
 - **Leakage trap:** eligibility is nearly the rule "loss > 0 and uninsured", so a naive model reaches ~0.99 AUC and learns nothing. Train only on verified-damage households and split by disaster. Pitch the cohort and the fairness gaps, not AUC.
 - **Hour-one risk:** `ineligibleReason` is a numeric code '1'–'9'. Decode it from the OpenFEMA data dictionary and confirm it splits into fixable vs genuinely ineligible.
 - **Add for the judging rubric (labs + criterion 3):**
-  - A **Generative AI layer** (predictive + generative hybrid): a local LLM on LinuxONE (llama.cpp ships in jupyter-lab-ml) writes a plain-language "why flagged" note and a callback script for each household.
+  - A **Generative AI layer** (predictive + generative hybrid), modelled on IBM's Loan Approval lab:
+    - **IBM Granite** runs locally through llama.cpp in the jupyter-lab-ml container.
+    - It uses **RAG over the FEMA IHP policy guide (IAPPG)**.
+    - For each household it writes a plain-language "why flagged" note and a callback script, citing the policy section that makes the denial fixable.
+    - Pitch it as the reverse of the lab: a bank deciding whether to approve loans vs. finding the people the system wrongly turned away.
+  - **Telum proof:** NNPA only accelerates TensorFlow ops (MatMul/Dense/ReLU/Softmax) through `ibm-zdnn-plugin`. Trees (sklearn/XGBoost/snapml) don't go through it.
+    - Build a small Keras MLP twin of the cohort model and benchmark it with the NNPA vs. CPU only.
+    - This also covers the "2 frameworks" item.
   - Run the app in a **Podman container** on the VM and screenshot it.
 - **Optional Sealed add-on** (only if the cohort works by about hour 6):
   - CPACF-backed HMAC tokenization of identities (synthetic names on top of the real rows)
@@ -61,6 +76,27 @@ Mahir's entry for the IBM Z Datathon 2026 (Shooting Stars Foundation × IBM). Re
   - The bridge to FEMA data: the paperwork barrier is universal. Families without formal proof of ownership or occupancy get turned away, and FEMA is one of the few agencies that publishes every application, which makes the problem measurable.
   - "What's next" goes back to Bangladesh, where informal land tenure makes ownership-proof barriers worse.
   - Keep the Bangladesh claims qualitative unless sourced. The data stays US FEMA, because no labeled Bangladesh aid-decision dataset exists.
+
+## Work queue (what to build next, in order; updated Oct 17)
+
+Done so far: cohort, model, fairness, ranking and SQLite store, all on the Mac (see Progress log). Dashboard design is agreed. Everything below is still open. Tick items off here as they land.
+
+1. **VM up.** Register with SSF2026 → AI LAB flavor, `-datathon` image. Start the jupyter-lab-ml container with our own token. Run the 2 mandatory labs and screenshot them.
+2. **Pipeline on the VM.**
+   - Use the conda `defaults` env on Python 3.12, then run `make pipeline`.
+   - Watch peak RSS in the cohort step (8 GB limit).
+   - Retrain on the VM; never copy pickles across.
+   - Record the s390x scoring throughput.
+3. **GenAI layer.** Granite via llama.cpp, plus RAG over the FEMA IAPPG. It writes a why-flagged note and a callback script per household.
+4. **Telum benchmark.** A Keras MLP twin through `ibm-zdnn-plugin`, comparing NNPA vs. CPU throughput. Claim only what we measured.
+5. **Disaster Declarations join**, so disaster numbers show as names.
+6. **Dashboard**, per "Dashboard design decisions" below. FastAPI + static HTML + Carbon from a CDN.
+7. **Podman container** for the app. Screenshot the container, `lscpu | grep nnpa`, the SSH tunnel and the custom token for criterion 3.
+8. **Submission.**
+   - Deck PDF `[Team Name]_IBM Z Datathon 2026 Project`.
+   - A video of 3 min or less, recorded on the VM, opening with the Bangladesh hook and showing team roles.
+   - Devpost write-up with SSF2026 in the description, the repo link and open-source links.
+9. *(Optional, only if ahead of schedule)* Sealed add-on.
 
 ## Progress log
 
@@ -100,6 +136,14 @@ Mahir's entry for the IBM Z Datathon 2026 (Shooting Stars Foundation × IBM). Re
 - PyPI has **no s390x wheels** for pandas, pyarrow, scikit-learn, xgboost, torch or onnxruntime. Install them from **conda `defaults`**; conda-forge doesn't have them either.
 - `snapml` 1.17.2 ships s390x wheels for cp39–cp312 only, so pin **Python 3.12**.
 - Run `grep nnpa /proc/cpuinfo` to see if the Telum accelerator is exposed. Don't claim acceleration unless measured.
+- **VM spec** (from the tech prep session):
+  - z17 (type 9175), 3 vCPU, **8 GB RAM**, 50 GB disk, 30 days, **one server per team**, user `linux1`.
+  - Register with **SSF2026** in the project description, or the **AI LAB** flavor won't appear.
+  - Pick the `-datathon` image: Ubuntu 24.04.4 or RHEL 9.8.
+- **Jupyter security:** the VM has a public IP, and the default token `Your_Token1` was shown on a public slide. Always set our own token, and serve the dashboard only over the SSH tunnel.
+- **Memory risk:** `pipeline/cohort.py` loads all of `ihp_slim.parquet` (26.2M × 33).
+  - On the Mac, peak RSS is 2.7 GB, but pandas reports 8.5 GB deep usage.
+  - Check RSS on the VM (`/usr/bin/time -v`). If it runs out of memory, filter or project with pyarrow before pandas.
 - Train models on the VM. Don't move pickles across architectures. Parquet is endian-neutral.
 
 ## Where things run
@@ -108,11 +152,30 @@ Mahir's entry for the IBM Z Datathon 2026 (Shooting Stars Foundation × IBM). Re
 - Pipeline, model, LLM and API all run on the VM. The dashboard is served from the VM and viewed in a browser through an SSH tunnel; screen-record that for the video.
 - No public website is required. Mahir wants the UI to look polished and wants a say in the design, so agree on the frontend look with him before building it.
 
+## Dashboard design decisions (agreed with Mahir, Oct 17)
+
+- Style: editorial (ProPublica-like) for the story pages, plus an IBM ops console for the callback list and the LinuxONE stats.
+- Built on IBM's open-source stack, not IBM branding:
+  - IBM Plex fonts: Serif for headlines, Sans for body text, Mono for numbers.
+  - Carbon Design System tokens: the White theme on editorial pages, the g100 dark theme on console pages.
+  - Carbon Charts for all charts.
+- No IBM logo or 8-bar mark, and nothing that implies an official IBM product.
+- Colors:
+  - IBM Blue 60 `#0F62FE` for interactive elements and model stats.
+  - Carbon Red 60 `#DA1E28` for fairness gaps (groups above the reference).
+  - Gray for groups at or below the reference.
+- Pages (3, in the order of the demo video):
+  1. **Story** (editorial): the hero number 94,395 with one sentence; adjusted-odds bars with CI whiskers, Carbon red for gaps; top disasters list, click to drill in.
+  2. **Disaster** (console): pick a disaster, then see cohort, verified loss and the denial-reason split; local fairness bars; the ranked callback table with why-flagged; a side panel with the LLM callback script; CSV export.
+  3. **Method + LinuxONE** (editorial top, console bottom): cohort definition, leakage guard, model metrics (AUC, precision@k, lift), s390x throughput and container proof.
+- Stack: FastAPI serving static HTML and vanilla JS. Carbon web components and Carbon Charts load from CDN, with no Node build step, so nothing needs compiling on s390x.
+
 ## Docs map
 
 - `docs/SECOND_LOOK_BUILD.md`: full build spec in Devpost format (architecture, layers, API, folder skeleton, setup, metrics, timeline)
 - `docs/IDEA_RANKING.md`: all 16 ideas ranked, debate method, verified facts
 - `docs/ideas/`: earlier rejected plans (Blindfold, Clonewall/Mirage)
+- `docs/research/TECH_PREP_SESSION_NOTES.md`: IBM tech prep session takeaways. The VM is 3 vCPU / 8 GB / 50 GB with the AI LAB flavor. Use Granite + RAG for the GenAI layer. NNPA acceleration only applies to TensorFlow via zDNN.
 - `docs/research/`: debate brief, idea pool, official guidebook and kickoff deck PDFs
 
 ## Open questions for Mahir
@@ -120,7 +183,7 @@ Mahir's entry for the IBM Z Datathon 2026 (Shooting Stars Foundation × IBM). Re
 1. Team: who is on it, and are there 4–6 members registered on hack2skill? What is the team name (needed in the title)?
 2. Was the abstract submitted by Oct 5? Are the two mandatory labs done?
 3. Is the LinuxONE VM provisioned yet?
-4. Frontend look: Streamlit with a custom theme, or a custom web page (FastAPI + HTML/React)?
+4. ~~Frontend look~~: resolved, see "Dashboard design decisions".
 5. Attend the UTD in-person hub on Oct 17?
 
 ## Mahir's preferences (from this planning session)
