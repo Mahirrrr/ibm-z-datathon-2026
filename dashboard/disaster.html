@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Second Look Disasters</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="console">
+  <header class="topbar">
+    <div class="brand">Second Look <span>· FEMA aid denials, re-examined</span></div>
+    <nav>
+      <a href="index.html">Story</a>
+      <a href="disaster.html" aria-current="page">Disasters</a>
+      <a href="method.html">Method</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <div class="crumb" id="crumb">second-look / disasters</div>
+    <h1 id="title">&nbsp;</h1>
+
+    <div class="toolbar">
+      <label>Disaster
+        <select id="picker" aria-label="Choose a disaster"></select>
+      </label>
+      <a class="btn" id="csv" href="#">Export callback list (CSV)</a>
+    </div>
+
+    <div class="tiles" id="tiles"></div>
+
+    <div class="panels">
+      <div>
+        <p class="panel-title">Why they were turned away</p>
+        <div id="tiers"></div>
+      </div>
+      <div>
+        <p class="panel-title">Who's on this list</p>
+        <div id="factors"></div>
+      </div>
+    </div>
+
+    <div class="workspace">
+      <div>
+        <p class="panel-title">Callback list, highest priority first</p>
+        <div style="overflow-x:auto">
+          <table class="list">
+            <thead><tr><th class="num">#</th><th class="num">Priority</th><th>Reason</th><th class="num">Verified loss</th><th>County</th><th>Factors</th></tr></thead>
+            <tbody id="callbacks"></tbody>
+          </table>
+        </div>
+        <div class="pager">
+          <span id="pageinfo"></span>
+          <span>
+            <button class="btn ghost" id="prev">Previous</button>
+            <button class="btn ghost" id="next">Next</button>
+          </span>
+        </div>
+      </div>
+      <aside class="drawer" id="drawer" aria-live="polite"></aside>
+    </div>
+  </main>
+
+  <script src="common.js"></script>
+  <script src="disaster.js"></script>
+</body>
+</html>

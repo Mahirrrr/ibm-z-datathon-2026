@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Second Look</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Second Look <span>· FEMA aid denials, re-examined</span></div>
+    <nav>
+      <a href="index.html" aria-current="page">Story</a>
+      <a href="disaster.html">Disasters</a>
+      <a href="method.html">Method</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <div class="kicker">
+      <span>The paperwork gap</span>
+      <span class="alert" id="records">FEMA aid records</span>
+    </div>
+
+    <div class="hero-number" id="hero">&nbsp;</div>
+    <p class="hero-text">
+      households had damage a FEMA inspector verified. They were denied anyway, for reasons a phone call
+      or one missing document could fix. <mark class="gap" id="hero-gap">Renters were twice as likely to end up here.</mark>
+    </p>
+
+    <div class="stats" id="stats"></div>
+
+    <section>
+      <h2>Why they were turned away</h2>
+      <p class="lede">Every household here passed inspection. These are the three denial reasons that don't mean "no damage."</p>
+      <div class="tierbar" id="tierbar" role="img" aria-label="Cohort split by denial reason"></div>
+      <div class="legend" id="tierlegend"></div>
+    </section>
+
+    <section>
+      <h2>Who lands here</h2>
+      <p class="lede">
+        Share of verified-damage households that end up in the Second Look group. Red means the group's odds
+        stay higher after controlling for damage size, livability, destruction, disaster type, and year.
+      </p>
+      <div class="gapchart" id="gapchart"></div>
+      <p class="note" style="margin-top:24px">
+        Bar: rate in group. Whisker: 95% Wilson interval. Right column: adjusted odds ratio vs the reference group
+        (logistic regression on 1.5M sampled households). Applicants with access or functional needs are
+        <em>less</em> likely to land here, and we report that as found.
+      </p>
+    </section>
+
+    <section>
+      <h2>Where it happened</h2>
+      <p class="lede">Disasters with the most verified-damage households denied for a fixable reason. Pick one to see its callback list.</p>
+      <table class="list">
+        <thead><tr><th>Disaster</th><th>Year</th><th>States</th><th class="num">Second Look</th><th class="num">Verified loss</th><th></th></tr></thead>
+        <tbody id="disasters"></tbody>
+      </table>
+    </section>
+
+    <footer>
+      Source: OpenFEMA Individuals and Households Program, Valid Registrations V2. Built for IBM LinuxONE.
+      <a href="method.html">How this was built</a>
+    </footer>
+  </main>
+
+  <script src="common.js"></script>
+  <script src="story.js"></script>
+</body>
+</html>

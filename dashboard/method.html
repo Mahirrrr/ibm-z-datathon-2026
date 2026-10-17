@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Second Look Method</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Second Look <span>· FEMA aid denials, re-examined</span></div>
+    <nav>
+      <a href="index.html">Story</a>
+      <a href="disaster.html">Disasters</a>
+      <a href="method.html" aria-current="page">Method</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <div class="kicker"><span>How this was built</span><span>Method and evidence</span></div>
+
+    <section style="margin-top:40px">
+      <h2>Who counts as a second look</h2>
+      <p class="lede">A rule, not a model. A household is in the group only when all three are true.</p>
+      <ol class="def">
+        <li><div><strong>FEMA verified the damage.</strong> An inspection came back and found real or personal property loss above $0.</div></li>
+        <li><div><strong>FEMA denied the aid anyway.</strong> The household was marked ineligible for Individuals and Households Program help.</div></li>
+        <li><div><strong>The reason is fixable.</strong> Missing documents (code 4), FEMA lost contact (code 3), or "other" reasons (codes 7, 9) where ownership or occupancy was never verified.</div></li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>How we kept the model honest</h2>
+      <p class="lede">
+        FEMA's eligibility is close to a rule, so a naive model scores near-perfect and learns nothing.
+        We train only on households with verified damage, use only what FEMA knew before deciding,
+        and test on whole disasters the model never saw.
+      </p>
+      <div class="stats" id="metrics" style="margin:24px 0"></div>
+      <p class="note" id="metricnote"></p>
+    </section>
+
+    <section>
+      <h2>What drives the prediction</h2>
+      <p class="lede">Permutation importance: how much average precision drops when a feature is shuffled.</p>
+      <div id="importance"></div>
+    </section>
+
+    <section>
+      <h2>How the callback list is ordered</h2>
+      <p class="lede">A policy choice, shown in the open so a program manager can change it.</p>
+      <pre class="formula" id="formula"></pre>
+    </section>
+  </main>
+
+  <div class="console band">
+    <div class="page" style="padding-top:0;padding-bottom:0">
+      <div class="crumb">second-look / runtime</div>
+      <h1>IBM LinuxONE runtime</h1>
+      <div class="tiles" id="runtime"></div>
+      <table class="list" style="margin-top:24px">
+        <thead><tr><th>Component</th><th>What it does</th><th>Status</th></tr></thead>
+        <tbody id="stack"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <main class="page" style="padding-top:0">
+    <footer style="margin-top:48px">
+      Source: OpenFEMA Individuals and Households Program, Valid Registrations V2. Code and tests in the project repository.
+    </footer>
+  </main>
+
+  <script src="common.js"></script>
+  <script src="method.js"></script>
+</body>
+</html>
