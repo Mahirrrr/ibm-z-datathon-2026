@@ -192,7 +192,8 @@ Done so far: cohort, model, fairness, ranking and SQLite store, all on the Mac (
 - **Honesty fix:** Snap ML `zdnn_tensors` scores were identical to CPU (1e-16), so it's no longer claimed as accelerator evidence anywhere. The TF twin is the NNPA claim.
 - **Docs:** `docs/VIDEO_PLAN.md`, `docs/SUBMISSION.md` (form text with SSF2026, links, public-repo checklist) and `docs/deck/deck.html`, rendered to `docs/deck/Second Look_IBM Z Datathon 2026 Project.pdf`.
 - Evidence added: `docs/evidence/{twin_benchmark.json, callback_notes.jsonl, granite_runtime.txt, dashboard_disaster_4559_granite.png, dashboard_method_genai.png}`. VM DB backup from before GenAI: `~/secondlook.db.pre-genai`.
-- Still open with Mahir: team names and roles (deck slide 12, video), making the repo public (the event PDFs are in history), the portal screenshot, the lab screenshots, and recording the video.
+- **Team confirmed (Oct 17): the team name is "Second Look" and Mahir Abdullah is the only member.** Deck slide 12 and the video plan are updated. The organizers still need to confirm that a solo entry is allowed.
+- Still open with Mahir: making the repo public (the event PDFs are in history), the portal screenshot, the lab screenshots, and recording the video.
 
 ## Game plan from here (written Oct 17, ~6 AM CDT; deadline Sun Oct 18 11:29 AM CDT, target 9 AM)
 
