@@ -65,6 +65,15 @@ These screenshots were taken through the SSH tunnel from the Podman container on
 - [dashboard_disaster_4559.png](dashboard_disaster_4559.png): caseworker console for Hurricane Laura (LA, 2020) with the ranked callback list
 - [dashboard_method_linuxone.png](dashboard_method_linuxone.png): method, model metrics, and the LinuxONE runtime panel (s390x, Snap ML, NNPA, Podman)
 
+## Mandatory labs ([labs/](labs/))
+
+Both labs ran end to end on the z17 on Oct 17, inside IBM's jupyter-lab-ml image (`registry.linuxone.cloud.marist.edu/l1cc/jupyterlab-image-s390x`). JupyterLab ran with a private token, published on 127.0.0.1 only and reached through an SSH tunnel; the public default token was not used. Each folder has the executed `.ipynb` and an HTML export, and no cell raised an error.
+
+| Lab | Notebook | Screenshots |
+|---|---|---|
+| Predictive + Generative AI (loan approval: XGBoost, BM25 RAG, Granite on llama.cpp with zDNN) | `Loan_Approval_Demo.ipynb`, 9/9 cells | [JupyterLab](labs/Loan_Approval_Demo_jupyterlab.png), [features and risk](labs/Loan_Approval_Demo_features_risk.png), [recommendation and Q&A](labs/Loan_Approval_Demo_recommendation.png) |
+| Predictive AI hybrid multi-model (client churn: scikit-learn + PyTorch) | `Churn_Scikit_PyTorch.ipynb`, 31/33 cells (the other 2 are empty) | [JupyterLab](labs/Churn_Scikit_PyTorch_jupyterlab.png), [PyTorch training](labs/Churn_Scikit_PyTorch_pytorch_training.png) |
+
 ## Provisioned instance
 
 [portal_instance_details.png](portal_instance_details.png) is the LinuxONE Community Cloud portal's instance details: flavor **AI_LAB**, 3 vCPU, 8192 MB RAM, 50 GB disk, image **Ubuntu24.04-Datathon**. The portal's status row reads ERROR, but that label is stale. `uptime` on the VM shows it has run continuously since it was created, and the organizers have been asked to reset the label.
