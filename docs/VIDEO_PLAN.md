@@ -20,7 +20,7 @@ The screen clips are silent. Record the on-camera parts and the voice-over separ
 
 **[0:14–0:30] On camera.** Cut yourself out over the aftermath clip, then cut to plain you.
 
-> All four of us grew up in Bangladesh. Every monsoon, we watched floods take homes. Then came the second loss, on paper: families with no deed and no lease, nothing to prove the home was theirs, turned away from help.
+> What happens when you lose your home, and then lose the proof it was ever yours? We grew up in Bangladesh, watching that happen every monsoon. Families with no deed and no lease were turned away from help.
 
 **[0:30–0:52] `01_story`, hero number.** Count-up from 0 to 94,395. A red DENIED stamp lands on the beat of "said no", with half a second of silence after it.
 
@@ -36,7 +36,7 @@ The screen clips are silent. Record the on-camera parts and the voice-over separ
 
 **[1:25–2:05] `02_disaster`, whole clip.** Speed the scroll to 1.3x if needed. Keyboard typing under the Granite note, a soft ding when it finishes. Zoom on the cited passage.
 
-> So I built Second Look. A caseworker picks a disaster and gets a ranked callback list. For each household, IBM Granite, running on the mainframe, explains why the denial looks fixable and drafts the call, citing FEMA's own policy guide. It's IBM's loan-approval lab in reverse: instead of explaining why a bank said no, it finds the people the system wrongly turned away. My code checks every note's citations and dollar amounts, and that nothing promises approval. All 50 passed.
+> So I built Second Look. A caseworker picks a disaster and gets a ranked callback list. Call the top 1,000 it flags, and 419 are in that group. Call 1,000 at random, and you'd reach about 11. For each household, IBM Granite, running on the mainframe, explains why the denial looks fixable and drafts the call, citing FEMA's own policy guide. It's IBM's loan-approval lab in reverse: instead of explaining why a bank said no, it finds the people the system wrongly turned away. My code checks every note's citations and dollar amounts, and that nothing promises approval. All 50 passed.
 
 **[2:05–2:35] `05_terminal_linuxone` (first 25s), then `03_method` from the runtime band (about 0:20 on).** Speed-ramp the scoring run with a whoosh, then slow down on "3.9 seconds" and on the `nnpa` and `1.23` lines.
 
