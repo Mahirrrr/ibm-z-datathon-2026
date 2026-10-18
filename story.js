@@ -13,13 +13,18 @@ function renderSummary(s) {
   document.getElementById("records").textContent = `${fmt.compact(s.records)} FEMA aid records`;
   const stats = [
     ["Verified loss in this group", fmt.compactMoney(s.cohort_loss)],
-    ["Homes not livable without repairs", fmt.int(s.needs_repairs)],
+    ["Aid left on the table (est.)", fmt.compactMoney(s.aid.total)],
+    ["Homes not livable", fmt.int(s.needs_repairs)],
     ["Median verified loss", fmt.money(s.median_loss)],
     ["Disasters affected", fmt.int(s.disasters_with_cohort)],
   ];
   document.getElementById("stats").replaceChildren(
     ...stats.map(([label, value]) => el("div", { class: "stat" }, el("div", { class: "label" }, label), el("div", { class: "value" }, value)))
   );
+  document.getElementById("aidnote").textContent =
+    `Aid estimate: for each household, the median award FEMA paid to approved households with a similar verified loss ` +
+    `in the same disaster (median ${fmt.money(s.aid.median)} per household). Medians make it a conservative floor. ` +
+    `A modeled estimate, not a promise of eligibility.`;
 
   const total = Object.values(s.tiers).reduce((a, b) => a + b, 0);
   const order = Object.keys(TIERS);

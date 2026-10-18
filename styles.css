@@ -50,7 +50,7 @@ a { color: var(--interactive); }
 mark.gap { background: var(--red-10); color: #750e13; padding: 0 4px; }
 
 .stats {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(176px, 1fr));
   gap: 1px; background: var(--border); border: 1px solid var(--border); margin: 48px 0;
 }
 .stat { background: var(--bg); padding: 16px; }
@@ -83,6 +83,23 @@ table.list th.num { text-align: right; }
 table.list tbody tr { cursor: pointer; }
 table.list tbody tr:hover, table.list tbody tr:focus { background: var(--layer); outline: none; }
 .go { color: var(--interactive); white-space: nowrap; }
+
+.usmap { position: relative; margin: 8px 0 12px; }
+.usmap svg { display: block; width: 100%; height: auto; }
+.usmap .county { stroke: #fff; stroke-width: 0.3; }
+.usmap .county.on:hover { stroke: var(--gray-100); stroke-width: 1.2; }
+.usmap .county.link { cursor: pointer; }
+.usmap .state-border { fill: none; stroke: var(--gray-50); stroke-width: 0.6; stroke-linejoin: round; pointer-events: none; }
+.usmap .inset { fill: none; stroke: var(--gray-30); stroke-width: 1; }
+.usmap .inset-label { font: 12px var(--sans); fill: var(--text-2); }
+.maptip {
+  position: absolute; z-index: 2; max-width: 280px; padding: 10px 12px; pointer-events: none;
+  background: var(--gray-100); color: var(--gray-10); font-size: 13px; line-height: 1.45;
+}
+.maptip .big { font: 500 16px/1.4 var(--mono); margin: 2px 0; }
+.maptip .hint { color: var(--blue-40); margin-top: 4px; }
+.maplegend { font-size: 13px; gap: 8px 16px; }
+.maplegend .legend-title { flex-basis: 100%; font-weight: 600; }
 
 footer { margin-top: 96px; padding-top: 16px; border-top: 1px solid var(--border); font-size: 13px; color: var(--text-2); }
 

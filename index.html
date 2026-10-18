@@ -31,6 +31,7 @@
     </p>
 
     <div class="stats" id="stats"></div>
+    <p class="note" id="aidnote"></p>
 
     <section>
       <h2>Why they were turned away</h2>
@@ -54,6 +55,14 @@
     </section>
 
     <section>
+      <h2>Where they live</h2>
+      <p class="lede">Every county with at least one Second Look household. Click a county to open the callback list for the disaster behind most of its cases.</p>
+      <div class="usmap" id="map"></div>
+      <div class="legend maplegend" id="maplegend"></div>
+      <p class="note" id="mapnote"></p>
+    </section>
+
+    <section>
       <h2>Where it happened</h2>
       <p class="lede">Disasters with the most verified-damage households denied for a fixable reason. Pick one to see its callback list.</p>
       <table class="list">
@@ -71,5 +80,9 @@
   <script src="static.js"></script>
   <script src="common.js"></script>
   <script src="story.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3-array@3.2.4/dist/d3-array.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3-geo@3.1.1/dist/d3-geo.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+  <script src="map.js"></script>
 </body>
 </html>
