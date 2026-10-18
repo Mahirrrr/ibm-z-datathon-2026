@@ -7,7 +7,19 @@ import pandas as pd
 
 from pipeline import frames, genai
 from pipeline.codebook import INELIGIBLE_REASONS, TIER_LABELS
-from pipeline.config import ADJUSTED_ODDS, BENCHMARK, CALLBACKS, COHORT, DB_PATH, FAIRNESS, METRICS, NOTES, SCORES
+from pipeline.config import (
+    ADJUSTED_ODDS,
+    AID,
+    BENCHMARK,
+    CALLBACKS,
+    COHORT,
+    COUNTIES,
+    DB_PATH,
+    FAIRNESS,
+    METRICS,
+    NOTES,
+    SCORES,
+)
 from pipeline.twin import TWIN_BENCHMARK
 
 
@@ -38,6 +50,7 @@ def disaster_summary():
 
 def main():
     callbacks = frames.read(CALLBACKS).merge(frames.read(SCORES), on="id", how="left")
+    callbacks = callbacks.merge(frames.read(AID, columns=["id", "aid_estimate", "aid_basis"]), on="id", how="left")
     callbacks["declarationDate"] = callbacks["declarationDate"].astype(str)
     metrics = json.loads(METRICS.read_text())
     if BENCHMARK.exists():
@@ -60,6 +73,7 @@ def main():
             "model_metrics", con, index=False
         )
         codes.to_sql("reason_codes", con, index=False)
+        frames.read(COUNTIES).to_sql("counties", con, index=False)
         if NOTES.exists():  # optional: written by pipeline.genai on LinuxONE
             genai.load_notes(NOTES).to_sql("callback_notes", con, index=False)
             con.execute("CREATE INDEX idx_notes_id ON callback_notes(id)")

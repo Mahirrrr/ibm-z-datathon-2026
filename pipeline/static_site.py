@@ -38,7 +38,7 @@ def build(db_path=DB_PATH, out=Path("site"), live_url=None):
     data = out / "data"
 
     for name, url in (("summary", "/api/summary"), ("fairness", "/api/fairness"), ("model", "/api/model"),
-                      ("disasters", "/api/disasters?limit=1000")):
+                      ("disasters", "/api/disasters?limit=1000"), ("counties", "/api/counties")):
         _write(data / f"{name}.json", get(url).json())
 
     for d in json.loads((data / "disasters.json").read_text()):

@@ -23,15 +23,17 @@ def sample_db(tmp_path):
         pd.DataFrame([
             {"id": i, "disasterNumber": 1, "tier": t, "verified_loss": loss, "habitabilityRepairsRequired": hab,
              "factors": f, "priority": p, "why_flagged": f"why {i}", "rank_in_disaster": r, "risk_score": 0.5,
-             "county": "Cameron (Parish)", "damagedStateAbbreviation": "LA"}
-            for i, t, loss, hab, f, p, r in [
-                (10, "missing_documents", 2000.0, 1, "renter", 1.5, 1),
-                (11, "missing_documents", 600.0, 0, "", 0.6, 2),
-                (12, "lost_contact", 400.0, 1, "age 65+, renter", 0.4, 3),
+             "county": "Cameron (Parish)", "damagedStateAbbreviation": "LA", "aid_estimate": aid,
+             "aid_basis": basis}
+            for i, t, loss, hab, f, p, r, aid, basis in [
+                (10, "missing_documents", 2000.0, 1, "renter", 1.5, 1, 2500.0, "disaster_band"),
+                (11, "missing_documents", 600.0, 0, "", 0.6, 2, 700.0, "disaster_band"),
+                (12, "lost_contact", 400.0, 1, "age 65+, renter", 0.4, 3, 400.0, "disaster"),
             ]
         ] + [{"id": 20, "disasterNumber": 2, "tier": "unverified_ownership_or_occupancy", "verified_loss": 500.0,
               "habitabilityRepairsRequired": 0, "factors": "", "priority": 0.9, "why_flagged": "why 20",
-              "rank_in_disaster": 1, "risk_score": 0.2, "county": "San Juan", "damagedStateAbbreviation": "PR"}]
+              "rank_in_disaster": 1, "risk_score": 0.2, "county": "San Juan", "damagedStateAbbreviation": "PR",
+              "aid_estimate": None, "aid_basis": "none"}]
         ).to_sql("callbacks", con, index=False)
         pd.DataFrame([
             {"group": "ownRent", "category": "O", "cohort": 1, "households": 100, "rate": 0.01, "ci_low": 0.005,
@@ -45,6 +47,12 @@ def sample_db(tmp_path):
             {"group": "ownRent", "category": "R", "reference": "O", "adjusted_odds_ratio": 2.0},
             {"group": "ownRent", "category": "Unknown", "reference": "O", "adjusted_odds_ratio": 60.0},
         ]).to_sql("adjusted_odds", con, index=False)
+        pd.DataFrame([
+            {"fips": "22023", "county": "Cameron (Parish)", "state": "LA", "cohort": 3, "verified_damage": 40,
+             "rate": 0.075, "top_disaster": 1, "top_disaster_cohort": 3},
+            {"fips": "72127", "county": "San Juan (Municipio)", "state": "PR", "cohort": 1, "verified_damage": 20,
+             "rate": 0.05, "top_disaster": 2, "top_disaster_cohort": 1},
+        ]).to_sql("counties", con, index=False)
         pd.DataFrame([{"feature": "rpfvl", "importance": 0.01}, {"feature": "ownRent", "importance": 0.02}]
                      ).to_sql("feature_importance", con, index=False)
         pd.DataFrame([{"key": "roc_auc", "value": "0.78"}, {"key": "backend", "value": '"sklearn"'}]

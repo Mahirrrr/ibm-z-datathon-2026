@@ -21,6 +21,7 @@ pipeline:
 	$(PY) -m pipeline.fairness
 	$(PY) -m pipeline.rank
 	$(PY) -m pipeline.benchmark
+	$(PY) -m pipeline.aid
 	$(PY) -m pipeline.store
 
 all: ingest pipeline

@@ -76,7 +76,21 @@ def create_app(db_path=DB_PATH):
         losses = [r["verified_loss"] for r in query("SELECT verified_loss FROM callbacks")]
         needs = query("SELECT COUNT(*) n FROM callbacks WHERE habitabilityRepairsRequired = 1")[0]["n"]
         return {**totals, "tiers": tiers, "median_loss": median(losses) if losses else None,
-                "needs_repairs": needs}
+                "needs_repairs": needs, "aid": aid_estimate()}
+
+    def aid_estimate():
+        """Modeled aid left on the table (pipeline/aid.py): not a promise of eligibility."""
+        values = [r["aid_estimate"] for r in query("SELECT aid_estimate FROM callbacks WHERE aid_estimate IS NOT NULL")]
+        basis = {r["aid_basis"]: r["n"] for r in query("SELECT aid_basis, COUNT(*) n FROM callbacks GROUP BY aid_basis")}
+        return {"total": sum(values), "median": median(values) if values else None, "households": len(values),
+                "basis": basis}
+
+    @app.get("/api/counties")
+    def counties():
+        rows = query("SELECT * FROM counties ORDER BY cohort DESC, fips")
+        for r in rows:
+            r["top_share"] = r["top_disaster_cohort"] / r["cohort"]
+        return rows
 
     @app.get("/api/fairness")
     def fairness():

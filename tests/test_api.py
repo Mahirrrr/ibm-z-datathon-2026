@@ -58,6 +58,20 @@ def test_summary_totals(client):
     assert body["disasters_with_cohort"] == 2
 
 
+def test_summary_reports_aid_estimate(client):
+    aid = client.get("/api/summary").json()["aid"]
+    assert aid == {"total": 3600.0, "median": 700.0, "households": 3,
+                   "basis": {"disaster_band": 2, "disaster": 1, "none": 1}}
+
+
+def test_counties_sorted_by_cohort_with_top_disaster_share(client):
+    rows = client.get("/api/counties").json()
+    assert [r["fips"] for r in rows] == ["22023", "72127"]
+    assert rows[0]["top_disaster"] == 1
+    assert rows[0]["top_share"] == 1.0
+    assert rows[0]["rate"] == 0.075
+
+
 def test_fairness_drops_unknown_and_joins_adjusted_odds(client):
     rows = client.get("/api/fairness").json()
     assert [r["category"] for r in rows] == ["O", "R"]

@@ -21,6 +21,8 @@ def test_exports_every_api_response(sample_db, tmp_path):
     assert load(data / "model.json")["metrics"]["roc_auc"] == 0.78
     assert [d["disasterNumber"] for d in load(data / "disasters.json")] == [1, 2]
     assert load(data / "disasters" / "1.json")["needs_repairs"] == 2
+    assert [c["fips"] for c in load(data / "counties.json")] == ["22023", "72127"]
+    assert load(data / "summary.json")["aid"]["total"] == 3600.0
 
 
 def test_callbacks_exported_in_full_with_notes(sample_db, tmp_path):

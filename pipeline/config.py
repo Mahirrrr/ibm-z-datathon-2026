@@ -23,6 +23,7 @@ SLIM_COLUMNS = [
     "incidentTypeCode",
     "damagedStateAbbreviation",
     "county",
+    "fips",
     "applicantAge",
     "householdComposition",
     "occupants65andOver",
@@ -63,6 +64,8 @@ FAIRNESS = PROCESSED_DIR / "fairness.arrow"
 ADJUSTED_ODDS = PROCESSED_DIR / "adjusted_odds.arrow"
 CALLBACKS = PROCESSED_DIR / "callbacks.arrow"
 SCORES = PROCESSED_DIR / "scores.arrow"
+AID = PROCESSED_DIR / "aid.arrow"
+COUNTIES = PROCESSED_DIR / "counties.arrow"
 DB_PATH = ROOT / "secondlook.db"
 
 # Generative layer: FEMA policy corpus (IAPPG 1.1) and Granite-written notes.
