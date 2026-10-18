@@ -79,10 +79,10 @@ function renderDisasters(rows) {
       const tr = el("tr", { tabindex: "0" },
         el("td", {}, `${d.incident_name} · #${d.disasterNumber}`),
         el("td", {}, String(d.year)),
-        el("td", {}, d.states.split(",").length > 3 ? `${d.states.split(",").slice(0, 3).join(", ")} +${d.states.split(",").length - 3}` : d.states.replaceAll(",", ", ")),
+        el("td", { class: "hide-sm" }, d.states.split(",").length > 3 ? `${d.states.split(",").slice(0, 3).join(", ")} +${d.states.split(",").length - 3}` : d.states.replaceAll(",", ", ")),
         el("td", { class: "num" }, fmt.int(d.cohort)),
         el("td", { class: "num" }, fmt.compactMoney(d.cohort_loss)),
-        el("td", { class: "go" }, "Open →")
+        el("td", { class: "go hide-sm" }, "Open →")
       );
       tr.addEventListener("click", () => (location.href = href));
       tr.addEventListener("keydown", (e) => e.key === "Enter" && (location.href = href));

@@ -107,12 +107,15 @@ async function loadCallbacks() {
   const trs = rows.map((r) => {
     const tr = el("tr", { tabindex: "0" },
       el("td", { class: "num" }, String(r.rank_in_disaster)),
-      el("td", { class: "num" }, r.priority.toFixed(2)),
+      el("td", { class: "num hide-sm" }, r.priority.toFixed(2)),
       el("td", {}, el("span", { class: `tag ${r.tier}` }, TIERS[r.tier].label.replace(/^Denied (for|after) /, ""))),
       el("td", { class: "num" }, fmt.money(r.verified_loss)),
       el("td", {}, r.county || "Unknown"),
-      el("td", {}, r.factors || "none"));
-    tr.addEventListener("click", () => selectRow(r, tr));
+      el("td", { class: "hide-sm" }, r.factors || "none"));
+    tr.addEventListener("click", () => {
+      selectRow(r, tr);
+      if (matchMedia("(max-width: 960px)").matches) $("drawer").scrollIntoView({ behavior: "smooth", block: "start" });
+    });
     tr.addEventListener("keydown", (e) => e.key === "Enter" && selectRow(r, tr));
     return tr;
   });
