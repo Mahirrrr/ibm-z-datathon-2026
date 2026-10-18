@@ -6,7 +6,7 @@
   <title>Second Look</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body>
   <header class="topbar">
@@ -66,7 +66,7 @@
       <h2>Where it happened</h2>
       <p class="lede">Disasters with the most verified-damage households denied for a fixable reason. Pick one to see its callback list.</p>
       <table class="list">
-        <thead><tr><th>Disaster</th><th>Year</th><th>States</th><th class="num">Second Look</th><th class="num">Verified loss</th><th></th></tr></thead>
+        <thead><tr><th>Disaster</th><th>Year</th><th class="hide-sm">States</th><th class="num">Second Look</th><th class="num">Verified loss</th><th class="hide-sm"></th></tr></thead>
         <tbody id="disasters"></tbody>
       </table>
     </section>
@@ -79,10 +79,10 @@
 
   <script src="static.js"></script>
   <script src="common.js"></script>
-  <script src="story.js"></script>
+  <script src="story.js?v=3"></script>
   <script src="https://cdn.jsdelivr.net/npm/d3-array@3.2.4/dist/d3-array.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/d3-geo@3.1.1/dist/d3-geo.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
-  <script src="map.js"></script>
+  <script src="map.js?v=3"></script>
 </body>
 </html>

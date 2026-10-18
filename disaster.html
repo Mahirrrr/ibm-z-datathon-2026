@@ -6,7 +6,7 @@
   <title>Second Look Disasters</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body class="console">
   <header class="topbar">
@@ -47,7 +47,7 @@
         <p class="panel-title">Callback list, highest priority first</p>
         <div style="overflow-x:auto">
           <table class="list">
-            <thead><tr><th class="num">#</th><th class="num">Priority</th><th>Reason</th><th class="num">Verified loss</th><th>County</th><th>Factors</th></tr></thead>
+            <thead><tr><th class="num">#</th><th class="num hide-sm">Priority</th><th>Reason</th><th class="num">Verified loss</th><th>County</th><th class="hide-sm">Factors</th></tr></thead>
             <tbody id="callbacks"></tbody>
           </table>
         </div>
@@ -65,6 +65,6 @@
 
   <script src="static.js"></script>
   <script src="common.js"></script>
-  <script src="disaster.js"></script>
+  <script src="disaster.js?v=3"></script>
 </body>
 </html>

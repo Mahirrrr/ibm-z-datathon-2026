@@ -170,7 +170,7 @@ pre.formula { font: 14px/1.6 var(--mono); background: var(--layer); padding: 16p
 .status.pending { color: #f1c21b; }
 
 @media (max-width: 960px) {
-  .workspace, .panels { grid-template-columns: 1fr; }
+  .workspace, .panels { grid-template-columns: minmax(0, 1fr); }
   .drawer { position: static; }
   .hbar { grid-template-columns: 140px 1fr 56px; }
 }
@@ -181,4 +181,18 @@ pre.formula { font: 14px/1.6 var(--mono); background: var(--layer); padding: 16p
   .gaprow { grid-template-columns: 100px 1fr 72px; }
   .topbar .brand span { display: none; }
   .topbar nav a { padding: 0 10px; }
+  .hide-sm { display: none; }
+  table.list th, table.list td { padding: 10px 8px; }
+  table.list th { white-space: normal; }
+  .stats, .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stat:last-child:nth-child(odd), .tile:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .stat .value { font-size: 24px; }
+  .tile .value { font-size: 22px; }
+  .console h1 { font-size: 26px; }
+  select { min-width: 0; width: 100%; }
+  .toolbar label { flex: 1 1 100%; }
+  .hbar { grid-template-columns: 104px minmax(0, 1fr) auto; gap: 8px; }
+  .hbar > span { overflow-wrap: anywhere; }
+  pre.formula { white-space: pre-wrap; font-size: 12px; }
+  .drawer { padding: 16px; }
 }
