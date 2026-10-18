@@ -205,6 +205,18 @@ Done so far: cohort, model, fairness, ranking and SQLite store, all on the Mac (
   - Recording the video.
   - The Hack2Skill form.
 
+## Progress: aid estimate and county map (Oct 17, ~7:30 PM CDT). Official z17 numbers.
+
+- **Aid left on the table** (`pipeline/aid.py`, runs in `make pipeline` before `store`): for each cohort household, the median `ihpAmount` of APPROVED verified-damage households in the same disaster and verified-loss band (bands at $1k, 2.5k, 5k, 10k, 25k, 50k). Cells under 30 approvals fall back to the disaster, then the band across disasters.
+  - z17 result: **$384,968,257 total (quote "$385M"), median $2,314 per household**, all 94,395 estimated. Basis: 93,787 disaster×band, 482 disaster, 126 band. Mac run is identical.
+  - Caveat to always say: a modeled estimate, not a promise of eligibility. Medians make it a conservative floor (approved awards: median $2,000, mean ~$4,355). The median estimate exceeds the median verified loss ($1,680) because IHP also pays rental assistance and other needs.
+  - Stored as `aid_estimate`/`aid_basis` columns on `callbacks`; `/api/summary` returns `aid`.
+- **County map** on the Story page (`dashboard/map.js`): counties shaded by cohort **count** (Carbon red bins), rate in the tooltip, Puerto Rico inset, click goes to the county's top disaster when it holds ≥50% of the county's cohort. Topology is us-atlas 3.0.1 `counties-10m.json`, vendored in `dashboard/`; d3-array 3.2.4, d3-geo 3.1.1, topojson-client 3.1.0 from jsDelivr. `/api/counties` from the `counties` table.
+  - 1,786 counties on the map (90,806 households). Not mapped: 3,186 in other territories (USVI, Guam, ...), 403 with no county. FEMA's retired FIPS 02270/46113 map to 02158/46102.
+- `fips` was added to `SLIM_COLUMNS`; `ihp_slim.arrow` was re-ingested on the Mac and uploaded. The z17 rerun was only cohort → aid → store; the model, scores, fairness and benchmark files were **not** retrained, so every earlier number stands. VM DB backup: `~/secondlook.db.pre-aid`.
+- Redeployed: container rebuilt on the VM, gh-pages snapshot pushed, tunnel URL unchanged. Evidence: `docs/evidence/{dashboard_story.png, dashboard_story_map.png, aid_run.log}`.
+- `01_story.mp4` predates the map and the aid tile; re-record it if there's time. Video script has one added line (380 words).
+
 ## Game plan from here (written Oct 17, ~6 AM CDT; deadline Sun Oct 18 11:29 AM CDT, target 9 AM)
 
 **Done and pushed** (commits c981f0b through 8e0a66b on `main`, private repo Mahirrrr/ibm-z-datathon-2026):

@@ -61,7 +61,9 @@ Settings below are visible in `container.txt`:
 
 These screenshots were taken through the SSH tunnel from the Podman container on the z17:
 
-- [dashboard_story.png](dashboard_story.png): the cohort, denial reasons, fairness gaps with 95% intervals, top disasters
+- [dashboard_story.png](dashboard_story.png): the cohort, the modeled aid estimate ($385.0M), denial reasons, fairness gaps with 95% intervals, the county map, top disasters
+- [dashboard_story_map.png](dashboard_story_map.png): county map of the 94,395 households, with Puerto Rico as an inset
+- [aid_run.log](aid_run.log): the cohort and aid steps on the z17 (`/usr/bin/time -v`), with the estimate total, median and fallback counts
 - [dashboard_disaster_4559.png](dashboard_disaster_4559.png): caseworker console for Hurricane Laura (LA, 2020) with the ranked callback list
 - [dashboard_method_linuxone.png](dashboard_method_linuxone.png): method, model metrics, and the LinuxONE runtime panel (s390x, Snap ML, NNPA, Podman)
 

@@ -1,0 +1,61 @@
+rows: 26,242,788
+verified damage: 8,938,750
+verified damage + denied: 2,033,722
+second look cohort: 94,395
+  missing_documents: 70,072
+  lost_contact: 14,624
+  unverified_ownership_or_occupancy: 9,699
+	Command being timed: "/home/linux1/miniconda3/envs/secondlook/bin/python -m pipeline.cohort"
+	User time (seconds): 21.73
+	System time (seconds): 1.62
+	Percent of CPU this job got: 126%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:18.47
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 205600
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 291313
+	Voluntary context switches: 16011
+	Involuntary context switches: 10275
+	Swaps: 0
+	File system inputs: 208
+	File system outputs: 2437528
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+aid estimate: 94,395 of 94,395 cohort households
+  total $384,968,257, median $2,314
+  disaster_band: 93,787
+  disaster: 482
+  band: 126
+counties with cohort households: 1,799 (93,992 households; 403 have no county)
+	Command being timed: "/home/linux1/miniconda3/envs/secondlook/bin/python -m pipeline.aid"
+	User time (seconds): 8.34
+	System time (seconds): 2.73
+	Percent of CPU this job got: 115%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:09.55
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3883008
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 7
+	Minor (reclaiming a frame) page faults: 789995
+	Voluntary context switches: 1817
+	Involuntary context switches: 858
+	Swaps: 0
+	File system inputs: 1296
+	File system outputs: 1760
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+wrote /home/linux1/ibm-z-datathon-2026/secondlook.db (28.8 MB)
+DONE 0

@@ -23,6 +23,8 @@ FEMA publishes every application for Individuals and Households Program aid: 26.
   - 14,624 were cases where FEMA lost contact.
   - 9,699 never had ownership or occupancy verified.
 - Their verified losses total **$612 million**, and **71,674** of those homes needed repairs before they were livable.
+- **About $385 million in aid likely never reached them** ($384,968,257; median $2,314 per household). This is a modeled estimate, not a promise of eligibility: for each household, the median award FEMA paid to approved households in the same disaster with a similar verified loss (7 loss bands; cells under 30 approvals fall back to the whole disaster, then to the loss band). 93,787 of the 94,395 estimates come from a same-disaster, same-band cell. Medians make it a conservative floor, since approved awards are right-skewed (median $2,000, mean about $4,355). Computed on the z17 (`pipeline/aid.py`).
+- They are spread across **1,786 counties** on the map. Calcasieu Parish, LA (Hurricane Laura) has the most: 4,478 households.
 - The gap is not evenly spread. Among households with verified damage, adjusted for damage size, livability, destruction, disaster type, and year:
 
 | Group (vs reference) | Adjusted odds of landing in the group |
@@ -45,7 +47,7 @@ FEMA publishes every application for Individuals and Households Program aid: 26.
    - **Generate.** IBM Granite 3.3 2B Instruct runs locally in llama.cpp on LinuxONE, from a big-endian GGUF build. It returns JSON: a "why flagged" note, a phone script, and the passages it used.
    - **Check.** Code rejects a note if it cites anything outside the retrieved passages, quotes a dollar amount that doesn't match the inspector's verified loss, or promises approval. Rejected notes fall back to the template script, and the Method page reports how many were rejected.
 6. **Dashboard** (`api/`, `dashboard/`). FastAPI serves three pages built with IBM Plex type and Carbon colors:
-   - Story: the finding
+   - Story: the finding, the aid estimate, and a county map (click a county to open its main disaster's callback list)
    - Disasters: caseworker console with CSV export and a side panel for Granite's cited note and script
    - Method: how it works, plus live LinuxONE runtime evidence
 
@@ -224,6 +226,7 @@ pipeline/
   benchmark.py   Snap ML inference engines: CPU, compressed trees, NNPA
   fairness.py    rates with Wilson intervals, adjusted odds ratios
   rank.py        ranked callback list with "why flagged" sentences
+  aid.py         aid-left-on-the-table estimate and per-county cohort counts
   policy.py      FEMA IAPPG passages + TF-IDF retriever pinned per denial reason
   genai.py       Granite (llama.cpp) notes and scripts, citation/amount/promise checks
   twin.py        Keras twin of the model, CPU vs Telum NNPA via IBM's zDNN plugin
@@ -231,7 +234,7 @@ pipeline/
   static_site.py GitHub Pages snapshot: every API response written to JSON
 api/app.py       read-only FastAPI over secondlook.db + static dashboard
 dashboard/       Story, Disasters, Method pages (IBM Plex, Carbon colors)
-tests/           73 tests: cohort rules, fairness math, ranking, Arrow I/O, API, policy retrieval, Granite checks, twin encoding
+tests/           91 tests: cohort rules, aid estimate, fairness math, ranking, Arrow I/O, API, policy retrieval, Granite checks, twin encoding
 Containerfile    rootless Podman image for the API and dashboard
 docs/evidence/   LinuxONE captures and screenshots
 ```

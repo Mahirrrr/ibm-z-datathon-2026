@@ -21,7 +21,7 @@ Submit at https://hack2skill.com/event/datathon-2026. The deadline is about Sun 
 
 > Second Look finds disaster survivors FEMA turned away even though an inspector verified their damage, and gets them a callback. Event code: SSF2026.
 >
-> In 26.2 million OpenFEMA aid applications, 94,395 households had verified damage and were denied for a fixable reason: missing documents, lost contact, or ownership or occupancy that was never verified. That adds up to $612M in verified loss. Renters face 1.88x adjusted odds of landing in this group, and households reporting $0 income face 3.02x.
+> In 26.2 million OpenFEMA aid applications, 94,395 households had verified damage and were denied for a fixable reason: missing documents, lost contact, or ownership or occupancy that was never verified. That adds up to $612M in verified loss, and by the awards FEMA paid approved neighbors with similar damage, about $385M in aid that never reached them (a modeled estimate, not a promise of eligibility). Renters face 1.88x adjusted odds of landing in this group, and households reporting $0 income face 3.02x.
 >
 > Everything runs on IBM LinuxONE (IBM z17, s390x):
 > - an IBM Snap ML model that scores who is at risk (ROC AUC 0.785 on 114 disasters it never saw)

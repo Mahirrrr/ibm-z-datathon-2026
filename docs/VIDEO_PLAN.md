@@ -4,7 +4,7 @@ The screen footage is already recorded, from the live deployment on the z17. The
 
 | Clip | Length | What it shows |
 |---|---|---|
-| `01_story.mp4` | 26s | Story page: 94,395 hero → denial-reason bar → adjusted-odds chart → top disasters |
+| `01_story.mp4` | 26s | Story page: 94,395 hero → denial-reason bar → adjusted-odds chart → top disasters. Recorded before the county map and the $385.0M aid tile were added; re-record to show them. |
 | `02_disaster.mp4` | 38s | Hurricane Laura console: tiles → callback list → click a row → Granite note → script → expand cited FEMA passage |
 | `03_method.mp4` | 41s | Method page: model metrics → "How Granite writes the callback" → LinuxONE runtime → engine chart → TF/NNPA twin → stack table |
 | `04_public_demo.mp4` | 7s | The same console on GitHub Pages, with the snapshot banner |
@@ -14,7 +14,7 @@ The opener is finished: `~/Downloads/second-look-opener/second_look_opener.mp4` 
 
 The screen clips are silent. Record the on-camera parts and the voice-over separately, then cut the clips to fit the voice.
 
-## Script (about 350 spoken words, roughly 150 words per minute)
+## Script (about 380 spoken words, roughly 150 words per minute)
 
 **[0:00–0:14] Opener.** No voice. Calm village, blink, fire, "IBM Z Datathon 2026", "Second Look", blink, aftermath with the blowing paper.
 
@@ -28,7 +28,7 @@ The screen clips are silent. Record the on-camera parts and the voice-over separ
 
 **[0:52–1:10] `01_story`, denial-reason bar.** A phone rings out unanswered under "couldn't reach".
 
-> They weren't denied because the damage wasn't real. They were denied for a missing document, a phone number FEMA couldn't reach, or ownership nobody checked. That's 612 million dollars of verified loss, and 71,674 homes that weren't safe to live in.
+> They weren't denied because the damage wasn't real. They were denied for a missing document, a phone number FEMA couldn't reach, or ownership nobody checked. That's 612 million dollars of verified loss, and 71,674 homes that weren't safe to live in. Approved neighbors with the same damage got paid; by that yardstick, about 385 million dollars never reached them.
 
 **[1:10–1:25] `01_story`, odds chart.** Zoom on the red bars.
 
