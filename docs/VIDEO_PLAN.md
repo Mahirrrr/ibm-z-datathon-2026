@@ -46,7 +46,7 @@ The screen clips are silent. Record the on-camera parts and the voice-over separ
 
 > Nothing leaves the machine. It's a rootless, read-only container with every capability dropped, behind a tunnel, and no outside AI service ever sees a household.
 
-**[2:45–2:58] All four of you on camera (plain, no cutout; one shared shot, or a quick cut of each person with a name caption), then deck slide 12, then `04_public_demo` with the URL as a caption.** End on the phone from 0:52 being picked up: the ring cuts off with a handset click.
+**[2:45–2:58] All four of you on camera (plain, no cutout; one shared shot, or a quick cut of each person with a name caption), then deck slide 13, then `04_public_demo` with the URL as a caption.** End on the phone from 0:52 being picked up: the ring cuts off with a handset click.
 
 > We're Team Second Look. I built it, and together we want to take it home to Bangladesh, where proving you own your home is even harder. 94,395 households. One callback each.
 
