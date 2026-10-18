@@ -24,7 +24,7 @@ The screen clips are silent. Record the on-camera parts and the voice-over separ
 
 **[0:30–0:52] `01_story`, hero number.** Count-up from 0 to 94,395. A red DENIED stamp lands on the beat of "said no", with half a second of silence after it.
 
-> That paperwork wall isn't only a Bangladesh problem. FEMA, America's disaster relief agency, publishes every application for aid: 26 million records. So I looked. In 94,395 cases, an inspector confirmed the damage in person, and FEMA still said no. Second Look finds them and gets them a callback.
+> That paperwork wall isn't only a Bangladesh problem. FEMA, America's disaster relief agency, publishes every application for aid: 26 million records. So we looked. In 94,395 cases, an inspector confirmed the damage in person, and FEMA still said no. Second Look finds them and gets them a callback.
 
 **[0:52–1:10] `01_story`, denial-reason bar.** A phone rings out unanswered under "couldn't reach".
 
@@ -36,7 +36,7 @@ The screen clips are silent. Record the on-camera parts and the voice-over separ
 
 **[1:25–2:05] `02_disaster`, whole clip.** Speed the scroll to 1.3x if needed. Keyboard typing under the Granite note, a soft ding when it finishes. Zoom on the cited passage.
 
-> So I built Second Look. A caseworker picks a disaster and gets a ranked callback list. Call the top 1,000 it flags, and 419 are in that group. Call 1,000 at random, and you'd reach about 11. For each household, IBM Granite, running on the mainframe, explains why the denial looks fixable and drafts the call, citing FEMA's own policy guide. It's IBM's loan-approval lab in reverse: instead of explaining why a bank said no, it finds the people the system wrongly turned away. My code checks every note's citations and dollar amounts, and that nothing promises approval. All 50 passed.
+> So we built Second Look. A caseworker picks a disaster and gets a ranked callback list. Call the top 1,000 it flags, and 419 are in that group. Call 1,000 at random, and you'd reach about 11. For each household, IBM Granite, running on the mainframe, explains why the denial looks fixable and drafts the call, citing FEMA's own policy guide. It's IBM's loan-approval lab in reverse: instead of explaining why a bank said no, it finds the people the system wrongly turned away. Our code checks every note's citations and dollar amounts, and that nothing promises approval. All 50 passed.
 
 **[2:05–2:35] `05_terminal_linuxone` (first 25s), then `03_method` from the runtime band (about 0:20 on).** Speed-ramp the scoring run with a whoosh, then slow down on "3.9 seconds" and on the `nnpa` and `1.23` lines.
 
@@ -48,7 +48,7 @@ The screen clips are silent. Record the on-camera parts and the voice-over separ
 
 **[2:45–2:58] All four of you on camera (plain, no cutout; one shared shot, or a quick cut of each person with a name caption), then deck slide 13, then `04_public_demo` with the URL as a caption.** End on the phone from 0:52 being picked up: the ring cuts off with a handset click.
 
-> We're Team Second Look. I built it, and together we want to take it home to Bangladesh, where proving you own your home is even harder. 94,395 households. One callback each.
+> We're Team Second Look. Next, we want to take it home to Bangladesh, where proving you own your home is even harder. 94,395 households. One callback each.
 
 ## Recording tips
 
@@ -70,7 +70,7 @@ The screen clips are silent. Record the on-camera parts and the voice-over separ
 ## Rules for the cut
 
 - Keep it to 3:00 or less.
-- Show all four team members on screen with name captions. Credit the build to Mahir; don't caption roles nobody did.
+- Show all four team members on screen with name captions. The voice-over says "we" as a team; the deck's team slide credits the build to Mahir. Don't caption roles nobody did.
 - Caption the opener "AI-generated illustration". It illustrates the story; it isn't footage of real events.
 - Don't run demo footage through any generative tool. The rubric wants a real recording of the demo running live on LinuxONE.
 - Never show the `.pem` key path, the VM IP or any Jupyter token. The recorded clips already hide them.
