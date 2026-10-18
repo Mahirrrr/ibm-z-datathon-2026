@@ -13,7 +13,7 @@ Submit at https://hack2skill.com/event/datathon-2026. The deadline is about Sun 
   - [ ] Remove `docs/research/*.pdf` (the event guidebook and kickoff deck). They are in git history, so `git rm` alone still leaves them reachable. Either rewrite history (`git filter-repo --path "docs/research/IBM Z Datathon 2026 Guidebook.pdf" --path "docs/research/IBM Z Datathon Kickoff Deck.pdf" --invert-paths`) or publish a fresh repo from a clean squash. **Mahir decides; both are destructive to history.**
   - [ ] Confirm no keys or tokens are in the tree: `git grep -n -I -E "BEGIN .*PRIVATE|token=|Your_Token"`.
 - [ ] **Open-source links** (list below).
-- [ ] Optional: architecture flowchart (the Mermaid diagram in README.md, exported as PNG).
+- [x] Optional: architecture flowchart: `docs/architecture/second-look-architecture.png` (1920x1080) and `.svg`.
 - [ ] Team: all 4 members (Mahir Abdullah, Arnab Dev, Azfar Islam, Raihan Ahmed) are added to the Hack2Skill team, which meets the 4–6 rule.
 - [ ] Both mandatory labs done, with screenshots.
 

@@ -51,20 +51,27 @@ FEMA publishes every application for Individuals and Households Program aid: 26.
 
 ## Architecture
 
+![Second Look architecture: Mac prep, every analysis step on the IBM z17, a read-only rootless Podman container behind tunnels, and the caseworker](docs/architecture/second-look-architecture.png)
+
+Full-size [PNG](docs/architecture/second-look-architecture.png) and [SVG](docs/architecture/second-look-architecture.svg). The same flow as Mermaid:
+
 ```mermaid
 flowchart LR
     F[OpenFEMA IHP<br/>26.2M rows, Parquet] -->|make ingest<br/>little-endian host| S[ihp_slim.arrow<br/>Arrow IPC]
-    S -->|rsync| Z
+    PG[FEMA IAPPG 1.1 PDF] -->|make policy| PC[89 cited passages]
+    S -->|rsync| C
+    PC -->|rsync| G
     subgraph Z[IBM LinuxONE · z17 · s390x]
         C[cohort<br/>streamed batches] --> T[Snap ML train<br/>+ score 8.94M]
-        T --> B[engine benchmark<br/>CPU · compressed · NNPA]
+        T -.->|same features| TW[TensorFlow twin<br/>ibm-zdnn-plugin on Telum NNPA<br/>benchmark only]
         C --> FA[fairness audit]
-        C --> R[ranked callbacks]
+        T --> R[ranked callbacks]
         R --> G[Granite 3.3 on llama.cpp<br/>RAG over FEMA IAPPG<br/>cited notes, checked]
-        T & FA & R & B & G --> DB[(secondlook.db)]
-        DB -->|read-only mount| P[Podman container<br/>FastAPI + dashboard<br/>127.0.0.1:8000]
+        FA & R & G --> DB[(secondlook.db)]
+        DB -->|read-only mount| P[Podman container, rootless, read-only<br/>FastAPI + dashboard<br/>bound to 127.0.0.1]
     end
-    P -->|SSH tunnel / outbound Cloudflare tunnel| U[Browser]
+    P -->|SSH tunnel / outbound Cloudflare tunnel| U[Caseworker]
+    DB -.->|static copy| GP[GitHub Pages snapshot] --> U
 ```
 
 ### Why two machines

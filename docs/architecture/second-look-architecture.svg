@@ -1,0 +1,182 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" role="img" aria-labelledby="title desc">
+  <title id="title">Second Look system architecture</title>
+  <desc id="desc">OpenFEMA data is prepared on a Mac, then every analysis step runs on an IBM z17 LinuxONE VM: cohort rules, an IBM Snap ML model, a TensorFlow twin on the Telum NNPA, a fairness audit, ranked callbacks and IBM Granite notes with RAG over FEMA policy. Results land in SQLite, served by a rootless read-only Podman container bound to localhost and reached through SSH or Cloudflare tunnels, plus a static GitHub Pages snapshot.</desc>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;600&amp;family=IBM+Plex+Serif:wght@500&amp;display=swap');
+    .h1 { font: 500 42px 'IBM Plex Serif', Georgia, serif; fill: #161616; }
+    .sub { font: 400 22px 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif; fill: #525252; }
+    .lane { font: 600 19px 'IBM Plex Mono', Menlo, monospace; letter-spacing: .06em; fill: #161616; }
+    .lanez { font: 600 19px 'IBM Plex Mono', Menlo, monospace; letter-spacing: .06em; fill: #0f62fe; }
+    .note { font: 400 17px 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif; fill: #525252; }
+    .t { font: 600 24px 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif; fill: #161616; }
+    .d { font: 400 20px 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif; fill: #525252; }
+    .n { font: 500 21px 'IBM Plex Mono', Menlo, monospace; fill: #0f62fe; }
+    .ng { font: 500 21px 'IBM Plex Mono', Menlo, monospace; fill: #198038; }
+    .w { fill: #ffffff; }
+    .wd { fill: #d0e2ff; }
+    .chip { font: 500 18px 'IBM Plex Mono', Menlo, monospace; fill: #161616; }
+    .lbl { font: 400 17px 'IBM Plex Mono', Menlo, monospace; fill: #393939; paint-order: stroke; stroke: #edf5ff; stroke-width: 8px; stroke-linejoin: round; }
+    .lblg { font: 400 17px 'IBM Plex Mono', Menlo, monospace; fill: #393939; paint-order: stroke; stroke: #f4f4f4; stroke-width: 8px; stroke-linejoin: round; }
+    .foot { font: 400 16px 'IBM Plex Mono', Menlo, monospace; fill: #6f6f6f; }
+    .flow { fill: none; stroke: #0f62fe; stroke-width: 3; }
+    .nnpa { fill: none; stroke: #198038; stroke-width: 3; stroke-dasharray: 10 6; }
+    .box { fill: #ffffff; stroke: #c6c6c6; stroke-width: 1.5; }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0f62fe"/></marker>
+    <marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#198038"/></marker>
+  </defs>
+
+  <rect width="1920" height="1080" fill="#ffffff"/>
+
+  <!-- Header -->
+  <text class="h1" x="40" y="74">Second Look: system architecture</text>
+  <text class="sub" x="40" y="112">From 26.2M OpenFEMA aid applications to a caseworker's callback list. Every analysis step runs on IBM LinuxONE.</text>
+  <g transform="translate(1440,58)">
+    <line x1="0" y1="0" x2="44" y2="0" class="flow" marker-end="url(#a)"/><text class="note" x="56" y="6">data flow</text>
+    <line x1="160" y1="0" x2="204" y2="0" class="nnpa" marker-end="url(#g)"/><text class="note" x="216" y="6">Telum NNPA path</text>
+    <rect x="0" y="26" width="44" height="22" fill="none" stroke="#161616" stroke-width="2" stroke-dasharray="7 5"/><text class="note" x="56" y="43">security boundary</text>
+  </g>
+
+  <!-- Lanes -->
+  <rect x="20" y="140" width="360" height="890" fill="#f4f4f4"/>
+  <text class="lane" x="40" y="174">MAC · PREP</text>
+  <text class="note" x="40" y="200">FEMA's CDN blocks the VM, and</text>
+  <text class="note" x="40" y="221">s390x pyarrow misreads Parquet</text>
+
+  <rect x="420" y="140" width="1110" height="890" fill="#edf5ff" stroke="#0f62fe" stroke-width="3"/>
+  <text class="lanez" x="445" y="174">IBM LINUXONE · z17 (9175) · s390x</text>
+  <text class="note" x="445" y="200">3 vCPU · 8 GB RAM · Ubuntu 24.04 · Telum II on-chip AI accelerator. All numbers below are from this machine.</text>
+
+  <rect x="1570" y="140" width="330" height="890" fill="#f4f4f4"/>
+  <text class="lane" x="1590" y="174">REACH · PEOPLE</text>
+  <text class="note" x="1590" y="200">Nothing listens publicly</text>
+
+  <!-- Mac lane -->
+  <rect class="box" x="40" y="240" width="320" height="130"/><rect x="40" y="240" width="320" height="5" fill="#0f62fe"/>
+  <text class="t" x="60" y="282">OpenFEMA IHP</text>
+  <text class="n" x="60" y="314">26.2M applications</text>
+  <text class="d" x="60" y="345">100 fields · Parquet</text>
+
+  <rect class="box" x="40" y="410" width="320" height="130"/><rect x="40" y="410" width="320" height="5" fill="#0f62fe"/>
+  <text class="t" x="60" y="452">make ingest</text>
+  <text class="d" x="60" y="484">pyarrow · 33 columns</text>
+  <text class="d" x="60" y="515">ihp_slim.arrow (IPC)</text>
+
+  <rect class="box" x="40" y="650" width="320" height="160"/><rect x="40" y="650" width="320" height="5" fill="#0f62fe"/>
+  <text class="t" x="60" y="692">FEMA policy guide</text>
+  <text class="d" x="60" y="724">IAPPG 1.1, chapter 3</text>
+  <text class="d" x="60" y="755">make policy · pdftotext</text>
+  <text class="n" x="60" y="789">89 cited passages</text>
+
+  <!-- z17 lane, row 1 -->
+  <rect class="box" x="445" y="240" width="330" height="130"/><rect x="445" y="240" width="330" height="5" fill="#0f62fe"/>
+  <text class="t" x="465" y="282">Cohort rules</text>
+  <text class="d" x="465" y="314">damage verified, still denied</text>
+  <text class="n" x="465" y="347">94,395 households</text>
+
+  <rect class="box" x="805" y="240" width="330" height="130"/><rect x="805" y="240" width="330" height="5" fill="#0f62fe"/>
+  <text class="t" x="825" y="282">IBM Snap ML model</text>
+  <text class="d" x="825" y="314">AUC 0.785, unseen disasters</text>
+  <text class="n" x="825" y="347">2.31M scores/s</text>
+
+  <rect x="1165" y="240" width="340" height="150" fill="#ffffff" stroke="#198038" stroke-width="2.5" stroke-dasharray="10 6"/><rect x="1165" y="240" width="340" height="5" fill="#198038"/>
+  <text class="t" x="1185" y="282">TensorFlow twin</text>
+  <text class="d" x="1185" y="314">ibm-zdnn-plugin on Telum</text>
+  <text class="ng" x="1185" y="347">NNPA 1.23x vs CPU</text>
+  <text class="note" x="1185" y="375">benchmark branch, not serving</text>
+
+  <!-- z17 lane, row 2 -->
+  <rect class="box" x="445" y="430" width="330" height="130"/><rect x="445" y="430" width="330" height="5" fill="#0f62fe"/>
+  <text class="t" x="465" y="472">Fairness audit</text>
+  <text class="d" x="465" y="504">adjusted odds: renters 1.88x</text>
+  <text class="d" x="465" y="535">$0 income 3.02x</text>
+
+  <rect class="box" x="805" y="430" width="330" height="130"/><rect x="805" y="430" width="330" height="5" fill="#0f62fe"/>
+  <text class="t" x="825" y="472">Ranked callbacks</text>
+  <text class="d" x="825" y="504">per disaster, each with a</text>
+  <text class="d" x="825" y="535">why-flagged sentence</text>
+
+  <rect class="box" x="1165" y="430" width="340" height="200"/><rect x="1165" y="430" width="340" height="5" fill="#0f62fe"/>
+  <text class="t" x="1185" y="472">IBM Granite 3.3 2B</text>
+  <text class="d" x="1185" y="504">llama.cpp, big-endian GGUF</text>
+  <text class="d" x="1185" y="535">RAG over FEMA policy</text>
+  <text class="d" x="1185" y="566">code checks every citation</text>
+  <text class="n" x="1185" y="602">50 of 50 notes passed</text>
+
+  <!-- Database -->
+  <g transform="translate(820,665)">
+    <path d="M0,18 v80 a150,18 0 0 0 300,0 v-80" fill="#ffffff" stroke="#0f62fe" stroke-width="2.5"/>
+    <ellipse cx="150" cy="18" rx="150" ry="18" fill="#d0e2ff" stroke="#0f62fe" stroke-width="2.5"/>
+    <text class="t" x="150" y="78" text-anchor="middle">secondlook.db</text>
+    <text class="d" x="150" y="106" text-anchor="middle">SQLite</text>
+  </g>
+
+  <!-- Security boundary + container -->
+  <rect x="445" y="815" width="1060" height="195" fill="none" stroke="#161616" stroke-width="2.5" stroke-dasharray="12 7"/>
+  <text class="lbl" x="460" y="820">SECURITY BOUNDARY</text>
+  <rect class="box" x="470" y="845" width="1010" height="145"/><rect x="470" y="845" width="1010" height="5" fill="#0f62fe"/>
+  <text class="t" x="490" y="886">Podman container, rootless</text>
+  <text class="d" x="830" y="886">FastAPI + 3-page dashboard</text>
+  <g class="chip">
+    <rect x="490" y="904" width="196" height="34" fill="#e0e0e0"/><text x="502" y="928">read-only rootfs</text>
+    <rect x="698" y="904" width="152" height="34" fill="#e0e0e0"/><text x="710" y="928">cap-drop ALL</text>
+    <rect x="862" y="904" width="206" height="34" fill="#e0e0e0"/><text x="874" y="928">no-new-privileges</text>
+    <rect x="490" y="946" width="108" height="34" fill="#e0e0e0"/><text x="502" y="970">UID 1000</text>
+    <rect x="610" y="946" width="174" height="34" fill="#e0e0e0"/><text x="622" y="970">DB mounted :ro</text>
+    <rect x="796" y="946" width="272" height="34" fill="#d0e2ff"/><text x="808" y="970">bound to 127.0.0.1 only</text>
+  </g>
+  <text class="d" x="1090" y="928">Carbon tokens, IBM Plex,</text>
+  <text class="d" x="1090" y="959">CSV export, cited notes</text>
+
+  <!-- Reach lane -->
+  <rect class="box" x="1590" y="240" width="290" height="140"/><rect x="1590" y="240" width="290" height="5" fill="#0f62fe"/>
+  <text class="t" x="1608" y="282">GitHub Pages</text>
+  <text class="d" x="1608" y="314">static snapshot of</text>
+  <text class="d" x="1608" y="345">the DB, always up</text>
+
+  <rect x="1590" y="440" width="290" height="290" fill="#0f62fe"/>
+  <text class="t w" x="1608" y="492" style="font-size:32px">Caseworker</text>
+  <text class="d w" x="1608" y="536">ranked callback list</text>
+  <text class="d w" x="1608" y="568">why each was flagged</text>
+  <text class="d w" x="1608" y="600">Granite call script</text>
+  <text class="d w" x="1608" y="632">with FEMA citations</text>
+  <text class="d w" x="1608" y="664">CSV into outreach</text>
+  <text class="n wd" x="1608" y="708">a phone call back</text>
+
+  <rect class="box" x="1590" y="790" width="290" height="220" stroke="#161616" stroke-width="2"/><rect x="1590" y="790" width="290" height="5" fill="#161616"/>
+  <text class="t" x="1608" y="832">Two tunnels in</text>
+  <text class="d" x="1608" y="866">SSH -L, key auth</text>
+  <text class="d" x="1608" y="897">(recorded demo)</text>
+  <text class="d" x="1608" y="936">Cloudflare quick</text>
+  <text class="d" x="1608" y="967">tunnel, outbound only</text>
+
+  <!-- Flows -->
+  <path class="flow" d="M200,370 V404" marker-end="url(#a)"/>
+  <path class="flow" d="M360,475 H398 V305 H439" marker-end="url(#a)"/>
+  <text class="lblg" transform="translate(392,440) rotate(-90)" style="stroke:#ffffff">rsync</text>
+  <path class="flow" d="M360,730 H400 V610 H1159" marker-end="url(#a)"/>
+  <text class="lblg" transform="translate(394,720) rotate(-90)" style="stroke:#ffffff">rsync</text>
+
+  <path class="flow" d="M775,305 H799" marker-end="url(#a)"/>
+  <path class="nnpa" d="M1135,305 H1159" marker-end="url(#g)"/>
+  <path class="flow" d="M610,370 V424" marker-end="url(#a)"/>
+  <path class="flow" d="M970,370 V424" marker-end="url(#a)"/>
+  <text class="lbl" x="982" y="404">risk scores</text>
+  <path class="flow" d="M1135,495 H1159" marker-end="url(#a)"/>
+
+  <path class="flow" d="M610,560 V733 H814" marker-end="url(#a)"/>
+  <path class="flow" d="M970,560 V659" marker-end="url(#a)"/>
+  <path class="flow" d="M1335,630 V733 H1126" marker-end="url(#a)"/>
+  <text class="lbl" x="1180" y="724">cited notes</text>
+  <text class="lbl" x="624" y="724">rates, odds</text>
+
+  <path class="flow" d="M970,781 V839" marker-end="url(#a)"/>
+  <text class="lbl" x="984" y="806">read-only mount</text>
+
+  <path class="flow" d="M1480,912 H1584" marker-end="url(#a)"/>
+  <path class="flow" d="M1735,790 V736" marker-end="url(#a)"/>
+  <path class="flow" d="M1735,380 V434" marker-end="url(#a)"/>
+
+  <text class="foot" x="40" y="1062">Second Look · IBM Z Datathon 2026 · numbers from the z17 run, Oct 17 2026 · github.com/Mahirrrr/ibm-z-datathon-2026</text>
+</svg>
