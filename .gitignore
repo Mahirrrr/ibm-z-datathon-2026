@@ -10,7 +10,4 @@ models/*.joblib
 secondlook.db
 data/policy/*.pdf
 data/policy/*.txt
-.claude/memory/linuxone-vm-address.md
-.claude/launch.json
 video/
-.claude/memory/
